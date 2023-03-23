@@ -1,0 +1,44 @@
+.block-container.css-z5fcl4.egzxvld4{
+    padding: 1rem 5rem 0;
+}
+
+div.st-bd.st-b3.st-be.st-b8.st-bf.st-bg.st-bh.st-bi.st-bj.st-bk.st-bl.st-bm.st-bn.st-b1.st-bo.st-au.st-ax.st-av.st-aw.st-ae.st-af.st-ag.st-ah.st-ai.st-aj.st-bp.st-bq.st-br.st-bs.st-bt.st-bu.st-bv{
+    border-radius: 0.5rem;
+}
+
+.css-79elbk.e1fqkh3o10[data-testid="stSidebarNav"]::before {
+    content: "SELECT MODULES";
+    margin-left: 20px;
+    margin-top: 20px;
+    font-size: 30px;
+    font-weight: bold;
+    position: relative;
+    top: 50px;
+}
+
+.card {
+  display: inline-block;
+  border-radius: 5px;
+  box-shadow: 0 2px 5px rgba(0, 0, 0, 0.15);
+  border: 1px solid #CCC;
+  margin: 10px 10px 10px 0;
+  width: 450px;
+  padding: 15px;
+  overflow:hidden;
+  white-space: nowrap;
+  word-wrap:break-word;
+}
+
+
+.card-title {
+  font-size: 18px;
+  font-weight: bold;
+  margin-bottom: 10px;
+  overflow:hidden;
+}
+
+.card-text {
+  font-size: 15px;
+  text-overflow: ellipsis;
+  overflow:hidden;
+}
