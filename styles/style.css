@@ -6,14 +6,10 @@ div.st-bd.st-b3.st-be.st-b8.st-bf.st-bg.st-bh.st-bi.st-bj.st-bk.st-bl.st-bm.st-b
     border-radius: 0.5rem;
 }
 
-.css-79elbk.e1fqkh3o10[data-testid="stSidebarNav"]::before {
-    content: "SELECT MODULES";
-    margin-left: 20px;
-    margin-top: 20px;
+.sidebar-title{
     font-size: 30px;
     font-weight: bold;
-    position: relative;
-    top: 50px;
+    padding-left: 5px;
 }
 
 .card {
@@ -23,12 +19,12 @@ div.st-bd.st-b3.st-be.st-b8.st-bf.st-bg.st-bh.st-bi.st-bj.st-bk.st-bl.st-bm.st-b
   border: 1px solid #CCC;
   margin: 10px 10px 10px 0;
   width: 450px;
+  min-height: 150px;
   padding: 15px;
   overflow:hidden;
   white-space: nowrap;
   word-wrap:break-word;
 }
-
 
 .card-title {
   font-size: 18px;
@@ -41,4 +37,45 @@ div.st-bd.st-b3.st-be.st-b8.st-bf.st-bg.st-bh.st-bi.st-bj.st-bk.st-bl.st-bm.st-b
   font-size: 15px;
   text-overflow: ellipsis;
   overflow:hidden;
+}
+
+.button-container {
+    display:flex;
+    border: 1px solid black;
+    justify-content: center;
+    align-items: center;
+    background-color: white;
+    border-radius: 5px;
+    width: 100px;
+    height: 40px;
+    margin-top: 10px;
+    text-decoration: none;
+}
+
+.button-container:hover{
+    background-color: #ff4b4b;
+}
+
+.read-more{
+    width: 100px;
+    height: 25px;
+    text-align: center;
+    border-radius:5px;
+    text-decoration: none;
+    color:black;
+}
+
+.read-more:link {
+  text-decoration: none;
+  color: black;
+}
+
+.read-more:visited {
+  text-decoration: none;
+  color:black;
+}
+
+.read-more:hover {
+  text-decoration: none;
+  color:white;
 }

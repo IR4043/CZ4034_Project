@@ -3,7 +3,7 @@ import requests
 
 app = Flask(__name__)
 
-SORL_URL = "http://localhost:8983/solr/test/select?indent=true&q.op=OR&q=ratingScore%3A%204.0&rows=20"
+SORL_URL = "http://localhost:8983/solr/test/select?indent=true&q.op=OR&q=ratingScore%3A%204.0&rows=100"
 
 
 @app.route('/query1')

@@ -1,15 +1,37 @@
 import streamlit as st
 from header_design import colored_header
+from streamlit_extras.switch_page_button import switch_page
+from streamlit_option_menu import option_menu
+
+
+def streamlit_menu():
+    with st.sidebar:
+        selected = option_menu(
+            menu_title=None,
+            options=["Home", "Crawler", "Search"],  # required
+            icons=["house", "book", "search"],  # optional
+            menu_icon="cast",  # optional
+            default_index=0,  # optional
+        )
+    return selected
+
 
 st.set_page_config(layout="wide")
 with open("styles/style.css") as source_des:
-    st.markdown(f"<style>{source_des.read()}</style>", unsafe_allow_html=True)
+    st.markdown(f"<style>{source_des.read()} </style>", unsafe_allow_html=True)
+    st.markdown("<style> ul {display: none;} </style>", unsafe_allow_html=True)
 
 colored_header(
     label="Information Retrieval Project Group-16",
     color_name="red-70"
 )
-st.sidebar.header("")
+
+st.sidebar.markdown('<p class="sidebar-title">SELECT MODULES</p>', unsafe_allow_html=True)
+selected = streamlit_menu()
+if selected == "Crawler":
+    switch_page("Crawler")
+if selected == "Search":
+    switch_page("Search")
 
 st.subheader("Introduction")
 st.write("This Project will be focused on the reviews of the Apple IPhone models from the Amazon Store.")
