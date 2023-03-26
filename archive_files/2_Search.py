@@ -53,7 +53,7 @@ def display_data(data):
 
 
 st.set_page_config(layout="wide")
-with open("./styles/style.css") as source_des:
+with open("../styles/style.css") as source_des:
     st.markdown(f"<style>{source_des.read()}</style>", unsafe_allow_html=True)
     st.markdown("<style> ul {display: none;} </style>", unsafe_allow_html=True)
 
