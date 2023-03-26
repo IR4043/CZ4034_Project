@@ -18,7 +18,7 @@ div.st-bd.st-b3.st-be.st-b8.st-bf.st-bg.st-bh.st-bi.st-bj.st-bk.st-bl.st-bm.st-b
   box-shadow: 0 2px 5px rgba(0, 0, 0, 0.15);
   border: 1px solid #CCC;
   margin: 10px 10px 10px 0;
-  width: 450px;
+  width: 370px;
   min-height: 150px;
   padding: 15px;
   overflow:hidden;
@@ -27,7 +27,7 @@ div.st-bd.st-b3.st-be.st-b8.st-bf.st-bg.st-bh.st-bi.st-bj.st-bk.st-bl.st-bm.st-b
 }
 
 .card-title {
-  font-size: 18px;
+  font-size: 17px;
   font-weight: bold;
   margin-bottom: 10px;
   overflow:hidden;
@@ -78,4 +78,8 @@ div.st-bd.st-b3.st-be.st-b8.st-bf.st-bg.st-bh.st-bi.st-bj.st-bk.st-bl.st-bm.st-b
 .read-more:hover {
   text-decoration: none;
   color:white;
+}
+
+div[data-testid="stExpander"] div[role="button"] p {
+    font-size: 20px;
 }

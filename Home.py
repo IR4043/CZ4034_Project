@@ -10,7 +10,6 @@ def streamlit_menu():
             menu_title=None,
             options=["Home", "Crawler", "Search"],  # required
             icons=["house", "book", "search"],  # optional
-            menu_icon="cast",  # optional
             default_index=0,  # optional
         )
     return selected

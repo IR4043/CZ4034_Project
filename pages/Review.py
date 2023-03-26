@@ -2,6 +2,18 @@ import streamlit as st
 from header_design import colored_header
 from streamlit_extras.switch_page_button import switch_page
 
+body2_design = """
+<div>
+    <h6><b>Id: {}</b></h6>
+    <h4><b>Ratings: {}</b></h4>
+    <h4><b>Variants: {}, {}</b></h4>
+    <h4><b>Visit the Offical Website: <a href={}>Link</a></b></h4>
+    <h4><b>{}</h4>
+    <h4><b>From: {}</b></h4>
+</div>
+"""
+
+
 st.set_page_config(layout="wide", initial_sidebar_state="collapsed")
 st.markdown(
     """
@@ -13,37 +25,56 @@ st.markdown(
 """,
     unsafe_allow_html=True,
 )
-with open("./styles/style.css") as source_des:
+
+with open("styles/style.css") as source_des:
     st.markdown(f"<style>{source_des.read()}</style>", unsafe_allow_html=True)
-    # st.markdown("<style> ul {display: none;} </style>", unsafe_allow_html=True)
-
-st.sidebar.header("")
-
 
 query_params = st._get_query_params()
 Id = query_params.get("index", [None])[0]
-new_label = "Review Id: " + str(Id)
+new_label = str(Id)
 
-colored_header(label=new_label, color_name="red-70")
-st.subheader("Country")
-st.write("United States")
-st.subheader("Date")
-st.write("2023-03-11T00:00:00Z")
-st.subheader("Position")
-st.write(str(370))
-st.subheader("Description")
-with st.expander("Review Title: It does not come with a fast charger"):
-    st.write("Description: " + "I like the fone so far but the charger that it shipped with does not work. I thought "
-                               "I would be getting a fast charger since it is the pro version")
+gold = "https://m.media-amazon.com/images/I/612hfh4g1jL._AC_SL1000_.jpg"
+green = "https://m.media-amazon.com/images/I/61IWAlDU-xL._AC_SL1000_.jpg"
+silver = "https://m.media-amazon.com/images/I/71SNCEmiscL._AC_SL1500_.jpg"
+space_gray = "https://m.media-amazon.com/images/I/51UnWftDvAL._AC_SL1112_.jpg"
 
-st.subheader("URL")
-st.write("[Review Link]('https://www.amazon.com/gp/customer-reviews/R113JAUTA7B9WY/ref=cm_cr_arp_d_rvw_ttl?ie=UTF8"
-         "&ASIN=B08BHHSB6M)")
-st.subheader("Reviewed In")
-st.write("Reviewed in the United States on February 3, 2022")
-st.subheader("Variant")
-st.write("Size: 256GBColor: Midnight GreenService Provider: UnlockedProduct grade: Renewed Premium")
-st.subheader("")
+
+# get values
+asin = "B08BHHSB6M"
+ratings = str(5)
+
+variant = "Size: 256GBColor: Midnight GreenService Provider: UnlockedProduct grade: Renewed Premium"
+size_index = variant.find("Size: ") + len("Size: ")
+color_index = variant.find("Color: ") + len("Color: ")
+size = str(variant[size_index:variant.find("Color:")].strip())
+color = str(variant[color_index:variant.find("Service Provider:")].strip())
+
+url = "https://www.amazon.com/gp/customer-reviews/R113JAUTA7B9WY/ref=cm_cr_arp_d_rvw_ttl?ie=UTF8&ASIN=B08BHHSB6M"
+reviewed = "Reviewed in the United States on February 3, 2022"
+country = "United States"
+title = "It does not come with a fast charger"
+desc = "I like the fone so far but the charger that it shipped with does not work. I thought I would be getting " \
+       "a fast charger since it is the pro version"
+
+
 back_btn = st.button("Back To Search", disabled=False)
 if back_btn:
     switch_page("Search")
+
+
+body1, body2 = st.columns([2,2])
+
+with body1:
+    st.markdown('<img src={} style="padding:20px; height:70%; width:70%;">'.format(space_gray), unsafe_allow_html=True)
+
+with body2:
+    colored_header(label="ASIN: " + asin, color_name="red-70")
+    st.markdown(body2_design.format(new_label, ratings, size, color, url, reviewed, country), unsafe_allow_html=True)
+
+    with st.expander(title):
+        st.write("Description:" + desc)
+
+
+
+
+

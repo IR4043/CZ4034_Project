@@ -2,6 +2,7 @@ import streamlit as st
 from header_design import colored_header
 from streamlit_extras.switch_page_button import switch_page
 from streamlit_option_menu import option_menu
+from amazon_crawl import scrape
 
 st.set_page_config(layout="wide")
 with open("./styles/style.css") as source_des:
@@ -31,5 +32,11 @@ if selected == "Home":
 colored_header(label="Crawler Module", color_name="red-70")
 st.sidebar.header("")
 st.subheader("Crawling Function")
+crawl_links = st.text_area(label="Insert Links")
 
 button = st.button("Start Crawling", disabled=False)
+
+if button:
+    link_list = crawl_links.split(",")
+    result = scrape(link_list)
+    st.write(result)
