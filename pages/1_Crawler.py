@@ -36,7 +36,15 @@ crawl_links = st.text_area(label="Insert Links")
 
 button = st.button("Start Crawling", disabled=False)
 
+default_progress = "Scraping Operation In Progress. Please Wait"
+my_bar = st.progress(0, text="")
+
 if button:
     link_list = crawl_links.split(",")
-    result = scrape(link_list)
-    st.write(result)
+    length_link = len(link_list)
+    count = 1
+    for i in link_list:
+        result = scrape(i)
+        st.write(result)
+        my_bar.progress((count / length_link), text="Scrape API for Link " + str(count) + " done.")
+        count += 1

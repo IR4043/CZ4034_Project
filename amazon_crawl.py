@@ -58,18 +58,17 @@ def get_reviews(soup, review_list, product_asin):
         pass
 
 
-def scrape(links):
+def scrape(link):
     review_list = []
-    for i in links:
-        split_list = i.split("/")
-        productAsin = split_list[5]
-        for n in range(1, 2):
-            soup = get_soup(i + str(n))
-            print(f'Getting Page: {n}')
-            get_reviews(soup, review_list, productAsin)
-            if not soup.find('li', {'class': 'a-disabled a-last'}):
-                pass
-            else:
-                break
+    split_list = link.split("/")
+    productAsin = split_list[5]
+    for n in range(1, 2):
+        soup = get_soup(link + str(n))
+        print(f'Getting Page: {n}')
+        get_reviews(soup, review_list, productAsin)
+        if not soup.find('li', {'class': 'a-disabled a-last'}):
+            pass
+        else:
+            break
     print("Scraping is Finished")
     return review_list
