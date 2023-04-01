@@ -4,8 +4,9 @@ import pandas as pd
 
 
 def get_soup(url):
-    r = requests.get('http://localhost:8050/render.html', params={'url': url, 'wait': 2})
+    r = requests.get('http://localhost:8050/render.html', params={'url': url, 'wait': 5})
     soup = BeautifulSoup(r.text, 'html.parser')
+    print(soup)
     return soup
 
 
@@ -75,10 +76,14 @@ def scrape(link):
     return review_list
 
 
+def add_underscore(value):
+    if isinstance(value, str) and '/' in value:
+        return f".{value}"
+    return value
+
+
 if __name__ == "__main__":
     list_links = ['https://www.amazon.com/Apple-iPhone-11-64GB-Black/product-reviews/B07ZPKN6YR/ref'
-                  '=cm_cr_getr_d_paging_btm_prev_1?ie=UTF8&reviewerType=all_reviews&pageNumber=',
-                  'https://www.amazon.com/Apple-iPhone-11-64GB-Unlocked/product-reviews/B07ZPKF8RG/ref'
                   '=cm_cr_arp_d_paging_btm_next_2?ie=UTF8&reviewerType=all_reviews&pageNumber=']
 
     df = pd.DataFrame(columns=["title", 'rating', 'productAsin', 'reviewDate', 'reviewDescription', 'size', 'color',
@@ -90,4 +95,5 @@ if __name__ == "__main__":
             new_row = pd.DataFrame({k: [v] for k, v in j.items()})
             df = pd.concat([df, new_row], ignore_index=True)
 
-    df.to_csv("data.csv", sep=",", encoding='utf-8', index=False)
+    df['title'] = df['title'].apply(add_underscore)
+    df.to_csv("3rd_link_data.csv", sep=",", encoding='utf-8', index=False)
