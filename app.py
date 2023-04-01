@@ -1,22 +1,18 @@
-from flask import Flask
+import json
 import requests
+from flask import Flask,request,Response
 
 app = Flask(__name__)
 
-SORL_URL = "http://localhost:8983/solr/test/select?indent=true&q.op=OR&q=ratingScore%3A%204.0&rows=100"
 
-
-@app.route('/query1')
-def query1():
-    params = {
-        'rows': 10,
-        'start': 0,
-        'wt': 'json'
-    }
-    response = requests.get(SORL_URL, params=params)
-    response_data = response.json()
-    return response_data
-
+@app.route('/update_index', methods=['POST'])
+def update_index():
+    data_lst = json.loads(request.data)['docs']
+    params = {"boost": 1.0, "overwrite": "true", "commitWithin": 1000}
+    url = 'http://127.0.0.1:8983/solr/new_phone/update?wt=json'
+    headers = {"Content-Type": "application/json"}
+    result = requests.post(url, json=data_lst, params=params, headers=headers)
+    return Response(result)
 
 if __name__ == '__main__':
-    app.run()
+    app.run(debug=True)
