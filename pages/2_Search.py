@@ -121,3 +121,4 @@ with body2:
     elif 'response' in st.session_state:
         json_data = st.session_state["response"]
         display_data(json_data)
+
