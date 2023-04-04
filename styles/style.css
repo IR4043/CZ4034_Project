@@ -83,3 +83,16 @@ div.st-bd.st-b3.st-be.st-b8.st-bf.st-bg.st-bh.st-bi.st-bj.st-bk.st-bl.st-bm.st-b
 div[data-testid="stExpander"] div[role="button"] p {
     font-size: 20px;
 }
+
+[data-testid="collapsedControl"]{
+    display: none;
+}
+
+.hr-1{
+    background-color: #ff4b4b;
+    margin-top: 0;
+    margin-bottom: 0;
+    min-height: 5px;
+    border: none;
+    border-radius: 3px;
+}

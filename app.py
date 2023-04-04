@@ -1,6 +1,6 @@
 import json
 import requests
-from flask import Flask,request,Response
+from flask import Flask, request, Response
 
 app = Flask(__name__)
 
@@ -13,6 +13,7 @@ def update_index():
     headers = {"Content-Type": "application/json"}
     result = requests.post(url, json=data_lst, params=params, headers=headers)
     return Response(result)
+
 
 if __name__ == '__main__':
     app.run(debug=True)

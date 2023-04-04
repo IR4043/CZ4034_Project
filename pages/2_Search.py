@@ -1,20 +1,21 @@
 import streamlit as st
 import requests
-from header_design import colored_header
 from streamlit_extras.switch_page_button import switch_page
 from streamlit_option_menu import option_menu
 
 
 def streamlit_menu():
-    with st.sidebar:
-        selected = option_menu(
-            menu_title=None,
-            options=["Home", "Crawler", "Search"],  # required
-            icons=["house", "book", "search"],  # optional
-            menu_icon="cast",  # optional
-            default_index=2,  # optional
-        )
-    return selected
+    bar_menu = option_menu(
+        menu_title=None,
+        options=["Home", "Crawler", "Search"],  # required
+        icons=["house", "book", "search"],  # optional
+        menu_icon="cast",  # optional
+        default_index=2,  # optional
+        orientation="horizontal",
+        styles={
+            "container": {"padding-top": "10px", "margin": "20px", "min-height": "80px", "background-color": "#FFFFFF"}}
+    )
+    return bar_menu
 
 
 def display_card(data):
@@ -52,19 +53,24 @@ def display_data(data):
         st.write("No Results Found")
 
 
-st.set_page_config(layout="wide")
-with open("styles/style.css") as source_des:
+st.set_page_config(layout="wide", initial_sidebar_state="collapsed")
+with open("./styles/style.css") as source_des:
     st.markdown(f"<style>{source_des.read()} </style>", unsafe_allow_html=True)
-    st.markdown('<style> ul {display: none;} </style>', unsafe_allow_html=True)
 
-colored_header(label="IPhone Models", color_name="red-70")
+container = st.container()
+with container:
+    cols = st.columns([1, 1])
+    with cols[0]:
+        st.title("Search Module")
 
-st.sidebar.markdown('<p class="sidebar-title">SELECT MODULES</p>', unsafe_allow_html=True)
-selected = streamlit_menu()
-if selected == "Crawler":
-    switch_page("Crawler")
-if selected == "Home":
-    switch_page("Home")
+    with cols[1]:
+        selected = streamlit_menu()
+        if selected == "Home":
+            switch_page("Home")
+        if selected == "Crawler":
+            switch_page("Crawler")
+
+    st.markdown('<hr class=hr-1></hr>', unsafe_allow_html=True)
 
 # This is to clear the query parameters of the website
 st._set_query_params()
@@ -75,7 +81,8 @@ form1, form2, form3 = st.columns([2, 2, 1])
 
 # style for horizontal radio button
 st.write(
-    '<style>div.row-widget.stRadio> div{flex-direction:row;justify-content: center; border:1px dotted red; padding:10px;} </style>',
+    '<style>div.row-widget.stRadio> div{flex-direction:row;justify-content: center; border:1px dotted red; '
+    'padding:10px;} </style>',
     unsafe_allow_html=True)
 
 st.write('<style>div.st-bf{flex-direction:column;} div.st-ag{padding-left:2px;}</style>', unsafe_allow_html=True)
@@ -121,4 +128,3 @@ with body2:
     elif 'response' in st.session_state:
         json_data = st.session_state["response"]
         display_data(json_data)
-
