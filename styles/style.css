@@ -96,3 +96,7 @@ div[data-testid="stExpander"] div[role="button"] p {
     border: none;
     border-radius: 3px;
 }
+
+.space-down{
+    margin-top: 34px;
+}

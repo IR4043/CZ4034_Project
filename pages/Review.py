@@ -1,5 +1,4 @@
 import streamlit as st
-from header_design import colored_header
 from streamlit_extras.switch_page_button import switch_page
 
 body2_design = """
@@ -12,7 +11,6 @@ body2_design = """
     <h4><b>From: {}</b></h4>
 </div>
 """
-
 
 st.set_page_config(layout="wide", initial_sidebar_state="collapsed")
 st.markdown(
@@ -38,7 +36,6 @@ green = "https://m.media-amazon.com/images/I/61IWAlDU-xL._AC_SL1000_.jpg"
 silver = "https://m.media-amazon.com/images/I/71SNCEmiscL._AC_SL1500_.jpg"
 space_gray = "https://m.media-amazon.com/images/I/51UnWftDvAL._AC_SL1112_.jpg"
 
-
 # get values
 asin = "B08BHHSB6M"
 ratings = str(5)
@@ -56,25 +53,17 @@ title = "It does not come with a fast charger"
 desc = "I like the fone so far but the charger that it shipped with does not work. I thought I would be getting " \
        "a fast charger since it is the pro version"
 
-
 back_btn = st.button("Back To Search", disabled=False)
 if back_btn:
     switch_page("Search")
 
-
-body1, body2 = st.columns([2,2])
+body1, body2 = st.columns([2, 2])
 
 with body1:
     st.markdown('<img src={} style="padding:20px; height:70%; width:70%;">'.format(space_gray), unsafe_allow_html=True)
 
 with body2:
-    colored_header(label="ASIN: " + asin, color_name="red-70")
     st.markdown(body2_design.format(new_label, ratings, size, color, url, reviewed, country), unsafe_allow_html=True)
 
     with st.expander(title):
         st.write("Description:" + desc)
-
-
-
-
-
