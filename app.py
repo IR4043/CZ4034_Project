@@ -91,5 +91,59 @@ def facet_query():
     return result
 
 
+@app.route('/mlt_query', methods=["POST"])
+def mlt_query():
+    data_list = request.get_json()
+    facet_fields = {
+        "size": data_list["size"],
+        "color": data_list["color"],
+        "critic": data_list["critic"],
+    }
+    if len(data_list["service_provider"]) > 1:
+        format_service = "%22" + quote(data_list["service_provider"]) + "%22"
+        facet_fields["service_provider"] = format_service
+    else:
+        facet_fields["service_provider"] = data_list["service_provider"]
+
+    if len(data_list["product_grade"]) > 1:
+        format_product = "%22" + quote(data_list["product_grade"]) + "%22"
+        facet_fields["product_grade"] = format_product
+    else:
+        facet_fields["product_grade"] = data_list["product_grade"]
+
+    base_mlt = "http://localhost:8983/solr/amazon_iphone/mlt?"
+
+    if data_list["search_term"]:
+        base_mlt += f"mlt.q=reviewDescription:{data_list['search_term']}"
+
+    base_mlt += "&fl=*"
+    base_mlt += "&mlt.fl=reviewDescription&"
+
+    page_number = (data_list["page"] - 1) * 9
+    base_mlt += f"start={page_number}&rows=9"
+
+    if any(facet_fields.values()):
+        base_mlt += "&facet=true&"
+
+    facet_q = "facet.field"
+
+    for field, value in facet_fields.items():
+        if value:
+            base_mlt += f"{facet_q}={field}&fq={field}:{value}&"
+
+    base_mlt = base_mlt.rstrip('&')
+    query_result = {"base_mlt": base_mlt}
+    return query_result
+
+    # headers = {"Content-Type": "application/json"}
+    # start = time.time()
+    # result = requests.get(base_mlt, headers=headers)
+    # end = time.time()
+    # time_taken = {"time_taken": end - start}
+    # result = result.json()
+    # result.update(time_taken)
+    # return result
+
+
 if __name__ == '__main__':
     app.run()

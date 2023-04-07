@@ -131,29 +131,29 @@ text_search = st_searchbox(label="Search Bar",
                            clear_on_submit=False,
                            clearable=True)
 # text_search = st.text_input(label="Search Bar", label_visibility="collapsed", placeholder="Search")
-with st.form("Searches"):
-    form1, form2, form3, form4, form5, form6 = st.columns([1, 1, 1, 1, 1, 1])
 
-    with form1:
-        size_d = st.selectbox(label="Size", options=["", "64GB", "128GB", "256GB", "512GB"])
+form1, form2, form3, form4, form5, form6 = st.columns([1, 1, 1, 1, 1, 1])
 
-    with form2:
-        color_d = st.selectbox(label="Color", options=["", "Black", "Blue", "Coral", "Gold", "Green", "Midnight Green",
-                                                       "Purple", "Red", "Silver", "Space Gray", "White", "Yellow"])
+with form1:
+    size_d = st.selectbox(label="Size", options=["", "64GB", "128GB", "256GB", "512GB"])
 
-    with form3:
-        sp_d = st.selectbox(label="Service Provider",
-                            options=["", "AT&T", "GSM Carrier", "Sprint", "T-Mobile", "Unlocked",
-                                     "Verizon"])
-    with form4:
-        pg_d = st.selectbox(label="Product Grade", options=["", "Renewed", "Renewed Premium"])
+with form2:
+    color_d = st.selectbox(label="Color", options=["", "Black", "Blue", "Coral", "Gold", "Green", "Midnight Green",
+                                                   "Purple", "Red", "Silver", "Space Gray", "White", "Yellow"])
 
-    with form5:
-        sen_d = st.selectbox(label="Sentiment Of Review", options=["", "Positive", "Neutral", "Negative"])
+with form3:
+    sp_d = st.selectbox(label="Service Provider",
+                        options=["", "AT&T", "GSM Carrier", "Sprint", "T-Mobile", "Unlocked",
+                                 "Verizon"])
+with form4:
+    pg_d = st.selectbox(label="Product Grade", options=["", "Renewed", "Renewed Premium"])
 
-    with form6:
-        st.markdown('<div class="space-down"></div>', unsafe_allow_html=True)
-        button = st.form_submit_button("Submit", disabled=False, use_container_width=True)
+with form5:
+    sen_d = st.selectbox(label="Sentiment Of Review", options=["", "Positive", "Neutral", "Negative"])
+
+with form6:
+    st.markdown('<div class="space-down"></div>', unsafe_allow_html=True)
+    button = st.button("Submit", disabled=False, use_container_width=True)
 
 body1, body2 = st.columns([1, 4])
 
