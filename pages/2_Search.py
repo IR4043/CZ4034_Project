@@ -46,14 +46,9 @@ def display_card(data):
 def display_data(data):
     row_limit = 3
     columns = st.columns(row_limit)
-    if 'response' not in st.session_state:
-        st.session_state['response'] = data
-    if data is not None:
-        for i, result in enumerate(data):
-            with columns[i % row_limit]:
-                display_card(result)
-    else:
-        st.write("No Results Found")
+    for i, result in enumerate(data):
+        with columns[i % row_limit]:
+            display_card(result)
 
 
 def auto_complete(searchterm: str) -> List[str]:
@@ -98,6 +93,9 @@ with container:
 
 # Clear the query parameters of the website
 st._set_query_params()
+
+with st.expander("Charts and Word Cloud"):
+    st.write("Works In Progress")
 
 text_search = st_searchbox(label="",
                            search_function=auto_complete,
@@ -169,12 +167,6 @@ with body2:
         if size_dropdown == "" and color_dropdown == "" and service_provider_dropdown == "" and product_grade_dropdown \
                 == "" and critic_dropdown == "":
             response = requests.get("http://127.0.0.1:5000/test_query")
-            response_json = response.json()
-            response_docs = response_json["response"]["docs"]
-            response_time = float(response_json["time_taken"])
-            response_time_string = "Search Time: ({:.2f}s)".format(response_time)
-            st.write(response_time_string)
-            display_data(response_docs)
         else:
             pack_data = {
                 "size": size_dropdown,
@@ -184,14 +176,23 @@ with body2:
                 "critic": critic_dropdown
             }
             response = requests.post("http://127.0.0.1:5000/facet_query", json=pack_data)
-            print(response.json())
-            # response_docs = response_json["response"]["docs"]
-            # response_time = float(response_json["time_taken"])
-            # response_time_string = "Search Time: ({:.2f}s)".format(response_time)
-            # st.write(response_time_string)
-            # display_data(response_docs)
 
+        response_json = response.json()
+        response_docs = response_json["response"]["docs"]
+        response_time = float(response_json["time_taken"])
+        response_time_string = " ({:.2f}s)".format(response_time)
+        response_num_found = response_json["response"]["numFound"]
+        search_statistics = "About " + str(response_num_found) + " results" + response_time_string
+        st.session_state["statistics"] = search_statistics
+        st.write(search_statistics)
+        if response_docs is None:
+            st.write("No Results Found.")
+        else:
+            display_data(response_docs)
+        st.session_state["response"] = response_docs
 
     elif 'response' in st.session_state:
+        if "statistics" in st.session_state:
+            st.write(st.session_state["statistics"])
         json_data = st.session_state["response"]
         display_data(json_data)

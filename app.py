@@ -2,14 +2,15 @@ import json
 import requests
 from flask import Flask, request, Response
 import time
+from urllib.parse import quote
 
 app = Flask(__name__)
 
 
 @app.route('/test_query', methods=['GET'])
 def test_query():
-    start = time.time()
     SORL_URL = "http://localhost:8983/solr/amazon_iphone/select?indent=true&q.op=OR&q=rating%3A%204.0&rows=10"
+    start = time.time()
     response = requests.get(SORL_URL)
     end = time.time()
     time_taken = {"time_taken": end - start}
@@ -49,10 +50,19 @@ def facet_query():
     facet_fields = {
         "size": data_list["size"],
         "color": data_list["color"],
-        "service_provider": data_list["service_provider"],
-        "product_grade": data_list["product_grade"],
-        "critic": data_list["critic"]
+        "critic": data_list["critic"],
     }
+    if len(data_list["service_provider"]) > 1:
+        format_service = "%22" + quote(data_list["service_provider"]) + "%22"
+        facet_fields["service_provider"] = format_service
+    else:
+        facet_fields["service_provider"] = data_list["service_provider"]
+
+    if len(data_list["product_grade"]) > 1:
+        format_product = "%22" + quote(data_list["product_grade"]) + "%22"
+        facet_fields["product_grade"] = format_product
+    else:
+        facet_fields["product_grade"] = data_list["product_grade"]
 
     base_query = "http://localhost:8983/solr/amazon_iphone/select?q=*:*&"
     facet_q = "facet.field"
@@ -68,8 +78,12 @@ def facet_query():
     base_query = base_query.rstrip('&')
 
     headers = {"Content-Type": "application/json"}
+    start = time.time()
     result = requests.get(base_query, headers=headers)
+    end = time.time()
+    time_taken = {"time_taken": end - start}
     result = result.json()
+    result.update(time_taken)
     return result
 
 
