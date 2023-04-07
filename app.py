@@ -7,9 +7,12 @@ from urllib.parse import quote
 app = Flask(__name__)
 
 
-@app.route('/test_query', methods=['GET'])
+@app.route('/test_query', methods=['POST'])
 def test_query():
-    SORL_URL = "http://localhost:8983/solr/amazon_iphone/select?indent=true&q.op=OR&q=rating%3A%204.0&rows=10"
+    SORL_URL = "http://localhost:8983/solr/amazon_iphone/select?indent=true&q.op=OR&q=rating%3A%204.0&"
+    data_list = request.get_json()
+    page_number = (data_list["page"] - 1) * 9
+    SORL_URL += f"start={page_number}&rows=9"
     start = time.time()
     response = requests.get(SORL_URL)
     end = time.time()
@@ -74,8 +77,9 @@ def facet_query():
         if value:
             base_query += f"{facet_q}={field}&fq={field}:{value}&"
 
-    # Remove the last '&' from the base_query
-    base_query = base_query.rstrip('&')
+    page_number = (data_list["page"] - 1) * 9
+
+    base_query += f"start={page_number}&rows=9"
 
     headers = {"Content-Type": "application/json"}
     start = time.time()
