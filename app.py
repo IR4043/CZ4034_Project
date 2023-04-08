@@ -47,6 +47,34 @@ def suggest_terms(search_term):
     return terms
 
 
+@app.route('/spell_check/<search_term>', methods=['GET'])
+def spell_check(search_term):
+    query_url = "http://localhost:8983/solr/amazon_iphone/spell?"
+    params = {
+        "spellcheck.q": search_term,
+        "rows": 5,
+        "spellcheck": "true",
+        "spellcheck.collate": "true",
+        "df": "reviewDescription"
+    }
+    query = ""
+    response = requests.get(query_url, params=params).json()
+    if len(response["spellcheck"]["collations"]) > 0:
+        query = response["spellcheck"]["collations"][1]["collationQuery"]
+
+    result = {"spellcheck": query}
+    return result
+
+
+@app.route('/fetch_record/<doc_id>', methods=['GET'])
+def fetch_record(doc_id):
+    query_url = "http://localhost:8983/solr/amazon_iphone/select?"
+    query_url += f"q=id:{doc_id}"
+    headers = {"Content-Type": "application/json"}
+    result = requests.get(query_url, headers=headers).json()
+    return result
+
+
 @app.route('/general_query', methods=["POST"])
 def general_query():
     data_list = request.get_json()

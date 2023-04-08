@@ -72,6 +72,12 @@ def fetch_results(search_term, data_dict, q_type, page=1):
     if not q_type:
         print("Invoked 1")
         response = requests.post("http://127.0.0.1:5000/general_query", json=pack_data)
+        if search_term:
+            correction = requests.get(f"http://127.0.0.1:5000/spell_check/{search_term}").json()
+            if correction["spellcheck"]:
+                st.session_state["spellcheck"] = correction["spellcheck"]
+            else:
+                st.session_state["spellcheck"] = ""
     else:
         print("Invoked 2")
         response = requests.post("http://127.0.0.1:5000/mlt_query", json=pack_data)
@@ -84,10 +90,17 @@ def fetch_results(search_term, data_dict, q_type, page=1):
     response_num_found = response_json["response"]["numFound"]
     search_statistic = "About " + str(response_num_found) + " results" + response_time_string
     st.session_state["statistics"] = search_statistic
+
     st.session_state["response"] = response_docs
     st.session_state["count"] = response_num_found
     if page == 1:
-        st.session_state["wordcloud"] = response_json["text"]
+        if response_json["text"] != "":
+            st.session_state["wordcloud"] = response_json["text"]
+
+    if response_num_found == 0:
+        st.session_state["mlt"] = 0
+
+    st.experimental_rerun()
 
 
 black = "https://m.media-amazon.com/images/W/IMAGERENDERING_521856-T1/images/I/31PpUfTCiFL._AC_.jpg"
@@ -105,6 +118,12 @@ yellow = "https://m.media-amazon.com/images/W/IMAGERENDERING_521856-T1/images/I/
 
 if "wordcloud" not in st.session_state:
     st.session_state["wordcloud"] = "default"
+if "default_word" not in st.session_state:
+    st.session_state["default_word"] = ""
+if "spellcheck" not in st.session_state:
+    st.session_state["spellcheck"] = ""
+if "last_input" not in st.session_state:
+    st.session_state["last_input"] = ""
 
 st.set_page_config(layout="wide", initial_sidebar_state="collapsed")
 with open("./styles/style.css") as source_des:
@@ -132,9 +151,6 @@ expander_placeholder = st.empty()
 expander_charts = expander_placeholder.expander("Charts and Word Cloud")
 
 text_search = st_keyup("Search", debounce=100)
-
-if "last_input" not in st.session_state:
-    st.session_state["last_input"] = ""
 
 if text_search != st.session_state["last_input"]:
     st.session_state["last_input"] = text_search
@@ -215,8 +231,11 @@ with body2:
         st.subheader("Search Results")
 
     more_like_this_button = None
+    spell_check_button = None
     statistics = st.empty()
     more_like_this = st.empty()
+    spell_check = st.empty()
+
     pack_data = {
         "size": size_d,
         "color": color_d,
@@ -226,15 +245,15 @@ with body2:
     }
 
     if button:
-        # Defaulted to 0 whenever the button is pressed to 0
         st.session_state["mlt_query"] = 0
+        st.session_state["spellcheck"] = ""
         fetch_results(text_search, pack_data, st.session_state["mlt_query"])
         statistics.write(st.session_state["statistics"])
         if text_search:
             st.session_state["mlt"] = 1
             more_like_this_button = more_like_this.button("More Results Like This")
         st.session_state['page'] = 1
-        display_data(st.session_state["response"])
+        # display_data(st.session_state["response"])
         total_pages = (st.session_state["count"] // 9) + 1
 
     elif 'response' in st.session_state:
@@ -257,12 +276,10 @@ with body2:
     if decrement_button and st.session_state["page"] > 1:
         st.session_state['page'] -= 1
         fetch_results(text_search, pack_data, st.session_state["mlt_query"], st.session_state["page"])
-        st.experimental_rerun()
 
     if increment_button and st.session_state["page"] <= total_pages:
         st.session_state['page'] += 1
         fetch_results(text_search, pack_data, st.session_state["mlt_query"], st.session_state["page"])
-        st.experimental_rerun()
 
     with page_menu[2]:
         st.markdown(f"<div class='space-down2'>Page {st.session_state['page']} of {total_pages}</div>",
@@ -272,8 +289,14 @@ with body2:
         st.session_state["mlt_query"] = 1
         st.session_state["page"] = 1
         fetch_results(text_search, pack_data, st.session_state["mlt_query"])
-        st.experimental_rerun()
 
+    if st.session_state["spellcheck"]:
+        spell_check_button = spell_check.button("Do you mean: " + "'" + st.session_state["spellcheck"] + "'")
+
+    if spell_check_button:
+        st.session_state["mlt_query"] = 0
+        st.session_state['page'] = 1
+        fetch_results(st.session_state["spellcheck"], pack_data, st.session_state["mlt_query"])
 
 with expander_charts:
     columns = st.columns((2, 2, 1))

@@ -2,6 +2,7 @@ import streamlit as st
 from streamlit_extras.switch_page_button import switch_page
 from streamlit_option_menu import option_menu
 from amazon_crawl import scrape
+import pandas as pd
 
 
 def streamlit_menu():
@@ -44,12 +45,34 @@ button = st.button("Start Crawling", disabled=False)
 default_progress = "Scraping Operation In Progress. Please Wait"
 my_bar = st.progress(0, text="")
 
+df = pd.DataFrame(columns=["title", 'rating', 'productAsin', 'reviewDate', 'reviewDescription', 'size', 'color',
+                           'service_provider', 'product_grade', 'review_link', 'image_links'])
+
+dataframe_space = st.empty()
+incremental_index = st.empty()
+
+dataframe_space.dataframe(df)
+incremental_button = incremental_index.button("Update Index")
+
 if button:
     link_list = crawl_links.split(",")
     length_link = len(link_list)
     count = 1
     for i in link_list:
         result = scrape(i)
-        st.write(result)
+        for j in result:
+            new_row = pd.DataFrame({k: [v] for k, v in j.items()})
+            df = pd.concat([df, new_row], ignore_index=True)
         my_bar.progress((count / length_link), text="Scrape Operation for Link " + str(count) + " done.")
         count += 1
+
+    dataframe_space.dataframe(df)
+    st.session_state["record_df"] = df
+
+if incremental_button:
+    if st.session_state["record_df"].empty:
+        st.write("No records to perform incremental updates to index.")
+    else:
+        st.write("Updating")
+        # Write the logic here for MODEL PREDICTION
+

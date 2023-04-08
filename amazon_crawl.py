@@ -1,11 +1,17 @@
 import requests
 from bs4 import BeautifulSoup
 import pandas as pd
+import urllib.request as req
 
 
 def get_soup(url):
-    r = requests.get('http://localhost:8050/render.html', params={'url': url, 'wait': 5})
-    soup = BeautifulSoup(r.text, 'html.parser')
+    headers = {'User-Agent': 'Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) '
+                             'Chrome/111.0.0.0 Safari/537.36'}
+    r = req.Request(url=url, headers=headers)
+    re = req.urlopen(r)
+    information = re.read()
+    # r = requests.get('http://localhost:8050/render.html', params={'url': url, 'wait': 5})
+    soup = BeautifulSoup(information, 'html.parser')
     return soup
 
 
@@ -63,7 +69,7 @@ def scrape(link):
     review_list = []
     split_list = link.split("/")
     productAsin = split_list[5]
-    for n in range(1, 75):
+    for n in range(1, 5):
         soup = get_soup(link + str(n))
         print(f'Getting Page: {n}')
         get_reviews(soup, review_list, productAsin)
