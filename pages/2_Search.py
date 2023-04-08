@@ -2,9 +2,8 @@ import streamlit as st
 import requests
 from streamlit_extras.switch_page_button import switch_page
 from streamlit_option_menu import option_menu
-from streamlit_searchbox import st_searchbox
 import time
-from typing import List
+from st_keyup import st_keyup
 
 
 def streamlit_menu():
@@ -51,11 +50,11 @@ def display_data(data):
             display_card(result)
 
 
-def auto_complete(searchterm: str) -> List[str]:
-    if not searchterm:
+def auto_complete(search_term):
+    if not search_term:
         return []
     time.sleep(0.5)
-    suggested_terms = requests.get(f"http://127.0.0.1:5000/suggest/{searchterm}").json()
+    suggested_terms = requests.get(f"http://127.0.0.1:5000/suggest/{search_term}").json()
     return suggested_terms
 
 
@@ -125,12 +124,17 @@ st._set_query_params()
 with st.expander("Charts and Word Cloud"):
     st.write("Works In Progress")
 
-text_search = st_searchbox(label="Search Bar",
-                           search_function=auto_complete,
-                           placeholder="Search Reviews...",
-                           clear_on_submit=False,
-                           clearable=True)
-# text_search = st.text_input(label="Search Bar", label_visibility="collapsed", placeholder="Search")
+text_search = st_keyup("Search", debounce=100)
+
+if "last_input" not in st.session_state:
+    st.session_state["last_input"] = ""
+
+if text_search != st.session_state["last_input"]:
+    st.session_state["last_input"] = text_search
+    suggestions = auto_complete(text_search)
+    st.write(suggestions)
+else:
+    suggestions = []
 
 form1, form2, form3, form4, form5, form6 = st.columns([1, 1, 1, 1, 1, 1])
 
@@ -212,11 +216,9 @@ with body2:
         total_pages = 1
 
     with page_menu[1]:
-        print(st.session_state['page'])
         decrement_button = st.button("Previous Page", key="Previous", disabled=(st.session_state['page'] == 1))
 
     with page_menu[3]:
-        print(st.session_state['page'])
         increment_button = st.button("Next Page", key="Next", disabled=(st.session_state['page'] == total_pages))
 
     if decrement_button and st.session_state["page"] > 1:
