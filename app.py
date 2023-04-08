@@ -51,8 +51,8 @@ def suggest_terms(search_term):
 def general_query():
     data_list = request.get_json()
     facet_fields = {
-        "size": data_list["size"],
-        "critic": data_list["critic"]
+        "size": data_list["size"]
+        # "critic": data_list["critic"]
     }
     # Declare Variables
     format_service = ""
@@ -75,51 +75,50 @@ def general_query():
     facet_fields["product_grade"] = format_product
     facet_fields["color"] = format_color
 
-    base_query = "http://localhost:8983/solr/amazon_iphone/select?defType=dismax&q="
+    base_query = "http://localhost:8983/solr/amazon_iphone/select?"
     if data_list["search_term"]:
         format_search_term = quote(data_list["search_term"])
-        base_query += format_search_term + "&mm=1&"
+        base_query += "defType=dismax&q=" + format_search_term + "&mm=1&"
         # Assigning importance to reviewDescription
         base_query += "qf=reviewDescription&"
     else:
-        base_query += "*:*&"
+        base_query += "q=*:*"
 
     count = 0
     for field, value in facet_fields.items():
         if value and count == 0:
-            base_query += f"fq={field}:{value} AND "
+            base_query += f"&fq={field}:{value} AND "
             count += 1
         elif value:
             base_query += f"{field}:{value} AND "
 
     base_query = base_query.rstrip(' AND ')
 
+    # Call one Query to get all text and facet for data analysis
+    text = ""
+    headers = {"Content-Type": "application/json"}
+    if data_list["page"] == 1:
+        # Facet and Text Counting for Data Analysis
+        additional_params = "&rows=500&facet=true"
+        for field, value in facet_fields.items():
+            additional_params += f"&facet.field={field}"
+        result = requests.get(base_query + additional_params, headers=headers).json()
+        for i in result['response']['docs']:
+            text = text + "," + i['reviewDescription']
+
     # Adding Page Numbers
     page_number = (data_list["page"] - 1) * 9
     base_query += f"&start={page_number}&rows=9"
 
-    headers = {"Content-Type": "application/json"}
     start = time.time()
-    result = requests.get(base_query, headers=headers)
+    result = requests.get(base_query)
     end = time.time()
     time_taken = {"time_taken": end - start}
+    text_dict = {"text": text}
     result = result.json()
     result.update(time_taken)
+    result.update(text_dict)
     return result
-
-# facet_q = "facet.field"
-    #
-    # if any(facet_fields.values()):
-    #     base_query += "facet=true&"
-    #
-    # for field, value in facet_fields.items():
-    #     if value:
-    #         base_query += f"{facet_q}={field}&"
-    #
-    # for field, value in facet_fields.items():
-    #     if value:
-    #         base_query += f"fq={field}:{value} AND "
-    #
 
 
 @app.route('/mlt_query', methods=["POST"])
@@ -130,50 +129,67 @@ def mlt_query():
         "color": data_list["color"],
         "critic": data_list["critic"],
     }
-    if len(data_list["service_provider"]) > 1:
-        format_service = "%22" + quote(data_list["service_provider"]) + "%22"
-        facet_fields["service_provider"] = format_service
-    else:
-        facet_fields["service_provider"] = data_list["service_provider"]
 
-    if len(data_list["product_grade"]) > 1:
+    # Declare Variables
+    format_service = ""
+    format_product = ""
+    format_color = ""
+
+    if data_list["service_provider"]:
+        format_service = "%22" + quote(data_list["service_provider"]) + "%22"
+
+    if data_list["product_grade"]:
         format_product = "%22" + quote(data_list["product_grade"]) + "%22"
-        facet_fields["product_grade"] = format_product
-    else:
-        facet_fields["product_grade"] = data_list["product_grade"]
+
+    if data_list["color"]:
+        format_color = "%22" + quote(data_list["color"]) + "%22"
+
+    facet_fields["service_provider"] = format_service
+    facet_fields["product_grade"] = format_product
+    facet_fields["color"] = format_color
 
     base_mlt = "http://localhost:8983/solr/amazon_iphone/mlt?"
 
     if data_list["search_term"]:
-        base_mlt += f"mlt.q=reviewDescription:{data_list['search_term']}"
+        format_search_term = quote(data_list['search_term'])
+        base_mlt += "q=reviewDescription:" + '%22' + f"{format_search_term}" + '%22'
 
     base_mlt += "&fl=*"
-    base_mlt += "&mlt.fl=reviewDescription&"
+    base_mlt += "&mlt.fl=reviewDescription"
+
+    count = 0
+    for field, value in facet_fields.items():
+        if value and count == 0:
+            base_mlt += f"&fq={field}:{value} AND "
+            count += 1
+        elif value:
+            base_mlt += f"{field}:{value} AND "
+
+    base_mlt = base_mlt.rstrip(' AND ')
+
+    text = ""
+    headers = {"Content-Type": "application/json"}
+    if data_list["page"] == 1:
+        # Facet and Text Counting for Data Analysis
+        additional_params = "&rows=500&facet=true"
+        for field, value in facet_fields.items():
+            additional_params += f"&facet.field={field}"
+        result = requests.get(base_mlt + additional_params, headers=headers).json()
+        for i in result['response']['docs']:
+            text = text + "," + i['reviewDescription']
 
     page_number = (data_list["page"] - 1) * 9
-    base_mlt += f"start={page_number}&rows=9"
+    base_mlt += f"&start={page_number}&rows=9"
 
-    if any(facet_fields.values()):
-        base_mlt += "&facet=true&"
-
-    facet_q = "facet.field"
-
-    for field, value in facet_fields.items():
-        if value:
-            base_mlt += f"{facet_q}={field}&fq={field}:{value}&"
-
-    base_mlt = base_mlt.rstrip('&')
-    query_result = {"base_mlt": base_mlt}
-    return query_result
-
-    # headers = {"Content-Type": "application/json"}
-    # start = time.time()
-    # result = requests.get(base_mlt, headers=headers)
-    # end = time.time()
-    # time_taken = {"time_taken": end - start}
-    # result = result.json()
-    # result.update(time_taken)
-    # return result
+    start = time.time()
+    result = requests.get(base_mlt, headers=headers)
+    end = time.time()
+    time_taken = {"time_taken": end - start}
+    text_dict = {"text": text}
+    result = result.json()
+    result.update(time_taken)
+    result.update(text_dict)
+    return result
 
 
 if __name__ == '__main__':

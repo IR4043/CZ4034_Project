@@ -4,6 +4,8 @@ from streamlit_extras.switch_page_button import switch_page
 from streamlit_option_menu import option_menu
 import time
 from st_keyup import st_keyup
+from wordcloud import WordCloud
+import matplotlib.pyplot as plt
 
 
 def streamlit_menu():
@@ -58,32 +60,34 @@ def auto_complete(search_term):
     return suggested_terms
 
 
-def fetch_results(size, color, sp, pg, sentiment, page=1):
-    if size == "" and color == "" and sp == "" and pg == "" and sentiment == "":
-        pack_data = {
-            "page": page
-        }
-        response = requests.post("http://127.0.0.1:5000/test_query", json=pack_data)
+def fetch_results(search_term, data_dict, q_type, page=1):
+    params = data_dict
+    params["page"] = page
+    if search_term:
+        st.session_state["search_term"] = search_term
     else:
-        pack_data = {
-            "size": size,
-            "color": color,
-            "service_provider": sp,
-            "product_grade": pg,
-            "critic": sentiment,
-            "page": page
-        }
-        response = requests.post("http://127.0.0.1:5000/facet_query", json=pack_data)
+        st.session_state["search_term"] = ""
+
+    params["search_term"] = search_term
+    if not q_type:
+        print("Invoked 1")
+        response = requests.post("http://127.0.0.1:5000/general_query", json=pack_data)
+    else:
+        print("Invoked 2")
+        response = requests.post("http://127.0.0.1:5000/mlt_query", json=pack_data)
+        st.session_state["mlt"] = 0
 
     response_json = response.json()
     response_docs = response_json["response"]["docs"]
     response_time = float(response_json["time_taken"])
     response_time_string = " ({:.2f}s)".format(response_time)
     response_num_found = response_json["response"]["numFound"]
-    search_statistics = "About " + str(response_num_found) + " results" + response_time_string
-    st.session_state["statistics"] = search_statistics
+    search_statistic = "About " + str(response_num_found) + " results" + response_time_string
+    st.session_state["statistics"] = search_statistic
     st.session_state["response"] = response_docs
     st.session_state["count"] = response_num_found
+    if page == 1:
+        st.session_state["wordcloud"] = response_json["text"]
 
 
 black = "https://m.media-amazon.com/images/W/IMAGERENDERING_521856-T1/images/I/31PpUfTCiFL._AC_.jpg"
@@ -98,6 +102,9 @@ silver = "https://m.media-amazon.com/images/I/71SNCEmiscL._AC_SL1500_.jpg"
 space_gray = "https://m.media-amazon.com/images/I/51UnWftDvAL._AC_SL1112_.jpg"
 white = "https://m.media-amazon.com/images/W/IMAGERENDERING_521856-T1/images/I/71jEjOp6D0L._AC_SL1500_.jpg"
 yellow = "https://m.media-amazon.com/images/W/IMAGERENDERING_521856-T1/images/I/51gyr3c5C9L._AC_SL1000_.jpg"
+
+if "wordcloud" not in st.session_state:
+    st.session_state["wordcloud"] = "default"
 
 st.set_page_config(layout="wide", initial_sidebar_state="collapsed")
 with open("./styles/style.css") as source_des:
@@ -121,8 +128,8 @@ with container:
 # Clear the query parameters of the website
 st._set_query_params()
 
-with st.expander("Charts and Word Cloud"):
-    st.write("Works In Progress")
+expander_placeholder = st.empty()
+expander_charts = expander_placeholder.expander("Charts and Word Cloud")
 
 text_search = st_keyup("Search", debounce=100)
 
@@ -190,6 +197,14 @@ with body1:
 
     st.markdown('<img src={} style="height:70%; width:70%;">'.format(chosen_color), unsafe_allow_html=True)
 
+# This is for button session state to make it appear or not
+if "mlt" not in st.session_state:
+    st.session_state["mlt"] = 0
+
+# This to tell the server what type of query to use. Default should always be set to 0
+if "mlt_query" not in st.session_state:
+    st.session_state["mlt_query"] = 0
+
 with body2:
     page_menu = st.columns((4.5, 1, 1, 1))
     current_page = 0
@@ -199,17 +214,35 @@ with body2:
     with page_menu[0]:
         st.subheader("Search Results")
 
+    more_like_this_button = None
+    statistics = st.empty()
+    more_like_this = st.empty()
+    pack_data = {
+        "size": size_d,
+        "color": color_d,
+        "service_provider": sp_d,
+        "product_grade": pg_d,
+        "critic": sen_d
+    }
+
     if button:
-        fetch_results(size_d, color_d, sp_d, pg_d, sen_d)
-        st.write(st.session_state["statistics"])
+        # Defaulted to 0 whenever the button is pressed to 0
+        st.session_state["mlt_query"] = 0
+        fetch_results(text_search, pack_data, st.session_state["mlt_query"])
+        statistics.write(st.session_state["statistics"])
+        if text_search:
+            st.session_state["mlt"] = 1
+            more_like_this_button = more_like_this.button("More Results Like This")
         st.session_state['page'] = 1
         display_data(st.session_state["response"])
         total_pages = (st.session_state["count"] // 9) + 1
 
     elif 'response' in st.session_state:
-        st.write(st.session_state["statistics"])
+        statistics.write(st.session_state["statistics"])
         display_data(st.session_state["response"])
         total_pages = (st.session_state["count"] // 9) + 1
+        if st.session_state["mlt"] == 1:
+            more_like_this_button = more_like_this.button("More Results Like This")
 
     else:
         st.write("No Results Found")
@@ -223,14 +256,34 @@ with body2:
 
     if decrement_button and st.session_state["page"] > 1:
         st.session_state['page'] -= 1
-        fetch_results(size_d, color_d, sp_d, pg_d, sen_d, st.session_state["page"])
+        fetch_results(text_search, pack_data, st.session_state["mlt_query"], st.session_state["page"])
         st.experimental_rerun()
 
     if increment_button and st.session_state["page"] <= total_pages:
         st.session_state['page'] += 1
-        fetch_results(size_d, color_d, sp_d, pg_d, sen_d, st.session_state["page"])
+        fetch_results(text_search, pack_data, st.session_state["mlt_query"], st.session_state["page"])
         st.experimental_rerun()
 
     with page_menu[2]:
         st.markdown(f"<div class='space-down2'>Page {st.session_state['page']} of {total_pages}</div>",
                     unsafe_allow_html=True)
+
+    if more_like_this_button:
+        st.session_state["mlt_query"] = 1
+        st.session_state["page"] = 1
+        fetch_results(text_search, pack_data, st.session_state["mlt_query"])
+        st.experimental_rerun()
+
+
+with expander_charts:
+    columns = st.columns((2, 2, 1))
+    with columns[0]:
+        wordcloud = WordCloud(background_color="white").generate(st.session_state["wordcloud"])
+        plt.imshow(wordcloud, interpolation="bilinear")
+        plt.axis("off")
+        plt.tight_layout(pad=0)
+        st.pyplot(plt)
+    with columns[1]:
+        st.write("Works in Progress")
+    with columns[2]:
+        st.write("Works in Progress2")
