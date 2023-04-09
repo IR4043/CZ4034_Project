@@ -124,6 +124,7 @@ def general_query():
 
     # Call one Query to get all text and facet for data analysis
     text = ""
+    facet = ""
     headers = {"Content-Type": "application/json"}
     if data_list["page"] == 1:
         # Facet and Text Counting for Data Analysis
@@ -134,18 +135,24 @@ def general_query():
         for i in result['response']['docs']:
             text = text + "," + i['reviewDescription']
 
+        if result['facet_counts']['facet_fields']:
+            facet = json.dumps(result['facet_counts']['facet_fields'])
+
     # Adding Page Numbers
     page_number = (data_list["page"] - 1) * 9
     base_query += f"&start={page_number}&rows=9"
 
+    print(facet)
     start = time.time()
     result = requests.get(base_query)
     end = time.time()
     time_taken = {"time_taken": end - start}
     text_dict = {"text": text}
+    facet_dict = {"facet": facet}
     result = result.json()
     result.update(time_taken)
     result.update(text_dict)
+    result.update(facet_dict)
     return result
 
 

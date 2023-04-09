@@ -6,7 +6,7 @@ import time
 from st_keyup import st_keyup
 from wordcloud import WordCloud
 import matplotlib.pyplot as plt
-
+import json
 
 def streamlit_menu():
     bar_menu = option_menu(
@@ -97,6 +97,11 @@ def fetch_results(search_term, data_dict, q_type, page=1):
         if response_json["text"] != "":
             st.session_state["wordcloud"] = response_json["text"]
 
+        if response_json["facet"] != "":
+            st.session_state["facet"] = json.loads(response_json["facet"])
+
+
+
     if response_num_found == 0:
         st.session_state["mlt"] = 0
 
@@ -124,6 +129,8 @@ if "spellcheck" not in st.session_state:
     st.session_state["spellcheck"] = ""
 if "last_input" not in st.session_state:
     st.session_state["last_input"] = ""
+if "last_input" not in st.session_state:
+    st.session_state["facet"] = ""
 
 st.set_page_config(layout="wide", initial_sidebar_state="collapsed")
 with open("./styles/style.css") as source_des:
@@ -299,14 +306,81 @@ with body2:
         fetch_results(st.session_state["spellcheck"], pack_data, st.session_state["mlt_query"])
 
 with expander_charts:
-    columns = st.columns((2, 2, 1))
-    with columns[0]:
-        wordcloud = WordCloud(background_color="white").generate(st.session_state["wordcloud"])
-        plt.imshow(wordcloud, interpolation="bilinear")
-        plt.axis("off")
-        plt.tight_layout(pad=0)
-        st.pyplot(plt)
-    with columns[1]:
-        st.write("Works in Progress")
-    with columns[2]:
-        st.write("Works in Progress2")
+
+    fig, ax = plt.subplots(2, 3, figsize=(10, 6), tight_layout=True)
+
+    wordcloud = WordCloud(background_color="white").generate(st.session_state["wordcloud"])
+
+    ax[0, 0].imshow(wordcloud, interpolation="bilinear")
+    ax[0, 0].set_title("Word Cloud")
+    ax[0, 0].axis('off')
+
+    if "size" in st.session_state["facet"]:
+        size_label = []
+        size_count = []
+        for i in range(0, len(st.session_state["facet"]["size"]), 2):
+            if st.session_state["facet"]["size"][i + 1] > 0:
+                size_label.append(st.session_state["facet"]["size"][i])
+                size_count.append(st.session_state["facet"]["size"][i + 1])
+
+        fSizeLabel = []
+        for i in range(0, len(size_label)):
+            fSizeLabel.append(size_label[i] + " " + str(round(size_count[i] / sum(size_count) * 100, 2)) + "% ")
+
+        ax[1, 0].pie(size_count, labels=None, autopct='', startangle=90, textprops={'fontsize': 6})
+        ax[1, 0].legend(fSizeLabel, loc='center left', bbox_to_anchor=(-0.1, 1.), fontsize=5)
+        ax[1, 0].set_title("Size" ,loc="right")
+
+    if "service_provider" in st.session_state["facet"]:
+        sp_label = []
+        sp_count = []
+        for i in range(0, len(st.session_state["facet"]["service_provider"]), 2):
+            if st.session_state["facet"]["service_provider"][i + 1] > 0:
+                sp_label.append(st.session_state["facet"]["service_provider"][i])
+                sp_count.append(st.session_state["facet"]["service_provider"][i + 1])
+
+        fSPlabel = []
+        for i in range(0, len(sp_label)):
+            fSPlabel.append(sp_label[i] + " " + str(round(sp_count[i] / sum(sp_count) * 100, 2)) + "% ")
+
+        ax[0, 1].pie(sp_count, labels=None, autopct='', startangle=90, textprops={'fontsize': 6})
+        ax[0, 1].legend(fSPlabel, loc='center left', bbox_to_anchor=(-0.1, 1.),fontsize=5)
+        ax[0, 1].set_title("Service Provider" ,loc="right")
+
+
+    if "product_grade" in st.session_state["facet"]:
+        pg_label = []
+        pg_count = []
+        for i in range(0, len(st.session_state["facet"]["product_grade"]), 2):
+            if st.session_state["facet"]["product_grade"][i + 1] > 0:
+                pg_label.append(st.session_state["facet"]["product_grade"][i])
+                pg_count.append(st.session_state["facet"]["product_grade"][i + 1])
+
+        fPGlabel = []
+        for i in range(0, len(pg_label)):
+            fPGlabel.append(pg_label[i] + " " + str(round(pg_count[i] / sum(pg_count) * 100, 2)) + "% ")
+
+
+        ax[1, 1].pie(pg_count, labels=None, autopct='', startangle=90, textprops={'fontsize': 6})
+        ax[1, 1].legend(fPGlabel, loc='center left', bbox_to_anchor=(-0.1, 1.),fontsize=5)
+        ax[1, 1].set_title("Quality", loc="right")
+
+
+
+    if "color" in st.session_state["facet"]:
+        c_label = []
+        c_count = []
+        for i in range(0, len(st.session_state["facet"]["color"]), 2):
+            if st.session_state["facet"]["color"][i + 1] > 0:
+                c_label.append(st.session_state["facet"]["color"][i])
+                c_count.append(st.session_state["facet"]["color"][i + 1])
+
+        fClabel = []
+        for i in range(0, len(c_label)):
+            fClabel.append(c_label[i] + " " + str(round(c_count[i] / sum(c_count) * 100, 2)) + "% ")
+
+        ax[0, 2].pie(c_count, labels=None, autopct='', startangle=90, textprops={'fontsize': 6})
+        ax[0, 2].set_title("color", loc="right")
+        ax[0, 2].legend(fClabel, loc='center left', bbox_to_anchor=(-0.1, 1.),fontsize=5)
+
+    st.pyplot(plt)
