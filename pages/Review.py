@@ -10,6 +10,7 @@ body2_design = """
     <h4><b>Visit the Offical Website: <a href={}>Link</a></b></h4>
     <h4><b>{}</h4>
     <h4><b>Product Asin: {}</b></h4>
+    <h4><b>Sentiment: {} </b></h4>
     <h4><b>Review: </b></h4>
 </div>
 """
@@ -64,6 +65,7 @@ review_description = record["reviewDescription"]
 review_date = record["reviewDate"]
 review_link = record["review_link"]
 image_link = record["image_links"]
+sentiment = record["sentiment"]
 
 
 back_btn = st.button("Back To Search", disabled=False)
@@ -77,7 +79,7 @@ with body1:
 
 with body2:
     st.markdown(body2_design.format(id_label, ratings, size, color, service_provider, product_grade, review_link,
-                                    review_date, asin), unsafe_allow_html=True)
+                                    review_date, asin, sentiment), unsafe_allow_html=True)
 
     with st.expander(review_title):
         st.write("Description: " + review_description)

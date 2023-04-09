@@ -8,6 +8,7 @@ from wordcloud import WordCloud
 import matplotlib.pyplot as plt
 import json
 
+
 def streamlit_menu():
     bar_menu = option_menu(
         menu_title=None,
@@ -64,6 +65,7 @@ def fetch_results(search_term, data_dict, q_type, page=1):
     params = data_dict
     params["page"] = page
     if search_term:
+        st.session_state["mlt"] = 1
         st.session_state["search_term"] = search_term
     else:
         st.session_state["search_term"] = ""
@@ -100,8 +102,6 @@ def fetch_results(search_term, data_dict, q_type, page=1):
         if response_json["facet"] != "":
             st.session_state["facet"] = json.loads(response_json["facet"])
 
-
-
     if response_num_found == 0:
         st.session_state["mlt"] = 0
 
@@ -129,7 +129,7 @@ if "spellcheck" not in st.session_state:
     st.session_state["spellcheck"] = ""
 if "last_input" not in st.session_state:
     st.session_state["last_input"] = ""
-if "last_input" not in st.session_state:
+if "facet" not in st.session_state:
     st.session_state["facet"] = ""
 
 st.set_page_config(layout="wide", initial_sidebar_state="collapsed")
@@ -183,7 +183,7 @@ with form4:
     pg_d = st.selectbox(label="Product Grade", options=["", "Renewed", "Renewed Premium"])
 
 with form5:
-    sen_d = st.selectbox(label="Sentiment Of Review", options=["", "Positive", "Neutral", "Negative"])
+    sen_d = st.selectbox(label="Sentiment Of Review", options=["", "Positive", "Negative"])
 
 with form6:
     st.markdown('<div class="space-down"></div>', unsafe_allow_html=True)
@@ -248,7 +248,7 @@ with body2:
         "color": color_d,
         "service_provider": sp_d,
         "product_grade": pg_d,
-        "critic": sen_d
+        "sentiment": sen_d
     }
 
     if button:
@@ -256,12 +256,12 @@ with body2:
         st.session_state["spellcheck"] = ""
         fetch_results(text_search, pack_data, st.session_state["mlt_query"])
         statistics.write(st.session_state["statistics"])
-        if text_search:
-            st.session_state["mlt"] = 1
-            more_like_this_button = more_like_this.button("More Results Like This")
         st.session_state['page'] = 1
-        # display_data(st.session_state["response"])
-        total_pages = (st.session_state["count"] // 9) + 1
+        # if text_search:
+        #     st.session_state["mlt"] = 1
+        #     more_like_this_button = more_like_this.button("More Results Like This")
+        # # display_data(st.session_state["response"])
+        # total_pages = (st.session_state["count"] // 9) + 1
 
     elif 'response' in st.session_state:
         statistics.write(st.session_state["statistics"])
@@ -306,7 +306,6 @@ with body2:
         fetch_results(st.session_state["spellcheck"], pack_data, st.session_state["mlt_query"])
 
 with expander_charts:
-
     fig, ax = plt.subplots(2, 3, figsize=(10, 6), tight_layout=True)
 
     wordcloud = WordCloud(background_color="white").generate(st.session_state["wordcloud"])
@@ -329,7 +328,7 @@ with expander_charts:
 
         ax[1, 0].pie(size_count, labels=None, autopct='', startangle=90, textprops={'fontsize': 6})
         ax[1, 0].legend(fSizeLabel, loc='center left', bbox_to_anchor=(-0.1, 1.), fontsize=5)
-        ax[1, 0].set_title("Size" ,loc="right")
+        ax[1, 0].set_title("Size", loc="right")
 
     if "service_provider" in st.session_state["facet"]:
         sp_label = []
@@ -344,9 +343,8 @@ with expander_charts:
             fSPlabel.append(sp_label[i] + " " + str(round(sp_count[i] / sum(sp_count) * 100, 2)) + "% ")
 
         ax[0, 1].pie(sp_count, labels=None, autopct='', startangle=90, textprops={'fontsize': 6})
-        ax[0, 1].legend(fSPlabel, loc='center left', bbox_to_anchor=(-0.1, 1.),fontsize=5)
-        ax[0, 1].set_title("Service Provider" ,loc="right")
-
+        ax[0, 1].legend(fSPlabel, loc='center left', bbox_to_anchor=(-0.1, 1.), fontsize=5)
+        ax[0, 1].set_title("Service Provider", loc="right")
 
     if "product_grade" in st.session_state["facet"]:
         pg_label = []
@@ -360,12 +358,9 @@ with expander_charts:
         for i in range(0, len(pg_label)):
             fPGlabel.append(pg_label[i] + " " + str(round(pg_count[i] / sum(pg_count) * 100, 2)) + "% ")
 
-
         ax[1, 1].pie(pg_count, labels=None, autopct='', startangle=90, textprops={'fontsize': 6})
-        ax[1, 1].legend(fPGlabel, loc='center left', bbox_to_anchor=(-0.1, 1.),fontsize=5)
+        ax[1, 1].legend(fPGlabel, loc='center left', bbox_to_anchor=(-0.1, 1.), fontsize=5)
         ax[1, 1].set_title("Quality", loc="right")
-
-
 
     if "color" in st.session_state["facet"]:
         c_label = []
@@ -381,6 +376,22 @@ with expander_charts:
 
         ax[0, 2].pie(c_count, labels=None, autopct='', startangle=90, textprops={'fontsize': 6})
         ax[0, 2].set_title("color", loc="right")
-        ax[0, 2].legend(fClabel, loc='center left', bbox_to_anchor=(-0.1, 1.),fontsize=5)
+        ax[0, 2].legend(fClabel, loc='center left', bbox_to_anchor=(-0.1, 1.), fontsize=5)
+
+    if "sentiment" in st.session_state["facet"]:
+        s_label = []
+        s_count = []
+        for i in range(0, len(st.session_state["facet"]["sentiment"]), 2):
+            if st.session_state["facet"]["sentiment"][i + 1] > 0:
+                s_label.append(st.session_state["facet"]["sentiment"][i])
+                s_count.append(st.session_state["facet"]["sentiment"][i + 1])
+
+        sentiment_label = []
+        for i in range(0, len(s_label)):
+            sentiment_label.append(s_label[i] + " " + str(round(s_count[i] / sum(s_count) * 100, 2)) + "% ")
+
+        ax[1, 2].pie(s_count, labels=None, autopct='', startangle=90, textprops={'fontsize': 6})
+        ax[1, 2].set_title("sentiment", loc="right")
+        ax[1, 2].legend(sentiment_label, loc="center left", bbox_to_anchor=(-0.1, 1.), fontsize=5)
 
     st.pyplot(plt)

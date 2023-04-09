@@ -80,12 +80,12 @@ def general_query():
     data_list = request.get_json()
     facet_fields = {
         "size": data_list["size"]
-        # "critic": data_list["critic"]
     }
     # Declare Variables
     format_service = ""
     format_product = ""
     format_color = ""
+    format_sentiment = ""
 
     # Pre-Processing for category fields
     if data_list["service_provider"]:
@@ -97,11 +97,16 @@ def general_query():
     if data_list["color"]:
         format_color = quote(data_list["color"])
         format_color = "%22" + format_color + "%22"
+    if data_list["sentiment"]:
+        format_sentiment = data_list["sentiment"]
+        if format_sentiment != 1:
+            format_sentiment = quote(format_sentiment)
 
     # Adding it to the facet fields dictionary
     facet_fields["service_provider"] = format_service
     facet_fields["product_grade"] = format_product
     facet_fields["color"] = format_color
+    facet_fields["sentiment"] = format_sentiment
 
     base_query = "http://localhost:8983/solr/amazon_iphone/select?"
     if data_list["search_term"]:
@@ -110,12 +115,12 @@ def general_query():
         # Assigning importance to reviewDescription
         base_query += "qf=reviewDescription&"
     else:
-        base_query += "q=*:*"
+        base_query += "q=*:*&"
 
     count = 0
     for field, value in facet_fields.items():
         if value and count == 0:
-            base_query += f"&fq={field}:{value} AND "
+            base_query += f"fq={field}:{value} AND "
             count += 1
         elif value:
             base_query += f"{field}:{value} AND "
@@ -128,7 +133,7 @@ def general_query():
     headers = {"Content-Type": "application/json"}
     if data_list["page"] == 1:
         # Facet and Text Counting for Data Analysis
-        additional_params = "&rows=500&facet=true"
+        additional_params = "rows=500&facet=true"
         for field, value in facet_fields.items():
             additional_params += f"&facet.field={field}"
         result = requests.get(base_query + additional_params, headers=headers).json()
@@ -142,7 +147,6 @@ def general_query():
     page_number = (data_list["page"] - 1) * 9
     base_query += f"&start={page_number}&rows=9"
 
-    print(facet)
     start = time.time()
     result = requests.get(base_query)
     end = time.time()
@@ -161,14 +165,13 @@ def mlt_query():
     data_list = request.get_json()
     facet_fields = {
         "size": data_list["size"],
-        "color": data_list["color"],
-        "critic": data_list["critic"],
     }
 
     # Declare Variables
     format_service = ""
     format_product = ""
     format_color = ""
+    format_sentiment = ""
 
     if data_list["service_provider"]:
         format_service = "%22" + quote(data_list["service_provider"]) + "%22"
@@ -179,9 +182,15 @@ def mlt_query():
     if data_list["color"]:
         format_color = "%22" + quote(data_list["color"]) + "%22"
 
+    if data_list["sentiment"]:
+        format_sentiment = data_list["sentiment"]
+        if format_sentiment != 1:
+            format_sentiment = quote(format_sentiment)
+
     facet_fields["service_provider"] = format_service
     facet_fields["product_grade"] = format_product
     facet_fields["color"] = format_color
+    facet_fields["sentiment"] = format_sentiment
 
     base_mlt = "http://localhost:8983/solr/amazon_iphone/mlt?"
 
@@ -203,6 +212,7 @@ def mlt_query():
     base_mlt = base_mlt.rstrip(' AND ')
 
     text = ""
+    facet = ""
     headers = {"Content-Type": "application/json"}
     if data_list["page"] == 1:
         # Facet and Text Counting for Data Analysis
@@ -213,6 +223,9 @@ def mlt_query():
         for i in result['response']['docs']:
             text = text + "," + i['reviewDescription']
 
+        if result['facet_counts']['facet_fields']:
+            facet = json.dumps(result['facet_counts']['facet_fields'])
+
     page_number = (data_list["page"] - 1) * 9
     base_mlt += f"&start={page_number}&rows=9"
 
@@ -221,9 +234,11 @@ def mlt_query():
     end = time.time()
     time_taken = {"time_taken": end - start}
     text_dict = {"text": text}
+    facet_dict = {"facet": facet}
     result = result.json()
     result.update(time_taken)
     result.update(text_dict)
+    result.update(facet_dict)
     return result
 
 
