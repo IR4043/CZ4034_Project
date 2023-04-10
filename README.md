@@ -10,7 +10,7 @@ The Crawler Module helps us to crawl the data using our API keys to gather data 
 The Search Module presents the user with five queries, the user can choose either of the five queries to be searched. The results and speed of the query will be displayed.
 
 
-## Installation
+## Setting up of Environment
 Create a Conda Environment, make sure you're using the correct environment
 
 ```bash
@@ -33,16 +33,3 @@ To run the streamlit UI, open up terminal and run the command below:
 ```bash
 streamlit run Home.py
 ```
-
-### Docker (Crawling Only)
-As of now, the crawling uses implementations of docker for rendering the html page for scraping,
-hence, go to this link to download docker: https://www.docker.com/products/docker-desktop/
-
-After installing docker and restarting your computer, open up Windows Powershell and run:
-
-```bash
-docker pull scrapinghub/splash
-```
-
-Open docker afterwards and click on run, click on optional settings, type 8050 under the port section.
-Press run and you're done!

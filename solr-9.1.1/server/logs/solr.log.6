@@ -1,0 +1,49 @@
+2023-04-08 08:57:34.885 INFO  (main) [] o.e.j.u.log Logging initialized @2249ms to org.eclipse.jetty.util.log.Slf4jLog
+2023-04-08 08:57:35.290 INFO  (main) [] o.e.j.s.Server jetty-9.4.48.v20220622; built: 2022-06-21T20:42:25.880Z; git: 6b67c5719d1f4371b33655ff2d047d24e171e49a; jvm 11.0.18+9-LTS-195
+2023-04-08 08:57:35.862 INFO  (main) [] o.a.s.s.CoreContainerProvider Using logger factory org.apache.logging.slf4j.Log4jLoggerFactory
+2023-04-08 08:57:35.882 INFO  (main) [] o.a.s.s.CoreContainerProvider  ___      _       Welcome to Apache Solr™ version 9.1.1
+2023-04-08 08:57:35.883 INFO  (main) [] o.a.s.s.CoreContainerProvider / __| ___| |_ _   Starting in standalone mode on port 8983
+2023-04-08 08:57:35.883 INFO  (main) [] o.a.s.s.CoreContainerProvider \__ \/ _ \ | '_|  Install dir: /Users/siying/Desktop/cz4034_code/database/solr-9.1.1
+2023-04-08 08:57:35.883 INFO  (main) [] o.a.s.s.CoreContainerProvider |___/\___/_|_|    Start time: 2023-04-08T08:57:35.883793Z
+2023-04-08 08:57:35.913 INFO  (main) [] o.a.s.s.CoreContainerProvider Solr Home: /Users/siying/Desktop/cz4034_code/database/solr-9.1.1/server/solr (source: system property: solr.solr.home)
+2023-04-08 08:57:35.916 INFO  (main) [] o.a.s.c.SolrXmlConfig Loading solr.xml from /Users/siying/Desktop/cz4034_code/database/solr-9.1.1/server/solr/solr.xml
+2023-04-08 08:57:36.053 INFO  (main) [] o.a.s.c.SolrResourceLoader Added 1 libs to classloader, from paths: [/Users/siying/Desktop/cz4034_code/database/solr-9.1.1/lib]
+2023-04-08 08:57:38.525 WARN  (main) [] o.a.s.u.StartupLoggingUtils Jetty request logging enabled. Will retain logs for last 3 days. See chapter "Configuring Logging" in reference guide for how to configure.
+2023-04-08 08:57:38.528 WARN  (main) [] o.a.s.c.CoreContainer Not all security plugins configured!  authentication=disabled authorization=disabled.  Solr is only as secure as you make it. Consider configuring authentication/authorization before exposing Solr to users internal or external.  See https://s.apache.org/solrsecurity for more info
+2023-04-08 08:57:38.853 INFO  (main) [] o.a.s.c.CorePropertiesLocator Found 1 core definitions underneath /Users/siying/Desktop/cz4034_code/database/solr-9.1.1/server/solr
+2023-04-08 08:57:38.853 INFO  (main) [] o.a.s.c.CorePropertiesLocator Cores are: [final_game_review]
+2023-04-08 08:57:38.859 INFO  (coreLoadExecutor-10-thread-1) [] o.a.s.c.TransientSolrCoreCacheDefault Allocating transient core cache for max 2147483647 cores with initial capacity of 1024
+2023-04-08 08:57:38.912 INFO  (coreLoadExecutor-10-thread-1) [ x:final_game_review] o.a.s.c.SolrConfig Using Lucene MatchVersion: 8.11.2
+2023-04-08 08:57:38.960 WARN  (coreLoadExecutor-10-thread-1) [ x:final_game_review] o.a.s.c.SolrConfig solrconfig.xml: <jmx> is no longer supported, use solr.xml:/metrics/reporter section instead
+2023-04-08 08:57:38.973 INFO  (main) [] o.e.j.s.h.ContextHandler Started o.e.j.w.WebAppContext@344b8190{/solr,file:///Users/siying/Desktop/cz4034_code/database/solr-9.1.1/server/solr-webapp/webapp/,AVAILABLE}{/Users/siying/Desktop/cz4034_code/database/solr-9.1.1/server/solr-webapp/webapp}
+2023-04-08 08:57:38.987 INFO  (main) [] o.e.j.s.RequestLogWriter Opened /Users/siying/Desktop/cz4034_code/database/solr-9.1.1/server/logs/2023_04_08.request.log
+2023-04-08 08:57:39.006 INFO  (main) [] o.e.j.s.AbstractConnector Started ServerConnector@2af616d3{HTTP/1.1, (http/1.1, h2c)}{127.0.0.1:8983}
+2023-04-08 08:57:39.006 INFO  (main) [] o.e.j.s.Server Started @6374ms
+2023-04-08 08:57:39.025 INFO  (coreLoadExecutor-10-thread-1) [ x:final_game_review] o.a.s.s.IndexSchema Schema name=example-schema
+2023-04-08 08:57:39.089 WARN  (coreLoadExecutor-10-thread-1) [ x:final_game_review] o.a.s.D.s.TrieDateField Solr loaded a deprecated plugin/analysis class [solr.TrieDateField]. Please consult documentation how to replace it accordingly.
+2023-04-08 08:57:39.092 WARN  (coreLoadExecutor-10-thread-1) [ x:final_game_review] o.a.s.D.s.TrieDoubleField Solr loaded a deprecated plugin/analysis class [solr.TrieDoubleField]. Please consult documentation how to replace it accordingly.
+2023-04-08 08:57:39.098 WARN  (coreLoadExecutor-10-thread-1) [ x:final_game_review] o.a.s.D.s.TrieLongField Solr loaded a deprecated plugin/analysis class [solr.TrieLongField]. Please consult documentation how to replace it accordingly.
+2023-04-08 08:57:39.113 INFO  (coreLoadExecutor-10-thread-1) [ x:final_game_review] o.a.s.s.IndexSchema Loaded schema example-schema/1.5 with uniqueid field id
+2023-04-08 08:57:39.114 INFO  (coreLoadExecutor-10-thread-1) [ x:final_game_review] o.a.s.c.CoreContainer Creating SolrCore 'final_game_review' using configuration from instancedir /Users/siying/Desktop/cz4034_code/database/solr-9.1.1/server/solr/final_game_review, trusted=true
+2023-04-08 08:57:39.197 INFO  (coreLoadExecutor-10-thread-1) [ x:final_game_review] o.a.s.c.SolrCore Opening new SolrCore at [/Users/siying/Desktop/cz4034_code/database/solr-9.1.1/server/solr/final_game_review], dataDir=[/Users/siying/Desktop/cz4034_code/database/solr-9.1.1/server/solr/final_game_review/data/]
+2023-04-08 08:57:40.088 INFO  (coreLoadExecutor-10-thread-1) [ x:final_game_review] o.a.s.u.UpdateHandler Using UpdateLog implementation: org.apache.solr.update.UpdateLog
+2023-04-08 08:57:40.088 INFO  (coreLoadExecutor-10-thread-1) [ x:final_game_review] o.a.s.u.UpdateLog Initializing UpdateLog: dataDir= defaultSyncLevel=FLUSH numRecordsToKeep=100 maxNumLogsToKeep=10 numVersionBuckets=65536
+2023-04-08 08:57:40.148 INFO  (coreLoadExecutor-10-thread-1) [ x:final_game_review] o.a.s.u.CommitTracker Hard AutoCommit: if uncommitted for 15000ms; 
+2023-04-08 08:57:40.154 INFO  (coreLoadExecutor-10-thread-1) [ x:final_game_review] o.a.s.u.CommitTracker Soft AutoCommit: disabled
+2023-04-08 08:57:40.536 INFO  (coreLoadExecutor-10-thread-1) [ x:final_game_review] o.a.s.r.ManagedResourceStorage File-based storage initialized to use dir: /Users/siying/Desktop/cz4034_code/database/solr-9.1.1/server/solr/final_game_review/conf
+2023-04-08 08:57:40.566 INFO  (coreLoadExecutor-10-thread-1) [ x:final_game_review] o.a.s.s.DirectSolrSpellChecker init: {maxEdits=2, minPrefix=1, maxInspections=5, minQueryLength=4, accuracy=0.5, maxQueryFrequency=0.01, name=default, field=_text_, classname=solr.DirectSolrSpellChecker, distanceMeasure=internal}
+2023-04-08 08:57:40.582 INFO  (coreLoadExecutor-10-thread-1) [ x:final_game_review] o.a.s.h.ReplicationHandler Commits will be reserved for 10000 ms
+2023-04-08 08:57:40.628 INFO  (searcherExecutor-12-thread-1-processing-final_game_review) [ x:final_game_review] o.a.s.c.QuerySenderListener QuerySenderListener done.
+2023-04-08 08:57:40.628 INFO  (searcherExecutor-12-thread-1-processing-final_game_review) [ x:final_game_review] o.a.s.h.c.SpellCheckComponent Loading spell index for spellchecker: default
+2023-04-08 08:57:40.638 INFO  (searcherExecutor-12-thread-1-processing-final_game_review) [ x:final_game_review] o.a.s.c.SolrCore Registered new searcher autowarm time: 0 ms
+2023-04-08 08:57:53.143 INFO  (qtp893523498-17) [] o.a.s.s.HttpSolrCall [admin] webapp=null path=/admin/cores params={indexInfo=false&wt=json&_=1680944273035} status=0 QTime=33
+2023-04-08 08:57:53.151 INFO  (qtp893523498-18) [] o.a.s.s.HttpSolrCall [admin] webapp=null path=/admin/info/system params={wt=json&_=1680944273035} status=0 QTime=42
+2023-04-08 08:57:53.176 INFO  (qtp893523498-25) [] o.a.s.s.HttpSolrCall [admin] webapp=null path=/admin/info/system params={wt=json&_=1680944273035} status=0 QTime=4
+2023-04-08 08:57:54.787 INFO  (qtp893523498-22) [] o.a.s.s.HttpSolrCall [admin] webapp=null path=/admin/cores params={indexInfo=false&wt=json&_=1680944273035} status=0 QTime=0
+2023-04-08 08:57:54.798 INFO  (qtp893523498-23) [] o.a.s.s.HttpSolrCall [admin] webapp=null path=/admin/info/system params={wt=json&_=1680944273035} status=0 QTime=10
+2023-04-08 08:57:54.815 INFO  (qtp893523498-19) [] o.a.s.s.HttpSolrCall [admin] webapp=null path=/admin/cores params={wt=json&_=1680944273035} status=0 QTime=21
+2023-04-08 08:57:54.849 INFO  (qtp893523498-24) [] o.a.s.s.HttpSolrCall [admin] webapp=null path=/admin/cores params={indexInfo=false&wt=json&_=1680944273035} status=0 QTime=0
+2023-04-08 08:57:54.854 INFO  (qtp893523498-21) [] o.a.s.s.HttpSolrCall [admin] webapp=null path=/admin/info/system params={wt=json&_=1680944273035} status=0 QTime=5
+2023-04-08 08:57:54.864 INFO  (qtp893523498-25) [] o.a.s.s.HttpSolrCall [admin] webapp=null path=/admin/cores params={wt=json&_=1680944273035} status=0 QTime=14
+2023-04-08 08:58:07.058 INFO  (qtp893523498-16) [ x:final_game_review] o.a.s.c.S.Request webapp=/solr path=/select params={q=ASIN:B07DMFDC6W&rows=12210} hits=110 status=0 QTime=140
+2023-04-08 08:58:28.580 INFO  (qtp893523498-18) [ x:final_game_review] o.a.s.c.S.Request webapp=/solr path=/select params={q=ASIN:B07DMFDC6W&rows=12210} hits=110 status=0 QTime=6

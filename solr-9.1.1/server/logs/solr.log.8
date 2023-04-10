@@ -1,0 +1,184 @@
+2023-04-09 08:25:31.710 INFO  (main) [] o.e.j.u.log Logging initialized @2330ms to org.eclipse.jetty.util.log.Slf4jLog
+2023-04-09 08:25:32.234 INFO  (main) [] o.e.j.s.Server jetty-9.4.48.v20220622; built: 2022-06-21T20:42:25.880Z; git: 6b67c5719d1f4371b33655ff2d047d24e171e49a; jvm 11.0.18+9-LTS-195
+2023-04-09 08:25:33.328 INFO  (main) [] o.a.s.s.CoreContainerProvider Using logger factory org.apache.logging.slf4j.Log4jLoggerFactory
+2023-04-09 08:25:33.351 INFO  (main) [] o.a.s.s.CoreContainerProvider  ___      _       Welcome to Apache Solr™ version 9.1.1
+2023-04-09 08:25:33.351 INFO  (main) [] o.a.s.s.CoreContainerProvider / __| ___| |_ _   Starting in standalone mode on port 8983
+2023-04-09 08:25:33.351 INFO  (main) [] o.a.s.s.CoreContainerProvider \__ \/ _ \ | '_|  Install dir: C:\Users\richi\OneDrive\Desktop\the_database\solr-9.1.1
+2023-04-09 08:25:33.351 INFO  (main) [] o.a.s.s.CoreContainerProvider |___/\___/_|_|    Start time: 2023-04-09T08:25:33.351361700Z
+2023-04-09 08:25:33.383 INFO  (main) [] o.a.s.s.CoreContainerProvider Solr Home: C:\Users\richi\OneDrive\Desktop\the_database\solr-9.1.1\server\solr (source: system property: solr.solr.home)
+2023-04-09 08:25:33.388 INFO  (main) [] o.a.s.c.SolrXmlConfig Loading solr.xml from C:\Users\richi\OneDrive\Desktop\the_database\solr-9.1.1\server\solr\solr.xml
+2023-04-09 08:25:33.552 INFO  (main) [] o.a.s.c.SolrResourceLoader Added 1 libs to classloader, from paths: [/C:/Users/richi/OneDrive/Desktop/the_database/solr-9.1.1/lib]
+2023-04-09 08:25:35.332 WARN  (main) [] o.a.s.u.StartupLoggingUtils Jetty request logging enabled. Will retain logs for last 3 days. See chapter "Configuring Logging" in reference guide for how to configure.
+2023-04-09 08:25:35.335 WARN  (main) [] o.a.s.c.CoreContainer Not all security plugins configured!  authentication=disabled authorization=disabled.  Solr is only as secure as you make it. Consider configuring authentication/authorization before exposing Solr to users internal or external.  See https://s.apache.org/solrsecurity for more info
+2023-04-09 08:25:35.674 INFO  (main) [] o.a.s.c.CorePropertiesLocator Found 5 core definitions underneath C:\Users\richi\OneDrive\Desktop\the_database\solr-9.1.1\server\solr
+2023-04-09 08:25:35.675 INFO  (main) [] o.a.s.c.CorePropertiesLocator Cores are: [amazon_iphone, final_game_review, game_list_dir, game_review, review_dir]
+2023-04-09 08:25:35.683 INFO  (coreLoadExecutor-10-thread-1) [] o.a.s.c.TransientSolrCoreCacheDefault Allocating transient core cache for max 2147483647 cores with initial capacity of 1024
+2023-04-09 08:25:35.757 INFO  (coreLoadExecutor-10-thread-1) [ x:amazon_iphone] o.a.s.c.SolrConfig Using Lucene MatchVersion: 9.1.1
+2023-04-09 08:25:35.755 INFO  (coreLoadExecutor-10-thread-2) [ x:final_game_review] o.a.s.c.SolrConfig Using Lucene MatchVersion: 8.11.2
+2023-04-09 08:25:35.754 INFO  (coreLoadExecutor-10-thread-3) [ x:game_list_dir] o.a.s.c.SolrConfig Using Lucene MatchVersion: 8.11.2
+2023-04-09 08:25:35.821 WARN  (coreLoadExecutor-10-thread-2) [ x:final_game_review] o.a.s.c.SolrConfig solrconfig.xml: <jmx> is no longer supported, use solr.xml:/metrics/reporter section instead
+2023-04-09 08:25:35.822 WARN  (coreLoadExecutor-10-thread-3) [ x:game_list_dir] o.a.s.c.SolrConfig solrconfig.xml: <jmx> is no longer supported, use solr.xml:/metrics/reporter section instead
+2023-04-09 08:25:35.898 INFO  (coreLoadExecutor-10-thread-3) [ x:game_list_dir] o.a.s.s.IndexSchema Schema name=example-schema
+2023-04-09 08:25:35.899 INFO  (coreLoadExecutor-10-thread-2) [ x:final_game_review] o.a.s.s.IndexSchema Schema name=example-schema
+2023-04-09 08:25:35.899 INFO  (coreLoadExecutor-10-thread-1) [ x:amazon_iphone] o.a.s.s.IndexSchema Schema name=example-schema
+2023-04-09 08:25:35.951 WARN  (coreLoadExecutor-10-thread-1) [ x:amazon_iphone] o.a.s.D.s.TrieDateField Solr loaded a deprecated plugin/analysis class [solr.TrieDateField]. Please consult documentation how to replace it accordingly.
+2023-04-09 08:25:35.954 WARN  (coreLoadExecutor-10-thread-2) [ x:final_game_review] o.a.s.D.s.TrieDoubleField Solr loaded a deprecated plugin/analysis class [solr.TrieDoubleField]. Please consult documentation how to replace it accordingly.
+2023-04-09 08:25:35.962 WARN  (coreLoadExecutor-10-thread-1) [ x:amazon_iphone] o.a.s.D.s.TrieLongField Solr loaded a deprecated plugin/analysis class [solr.TrieLongField]. Please consult documentation how to replace it accordingly.
+2023-04-09 08:25:35.975 INFO  (coreLoadExecutor-10-thread-3) [ x:game_list_dir] o.a.s.s.IndexSchema Loaded schema example-schema/1.5 with uniqueid field id
+2023-04-09 08:25:35.975 INFO  (coreLoadExecutor-10-thread-2) [ x:final_game_review] o.a.s.s.IndexSchema Loaded schema example-schema/1.5 with uniqueid field id
+2023-04-09 08:25:35.975 INFO  (coreLoadExecutor-10-thread-1) [ x:amazon_iphone] o.a.s.s.IndexSchema Loaded schema example-schema/1.5 with uniqueid field id
+2023-04-09 08:25:35.975 INFO  (coreLoadExecutor-10-thread-2) [ x:final_game_review] o.a.s.c.CoreContainer Creating SolrCore 'final_game_review' using configuration from instancedir C:\Users\richi\OneDrive\Desktop\the_database\solr-9.1.1\server\solr\final_game_review, trusted=true
+2023-04-09 08:25:35.975 INFO  (coreLoadExecutor-10-thread-3) [ x:game_list_dir] o.a.s.c.CoreContainer Creating SolrCore 'game_list_dir' using configuration from instancedir C:\Users\richi\OneDrive\Desktop\the_database\solr-9.1.1\server\solr\game_list_dir, trusted=true
+2023-04-09 08:25:35.976 INFO  (coreLoadExecutor-10-thread-1) [ x:amazon_iphone] o.a.s.c.CoreContainer Creating SolrCore 'amazon_iphone' using configuration from instancedir C:\Users\richi\OneDrive\Desktop\the_database\solr-9.1.1\server\solr\amazon_iphone, trusted=true
+2023-04-09 08:25:36.066 INFO  (coreLoadExecutor-10-thread-1) [ x:amazon_iphone] o.a.s.c.SolrCore Opening new SolrCore at [C:\Users\richi\OneDrive\Desktop\the_database\solr-9.1.1\server\solr\amazon_iphone], dataDir=[C:\Users\richi\OneDrive\Desktop\the_database\solr-9.1.1\server\solr\amazon_iphone\data\]
+2023-04-09 08:25:36.066 INFO  (coreLoadExecutor-10-thread-3) [ x:game_list_dir] o.a.s.c.SolrCore Opening new SolrCore at [C:\Users\richi\OneDrive\Desktop\the_database\solr-9.1.1\server\solr\game_list_dir], dataDir=[C:\Users\richi\OneDrive\Desktop\the_database\solr-9.1.1\server\solr\game_list_dir\data\]
+2023-04-09 08:25:36.066 INFO  (coreLoadExecutor-10-thread-2) [ x:final_game_review] o.a.s.c.SolrCore Opening new SolrCore at [C:\Users\richi\OneDrive\Desktop\the_database\solr-9.1.1\server\solr\final_game_review], dataDir=[C:\Users\richi\OneDrive\Desktop\the_database\solr-9.1.1\server\solr\final_game_review\data\]
+2023-04-09 08:25:36.328 INFO  (main) [] o.e.j.s.h.ContextHandler Started o.e.j.w.WebAppContext@4943defe{/solr,file:///C:/Users/richi/OneDrive/Desktop/the_database/solr-9.1.1/server/solr-webapp/webapp/,AVAILABLE}{C:\Users\richi\OneDrive\Desktop\the_database\solr-9.1.1\server/solr-webapp/webapp}
+2023-04-09 08:25:36.339 INFO  (main) [] o.e.j.s.RequestLogWriter Opened C:\Users\richi\OneDrive\Desktop\the_database\solr-9.1.1\server\logs\2023_04_09.request.log
+2023-04-09 08:25:36.351 INFO  (main) [] o.e.j.s.AbstractConnector Started ServerConnector@200a26bc{HTTP/1.1, (http/1.1, h2c)}{127.0.0.1:8983}
+2023-04-09 08:25:36.352 INFO  (main) [] o.e.j.s.Server Started @6974ms
+2023-04-09 08:25:37.053 INFO  (qtp967677821-25) [] o.a.s.s.HttpSolrCall [admin] webapp=null path=/admin/info/system params={wt=json} status=0 QTime=56
+2023-04-09 08:25:37.140 INFO  (coreLoadExecutor-10-thread-2) [ x:final_game_review] o.a.s.u.UpdateHandler Using UpdateLog implementation: org.apache.solr.update.UpdateLog
+2023-04-09 08:25:37.140 INFO  (coreLoadExecutor-10-thread-3) [ x:game_list_dir] o.a.s.u.UpdateHandler Using UpdateLog implementation: org.apache.solr.update.UpdateLog
+2023-04-09 08:25:37.140 INFO  (coreLoadExecutor-10-thread-1) [ x:amazon_iphone] o.a.s.u.UpdateHandler Using UpdateLog implementation: org.apache.solr.update.UpdateLog
+2023-04-09 08:25:37.140 INFO  (coreLoadExecutor-10-thread-2) [ x:final_game_review] o.a.s.u.UpdateLog Initializing UpdateLog: dataDir= defaultSyncLevel=FLUSH numRecordsToKeep=100 maxNumLogsToKeep=10 numVersionBuckets=65536
+2023-04-09 08:25:37.140 INFO  (coreLoadExecutor-10-thread-1) [ x:amazon_iphone] o.a.s.u.UpdateLog Initializing UpdateLog: dataDir= defaultSyncLevel=FLUSH numRecordsToKeep=100 maxNumLogsToKeep=10 numVersionBuckets=65536
+2023-04-09 08:25:37.141 INFO  (coreLoadExecutor-10-thread-3) [ x:game_list_dir] o.a.s.u.UpdateLog Initializing UpdateLog: dataDir= defaultSyncLevel=FLUSH numRecordsToKeep=100 maxNumLogsToKeep=10 numVersionBuckets=65536
+2023-04-09 08:25:37.180 INFO  (coreLoadExecutor-10-thread-3) [ x:game_list_dir] o.a.s.u.CommitTracker Hard AutoCommit: if uncommitted for 15000ms; 
+2023-04-09 08:25:37.180 INFO  (coreLoadExecutor-10-thread-1) [ x:amazon_iphone] o.a.s.u.CommitTracker Hard AutoCommit: if uncommitted for 15000ms; 
+2023-04-09 08:25:37.190 INFO  (coreLoadExecutor-10-thread-1) [ x:amazon_iphone] o.a.s.u.CommitTracker Soft AutoCommit: disabled
+2023-04-09 08:25:37.190 INFO  (coreLoadExecutor-10-thread-3) [ x:game_list_dir] o.a.s.u.CommitTracker Soft AutoCommit: disabled
+2023-04-09 08:25:37.203 INFO  (coreLoadExecutor-10-thread-2) [ x:final_game_review] o.a.s.u.CommitTracker Hard AutoCommit: if uncommitted for 15000ms; 
+2023-04-09 08:25:37.203 INFO  (coreLoadExecutor-10-thread-2) [ x:final_game_review] o.a.s.u.CommitTracker Soft AutoCommit: disabled
+2023-04-09 08:25:37.428 INFO  (coreLoadExecutor-10-thread-3) [ x:game_list_dir] o.a.s.r.ManagedResourceStorage File-based storage initialized to use dir: C:\Users\richi\OneDrive\Desktop\the_database\solr-9.1.1\server\solr\game_list_dir\conf
+2023-04-09 08:25:37.432 INFO  (coreLoadExecutor-10-thread-1) [ x:amazon_iphone] o.a.s.r.ManagedResourceStorage File-based storage initialized to use dir: C:\Users\richi\OneDrive\Desktop\the_database\solr-9.1.1\server\solr\amazon_iphone\conf
+2023-04-09 08:25:37.456 INFO  (coreLoadExecutor-10-thread-1) [ x:amazon_iphone] o.a.s.s.DirectSolrSpellChecker init: {maxEdits=2, minPrefix=1, maxInspections=5, minQueryLength=4, accuracy=0.5, maxQueryFrequency=0.01, name=default, field=reviewDescription, classname=solr.DirectSolrSpellChecker, distanceMeasure=internal}
+2023-04-09 08:25:37.456 INFO  (coreLoadExecutor-10-thread-3) [ x:game_list_dir] o.a.s.s.DirectSolrSpellChecker init: {maxEdits=2, minPrefix=1, maxInspections=5, minQueryLength=4, accuracy=0.5, maxQueryFrequency=0.01, name=default, field=_text_, classname=solr.DirectSolrSpellChecker, distanceMeasure=internal}
+2023-04-09 08:25:37.458 INFO  (coreLoadExecutor-10-thread-2) [ x:final_game_review] o.a.s.r.ManagedResourceStorage File-based storage initialized to use dir: C:\Users\richi\OneDrive\Desktop\the_database\solr-9.1.1\server\solr\final_game_review\conf
+2023-04-09 08:25:37.459 INFO  (coreLoadExecutor-10-thread-1) [ x:amazon_iphone] o.a.s.h.c.SuggestComponent Initializing SuggestComponent
+2023-04-09 08:25:37.459 INFO  (coreLoadExecutor-10-thread-2) [ x:final_game_review] o.a.s.s.DirectSolrSpellChecker init: {maxEdits=2, minPrefix=1, maxInspections=5, minQueryLength=4, accuracy=0.5, maxQueryFrequency=0.01, name=default, field=_text_, classname=solr.DirectSolrSpellChecker, distanceMeasure=internal}
+2023-04-09 08:25:37.463 INFO  (coreLoadExecutor-10-thread-1) [ x:amazon_iphone] o.a.s.s.s.SolrSuggester init: {highlight=false, name=mySuggester, lookupImpl=AnalyzingInfixLookupFactory, dictionaryImpl=HighFrequencyDictionaryFactory, field=reviewDescription, suggestAnalyzerFieldType=text_general, suggestFreeTextAnalyzerFieldType=text_general, ngrams=5, buildOnCommit=true}
+2023-04-09 08:25:37.470 INFO  (coreLoadExecutor-10-thread-3) [ x:game_list_dir] o.a.s.h.ReplicationHandler Commits will be reserved for 10000 ms
+2023-04-09 08:25:37.470 INFO  (coreLoadExecutor-10-thread-2) [ x:final_game_review] o.a.s.h.ReplicationHandler Commits will be reserved for 10000 ms
+2023-04-09 08:25:37.491 INFO  (searcherExecutor-15-thread-1-processing-game_list_dir) [ x:game_list_dir] o.a.s.c.QuerySenderListener QuerySenderListener done.
+2023-04-09 08:25:37.492 INFO  (searcherExecutor-15-thread-1-processing-game_list_dir) [ x:game_list_dir] o.a.s.h.c.SpellCheckComponent Loading spell index for spellchecker: default
+2023-04-09 08:25:37.504 INFO  (searcherExecutor-15-thread-1-processing-game_list_dir) [ x:game_list_dir] o.a.s.c.SolrCore Registered new searcher autowarm time: 0 ms
+2023-04-09 08:25:37.504 INFO  (coreLoadExecutor-10-thread-3) [ x:game_review] o.a.s.c.SolrConfig Using Lucene MatchVersion: 9.3.0
+2023-04-09 08:25:37.508 INFO  (searcherExecutor-14-thread-1-processing-final_game_review) [ x:final_game_review] o.a.s.c.QuerySenderListener QuerySenderListener done.
+2023-04-09 08:25:37.508 INFO  (searcherExecutor-14-thread-1-processing-final_game_review) [ x:final_game_review] o.a.s.h.c.SpellCheckComponent Loading spell index for spellchecker: default
+2023-04-09 08:25:37.513 INFO  (searcherExecutor-14-thread-1-processing-final_game_review) [ x:final_game_review] o.a.s.c.SolrCore Registered new searcher autowarm time: 0 ms
+2023-04-09 08:25:37.521 INFO  (coreLoadExecutor-10-thread-2) [ x:review_dir] o.a.s.c.SolrConfig Using Lucene MatchVersion: 8.11.2
+2023-04-09 08:25:37.521 WARN  (coreLoadExecutor-10-thread-2) [ x:review_dir] o.a.s.c.SolrConfig solrconfig.xml: <jmx> is no longer supported, use solr.xml:/metrics/reporter section instead
+2023-04-09 08:25:37.522 INFO  (coreLoadExecutor-10-thread-3) [ x:game_review] o.a.s.s.IndexSchema Schema name=default-config
+2023-04-09 08:25:37.529 INFO  (coreLoadExecutor-10-thread-2) [ x:review_dir] o.a.s.s.IndexSchema Schema name=example-schema
+2023-04-09 08:25:37.530 INFO  (coreLoadExecutor-10-thread-2) [ x:review_dir] o.a.s.s.IndexSchema Loaded schema example-schema/1.5 with uniqueid field id
+2023-04-09 08:25:37.530 INFO  (coreLoadExecutor-10-thread-2) [ x:review_dir] o.a.s.c.CoreContainer Creating SolrCore 'review_dir' using configuration from instancedir C:\Users\richi\OneDrive\Desktop\the_database\solr-9.1.1\server\solr\review_dir, trusted=true
+2023-04-09 08:25:37.531 INFO  (coreLoadExecutor-10-thread-2) [ x:review_dir] o.a.s.c.SolrCore Opening new SolrCore at [C:\Users\richi\OneDrive\Desktop\the_database\solr-9.1.1\server\solr\review_dir], dataDir=[C:\Users\richi\OneDrive\Desktop\the_database\solr-9.1.1\server\solr\review_dir\data\]
+2023-04-09 08:25:37.585 INFO  (coreLoadExecutor-10-thread-1) [ x:amazon_iphone] o.a.s.s.s.SolrSuggester Dictionary loaded with params: {highlight=false, name=mySuggester, lookupImpl=AnalyzingInfixLookupFactory, dictionaryImpl=HighFrequencyDictionaryFactory, field=reviewDescription, suggestAnalyzerFieldType=text_general, suggestFreeTextAnalyzerFieldType=text_general, ngrams=5, buildOnCommit=true}
+2023-04-09 08:25:37.600 INFO  (coreLoadExecutor-10-thread-2) [ x:review_dir] o.a.s.u.UpdateHandler Using UpdateLog implementation: org.apache.solr.update.UpdateLog
+2023-04-09 08:25:37.600 INFO  (coreLoadExecutor-10-thread-2) [ x:review_dir] o.a.s.u.UpdateLog Initializing UpdateLog: dataDir= defaultSyncLevel=FLUSH numRecordsToKeep=100 maxNumLogsToKeep=10 numVersionBuckets=65536
+2023-04-09 08:25:37.587 INFO  (coreLoadExecutor-10-thread-1) [ x:amazon_iphone] o.a.s.h.c.SuggestComponent Registering searcher listener for suggester: mySuggester = SuggesterListener [core=org.apache.solr.core.SolrCore@7013b9fc amazon_iphone, suggester=SolrSuggester [ name=mySuggester, sourceLocation=null, storeDir=, lookupImpl=AnalyzingInfixLookupFactory, dictionaryImpl=HighFrequencyDictionaryFactory, sizeInBytes=0 ], buildOnCommit=true, buildOnOptimize=false, buildOnStartup=true, isCoreReload=false]
+2023-04-09 08:25:37.610 INFO  (coreLoadExecutor-10-thread-2) [ x:review_dir] o.a.s.u.CommitTracker Hard AutoCommit: if uncommitted for 15000ms; 
+2023-04-09 08:25:37.610 INFO  (coreLoadExecutor-10-thread-2) [ x:review_dir] o.a.s.u.CommitTracker Soft AutoCommit: disabled
+2023-04-09 08:25:37.612 INFO  (coreLoadExecutor-10-thread-1) [ x:amazon_iphone] o.a.s.h.ReplicationHandler Commits will be reserved for 10000 ms
+2023-04-09 08:25:37.624 INFO  (searcherExecutor-16-thread-1-processing-amazon_iphone) [ x:amazon_iphone] o.a.s.c.QuerySenderListener QuerySenderListener done.
+2023-04-09 08:25:37.624 INFO  (searcherExecutor-16-thread-1-processing-amazon_iphone) [ x:amazon_iphone] o.a.s.h.c.SpellCheckComponent Loading spell index for spellchecker: default
+2023-04-09 08:25:37.624 INFO  (searcherExecutor-16-thread-1-processing-amazon_iphone) [ x:amazon_iphone] o.a.s.h.c.SuggestComponent buildOnStartup: mySuggester
+2023-04-09 08:25:37.625 INFO  (searcherExecutor-16-thread-1-processing-amazon_iphone) [ x:amazon_iphone] o.a.s.s.s.SolrSuggester SolrSuggester.build(mySuggester)
+2023-04-09 08:25:37.678 INFO  (coreLoadExecutor-10-thread-2) [ x:review_dir] o.a.s.r.ManagedResourceStorage File-based storage initialized to use dir: C:\Users\richi\OneDrive\Desktop\the_database\solr-9.1.1\server\solr\review_dir\conf
+2023-04-09 08:25:37.680 INFO  (coreLoadExecutor-10-thread-2) [ x:review_dir] o.a.s.s.DirectSolrSpellChecker init: {maxEdits=2, minPrefix=1, maxInspections=5, minQueryLength=4, accuracy=0.5, maxQueryFrequency=0.01, name=default, field=_text_, classname=solr.DirectSolrSpellChecker, distanceMeasure=internal}
+2023-04-09 08:25:37.682 INFO  (coreLoadExecutor-10-thread-2) [ x:review_dir] o.a.s.h.ReplicationHandler Commits will be reserved for 10000 ms
+2023-04-09 08:25:37.688 INFO  (searcherExecutor-30-thread-1-processing-review_dir) [ x:review_dir] o.a.s.c.QuerySenderListener QuerySenderListener done.
+2023-04-09 08:25:37.688 INFO  (searcherExecutor-30-thread-1-processing-review_dir) [ x:review_dir] o.a.s.h.c.SpellCheckComponent Loading spell index for spellchecker: default
+2023-04-09 08:25:37.693 INFO  (searcherExecutor-30-thread-1-processing-review_dir) [ x:review_dir] o.a.s.c.SolrCore Registered new searcher autowarm time: 0 ms
+2023-04-09 08:25:37.880 INFO  (coreLoadExecutor-10-thread-3) [ x:game_review] o.a.s.s.IndexSchema Loaded schema default-config/1.6 with uniqueid field id
+2023-04-09 08:25:37.880 INFO  (coreLoadExecutor-10-thread-3) [ x:game_review] o.a.s.c.CoreContainer Creating SolrCore 'game_review' using configuration from instancedir C:\Users\richi\OneDrive\Desktop\the_database\solr-9.1.1\server\solr\game_review, trusted=true
+2023-04-09 08:25:37.881 INFO  (coreLoadExecutor-10-thread-3) [ x:game_review] o.a.s.c.SolrCore Opening new SolrCore at [C:\Users\richi\OneDrive\Desktop\the_database\solr-9.1.1\server\solr\game_review], dataDir=[C:\Users\richi\OneDrive\Desktop\the_database\solr-9.1.1\server\solr\game_review\data\]
+2023-04-09 08:25:38.015 INFO  (coreLoadExecutor-10-thread-3) [ x:game_review] o.a.s.u.UpdateHandler Using UpdateLog implementation: org.apache.solr.update.UpdateLog
+2023-04-09 08:25:38.015 INFO  (coreLoadExecutor-10-thread-3) [ x:game_review] o.a.s.u.UpdateLog Initializing UpdateLog: dataDir= defaultSyncLevel=FLUSH numRecordsToKeep=100 maxNumLogsToKeep=10 numVersionBuckets=65536
+2023-04-09 08:25:38.036 INFO  (coreLoadExecutor-10-thread-3) [ x:game_review] o.a.s.u.CommitTracker Hard AutoCommit: if uncommitted for 15000ms; 
+2023-04-09 08:25:38.036 INFO  (coreLoadExecutor-10-thread-3) [ x:game_review] o.a.s.u.CommitTracker Soft AutoCommit: disabled
+2023-04-09 08:25:38.138 INFO  (coreLoadExecutor-10-thread-3) [ x:game_review] o.a.s.r.ManagedResourceStorage File-based storage initialized to use dir: C:\Users\richi\OneDrive\Desktop\the_database\solr-9.1.1\server\solr\game_review\conf
+2023-04-09 08:25:38.140 INFO  (coreLoadExecutor-10-thread-3) [ x:game_review] o.a.s.s.DirectSolrSpellChecker init: {maxEdits=2, minPrefix=1, maxInspections=5, minQueryLength=4, accuracy=0.5, maxQueryFrequency=0.01, name=default, field=_text_, classname=solr.DirectSolrSpellChecker, distanceMeasure=internal}
+2023-04-09 08:25:38.142 INFO  (coreLoadExecutor-10-thread-3) [ x:game_review] o.a.s.h.ReplicationHandler Commits will be reserved for 10000 ms
+2023-04-09 08:25:38.161 INFO  (searcherExecutor-36-thread-1-processing-game_review) [ x:game_review] o.a.s.c.QuerySenderListener QuerySenderListener done.
+2023-04-09 08:25:38.161 INFO  (searcherExecutor-36-thread-1-processing-game_review) [ x:game_review] o.a.s.h.c.SpellCheckComponent Loading spell index for spellchecker: default
+2023-04-09 08:25:38.165 INFO  (searcherExecutor-36-thread-1-processing-game_review) [ x:game_review] o.a.s.c.SolrCore Registered new searcher autowarm time: 0 ms
+2023-04-09 08:25:59.914 INFO  (qtp967677821-24) [] o.a.s.s.HttpSolrCall [admin] webapp=null path=/admin/cores params={indexInfo=false&wt=json&_=1681028759842} status=0 QTime=4
+2023-04-09 08:25:59.956 INFO  (qtp967677821-19) [] o.a.s.s.HttpSolrCall [admin] webapp=null path=/admin/info/system params={wt=json&_=1681028759843} status=0 QTime=45
+2023-04-09 08:26:13.563 INFO  (qtp967677821-24) [] o.a.s.s.HttpSolrCall [admin] webapp=null path=/admin/cores params={indexInfo=false&wt=json&_=1681028759842} status=0 QTime=0
+2023-04-09 08:26:13.615 INFO  (qtp967677821-23) [] o.a.s.s.HttpSolrCall [admin] webapp=null path=/admin/info/system params={wt=json&_=1681028759843} status=0 QTime=51
+2023-04-09 08:26:13.679 INFO  (qtp967677821-24) [] o.a.s.s.HttpSolrCall [admin] webapp=null path=/admin/info/system params={wt=json&_=1681028759843} status=0 QTime=44
+2023-04-09 08:26:13.693 INFO  (qtp967677821-22) [] o.a.s.s.HttpSolrCall [admin] webapp=null path=/cluster/security/authorization params={wt=json&_=1681028773541} status=0 QTime=2
+2023-04-09 08:26:15.195 INFO  (qtp967677821-24) [] o.a.s.s.HttpSolrCall [admin] webapp=null path=/admin/cores params={indexInfo=false&wt=json&_=1681028759842} status=0 QTime=1
+2023-04-09 08:26:15.196 INFO  (qtp967677821-21) [] o.a.s.s.HttpSolrCall [admin] webapp=null path=/admin/info/properties params={wt=json&_=1681028775188} status=0 QTime=1
+2023-04-09 08:26:15.236 INFO  (qtp967677821-23) [] o.a.s.s.HttpSolrCall [admin] webapp=null path=/admin/info/system params={wt=json&_=1681028759843} status=0 QTime=41
+2023-04-09 08:26:15.888 INFO  (qtp967677821-17) [] o.a.s.s.HttpSolrCall [admin] webapp=null path=/admin/cores params={indexInfo=false&wt=json&_=1681028759842} status=0 QTime=0
+2023-04-09 08:26:15.926 INFO  (qtp967677821-25) [] o.a.s.s.HttpSolrCall [admin] webapp=null path=/admin/info/system params={wt=json&_=1681028759843} status=0 QTime=38
+2023-04-09 08:26:32.169 INFO  (qtp967677821-24) [] o.a.s.s.HttpSolrCall [admin] webapp=null path=/admin/cores params={indexInfo=false&wt=json&_=1681028759842} status=0 QTime=0
+2023-04-09 08:26:32.210 INFO  (qtp967677821-23) [] o.a.s.s.HttpSolrCall [admin] webapp=null path=/admin/info/system params={wt=json&_=1681028759843} status=0 QTime=40
+2023-04-09 08:26:32.248 INFO  (qtp967677821-17) [] o.a.s.s.HttpSolrCall [admin] webapp=null path=/admin/info/system params={wt=json&_=1681028759843} status=0 QTime=34
+2023-04-09 08:26:33.389 INFO  (qtp967677821-23) [] o.a.s.s.HttpSolrCall [admin] webapp=null path=/admin/cores params={indexInfo=false&wt=json&_=1681028759842} status=0 QTime=0
+2023-04-09 08:26:33.426 INFO  (qtp967677821-25) [] o.a.s.s.HttpSolrCall [admin] webapp=null path=/admin/info/system params={wt=json&_=1681028759843} status=0 QTime=37
+2023-04-09 08:26:45.569 INFO  (qtp967677821-24) [] o.a.s.s.HttpSolrCall [admin] webapp=null path=/admin/cores params={indexInfo=false&wt=json&_=1681028759842} status=0 QTime=0
+2023-04-09 08:26:45.610 INFO  (qtp967677821-17) [] o.a.s.s.HttpSolrCall [admin] webapp=null path=/admin/info/system params={wt=json&_=1681028759843} status=0 QTime=40
+2023-04-09 08:26:45.650 INFO  (qtp967677821-23) [] o.a.s.s.HttpSolrCall [admin] webapp=null path=/admin/info/system params={wt=json&_=1681028759843} status=0 QTime=36
+2023-04-09 08:26:47.026 INFO  (searcherExecutor-16-thread-1-processing-amazon_iphone) [ x:amazon_iphone] o.a.s.c.SolrCore Registered new searcher autowarm time: 0 ms
+2023-04-09 08:26:47.089 INFO  (qtp967677821-22) [] o.a.s.s.HttpSolrCall [admin] webapp=null path=/admin/cores params={wt=json&_=1681028759842} status=0 QTime=31201
+2023-04-09 08:26:47.125 INFO  (qtp967677821-19) [] o.a.s.s.HttpSolrCall [admin] webapp=null path=/admin/cores params={wt=json&_=1681028759842} status=0 QTime=13737
+2023-04-09 08:26:47.136 INFO  (qtp967677821-26) [] o.a.s.s.HttpSolrCall [admin] webapp=null path=/admin/cores params={wt=json&_=1681028759842} status=0 QTime=47226
+2023-04-09 08:26:47.349 INFO  (qtp967677821-17) [] o.a.s.s.HttpSolrCall [admin] webapp=null path=/admin/cores params={indexInfo=false&wt=json&_=1681028759842} status=0 QTime=0
+2023-04-09 08:26:47.354 INFO  (qtp967677821-19) [ x:amazon_iphone] o.a.s.c.S.Request webapp=/solr path=/admin/luke params={numTerms=0&show=index&wt=json&_=1681028807342} status=0 QTime=5
+2023-04-09 08:26:47.365 INFO  (qtp967677821-17) [ x:amazon_iphone] o.a.s.c.S.Request webapp=/solr path=/admin/ping params={action=status&wt=json&_=1681028759843&ts=1681028759843} status=503 QTime=3
+2023-04-09 08:26:47.369 INFO  (qtp967677821-18) [ x:amazon_iphone] o.a.s.c.S.Request webapp=/solr path=/replication params={wt=json&command=details&_=1681028807342} status=0 QTime=18
+2023-04-09 08:26:47.432 INFO  (qtp967677821-25) [] o.a.s.s.HttpSolrCall [admin] webapp=null path=/admin/info/system params={wt=json&_=1681028759843} status=0 QTime=84
+2023-04-09 08:26:47.435 INFO  (qtp967677821-23) [ x:amazon_iphone] o.a.s.c.S.Request webapp=/solr path=/admin/system params={wt=json&_=1681028807342} status=0 QTime=81
+2023-04-09 08:26:52.051 INFO  (qtp967677821-19) [] o.a.s.s.HttpSolrCall [admin] webapp=null path=/admin/cores params={indexInfo=false&wt=json&_=1681028759842} status=0 QTime=0
+2023-04-09 08:26:52.096 INFO  (qtp967677821-24) [] o.a.s.s.HttpSolrCall [admin] webapp=null path=/admin/info/system params={wt=json&_=1681028759843} status=0 QTime=45
+2023-04-09 08:26:52.105 INFO  (qtp967677821-22) [ x:amazon_iphone] o.a.s.c.S.Request webapp=/solr path=/admin/mbeans params={stats=true&wt=json&_=1681028812046} status=0 QTime=53
+2023-04-09 08:26:52.728 INFO  (qtp967677821-25) [] o.a.s.s.HttpSolrCall [admin] webapp=null path=/admin/cores params={indexInfo=false&wt=json&_=1681028759842} status=0 QTime=0
+2023-04-09 08:26:52.732 INFO  (qtp967677821-23) [ x:amazon_iphone] o.a.s.c.S.Request webapp=/solr path=/config/params params={wt=json&_=1681028812708} status=0 QTime=4
+2023-04-09 08:26:52.773 INFO  (qtp967677821-17) [] o.a.s.s.HttpSolrCall [admin] webapp=null path=/admin/info/system params={wt=json&_=1681028759843} status=0 QTime=45
+2023-04-09 08:26:53.886 INFO  (qtp967677821-22) [ x:amazon_iphone] o.a.s.c.S.Request webapp=/solr path=/config/params params={wt=json&_=1681028812708} status=0 QTime=0
+2023-04-09 08:26:53.886 INFO  (qtp967677821-24) [] o.a.s.s.HttpSolrCall [admin] webapp=null path=/admin/cores params={indexInfo=false&wt=json&_=1681028759842} status=0 QTime=0
+2023-04-09 08:26:53.933 INFO  (qtp967677821-19) [] o.a.s.s.HttpSolrCall [admin] webapp=null path=/admin/info/system params={wt=json&_=1681028759843} status=0 QTime=47
+2023-04-09 08:26:53.940 INFO  (qtp967677821-23) [ x:amazon_iphone] o.a.s.c.S.Request webapp=/solr path=/select params={q=*:*&indent=true&q.op=OR&useParams=&_=1681028812708} hits=11546 status=0 QTime=52
+2023-04-09 08:27:10.788 INFO  (qtp967677821-52) [ x:amazon_iphone] o.a.s.c.S.Request webapp=/solr path=/select params={q=*:*&facet.field=size&facet.field=service_provider&facet.field=product_grade&facet.field=color&rows=500&facet=true} hits=11546 status=0 QTime=46
+2023-04-09 08:27:12.967 INFO  (qtp967677821-17) [ x:amazon_iphone] o.a.s.c.S.Request webapp=/solr path=/select params={q=*:*&start=0&rows=9} hits=11546 status=0 QTime=0
+2023-04-09 10:22:52.093 INFO  (qtp967677821-52) [ x:amazon_iphone] o.a.s.c.S.Request webapp=/solr path=/select params={q=*:*&facet.field=size&facet.field=service_provider&facet.field=product_grade&facet.field=color&rows=500&facet=true} hits=11546 status=0 QTime=54
+2023-04-09 10:22:54.187 INFO  (qtp967677821-22) [ x:amazon_iphone] o.a.s.c.S.Request webapp=/solr path=/select params={q=*:*&start=0&rows=9} hits=11546 status=0 QTime=0
+2023-04-09 10:23:02.886 INFO  (qtp967677821-17) [ x:amazon_iphone] o.a.s.c.PluginBag Going to create a new requestHandler with {type = requestHandler,name = /suggest,class = solr.SearchHandler,attributes = {startup=lazy, name=/suggest, class=solr.SearchHandler},args = {components=[suggest], defaults={suggest=true, suggest.count=6, suggest.dictionary=mySuggester}}} 
+2023-04-09 10:23:02.900 INFO  (qtp967677821-17) [ x:amazon_iphone] o.a.s.h.c.SuggestComponent SuggestComponent prepare with : suggest.count=6&suggest=true&hl=false&suggest.dictionary=mySuggester&suggest.q=Deli&rid=localhost-5
+2023-04-09 10:23:02.900 INFO  (qtp967677821-17) [ x:amazon_iphone] o.a.s.h.c.SuggestComponent SuggestComponent process with : suggest.count=6&suggest=true&hl=false&suggest.dictionary=mySuggester&suggest.q=Deli&rid=localhost-5
+2023-04-09 10:23:02.978 INFO  (qtp967677821-53) [ x:amazon_iphone] o.a.s.h.c.SuggestComponent SuggestComponent prepare with : suggest.count=6&suggest=true&hl=false&suggest.dictionary=mySuggester&suggest.q=Delive&rid=localhost-6
+2023-04-09 10:23:02.978 INFO  (qtp967677821-53) [ x:amazon_iphone] o.a.s.h.c.SuggestComponent SuggestComponent process with : suggest.count=6&suggest=true&hl=false&suggest.dictionary=mySuggester&suggest.q=Delive&rid=localhost-6
+2023-04-09 10:23:03.068 INFO  (qtp967677821-17) [ x:amazon_iphone] o.a.s.c.S.Request webapp=/solr path=/suggest params={hl=false&suggest.q=Deli&suggest=true&suggest.dictionary=mySuggester} status=0 QTime=183
+2023-04-09 10:23:03.068 INFO  (qtp967677821-53) [ x:amazon_iphone] o.a.s.c.S.Request webapp=/solr path=/suggest params={hl=false&suggest.q=Delive&suggest=true&suggest.dictionary=mySuggester} status=0 QTime=90
+2023-04-09 10:23:03.327 INFO  (qtp967677821-25) [ x:amazon_iphone] o.a.s.h.c.SuggestComponent SuggestComponent prepare with : suggest.count=6&suggest=true&hl=false&suggest.dictionary=mySuggester&suggest.q=Delivery&rid=localhost-7
+2023-04-09 10:23:03.327 INFO  (qtp967677821-25) [ x:amazon_iphone] o.a.s.h.c.SuggestComponent SuggestComponent process with : suggest.count=6&suggest=true&hl=false&suggest.dictionary=mySuggester&suggest.q=Delivery&rid=localhost-7
+2023-04-09 10:23:03.377 INFO  (qtp967677821-25) [ x:amazon_iphone] o.a.s.c.S.Request webapp=/solr path=/suggest params={hl=false&suggest.q=Delivery&suggest=true&suggest.dictionary=mySuggester} status=0 QTime=50
+2023-04-09 10:23:09.237 INFO  (qtp967677821-22) [ x:amazon_iphone] o.a.s.c.S.Request webapp=/solr path=/select params={mm=1&q=Delivery&defType=dismax&facet.field=size&facet.field=service_provider&facet.field=product_grade&facet.field=color&qf=reviewDescription&rows=500&facet=true} hits=155 status=0 QTime=95
+2023-04-09 10:23:11.359 INFO  (qtp967677821-18) [ x:amazon_iphone] o.a.s.c.S.Request webapp=/solr path=/select params={mm=1&q=Delivery&defType=dismax&qf=reviewDescription&start=0&rows=9} hits=155 status=0 QTime=4
+2023-04-09 10:23:13.431 INFO  (qtp967677821-17) [ x:amazon_iphone] o.a.s.c.PluginBag Going to create a new requestHandler with {type = requestHandler,name = /spell,class = solr.SearchHandler,attributes = {startup=lazy, name=/spell, class=solr.SearchHandler},args = {last-components=[spellcheck], defaults={spellcheck.dictionary=default, spellcheck=on, spellcheck.extendedResults=true, spellcheck.count=10, spellcheck.alternativeTermCount=5, spellcheck.maxResultsForSuggest=5, spellcheck.collate=true, spellcheck.collateExtendedResults=true, spellcheck.maxCollationTries=10, spellcheck.maxCollations=5, df=_text_}}} 
+2023-04-09 10:23:13.482 INFO  (qtp967677821-17) [ x:amazon_iphone] o.a.s.c.S.Request webapp=/solr path=/spell params={spellcheck.q=Delivery&df=reviewDescription&spellcheck=true&rows=5&spellcheck.collate=true} hits=0 status=0 QTime=51
+2023-04-09 10:36:13.328 INFO  (ShutdownMonitor) [] o.e.j.s.AbstractConnector Stopped ServerConnector@200a26bc{HTTP/1.1, (http/1.1, h2c)}{127.0.0.1:8983}
+2023-04-09 10:36:13.347 INFO  (ShutdownMonitor) [] o.a.s.c.CoreContainer Shutting down CoreContainer instance=1983063045
+2023-04-09 10:36:13.362 INFO  (coreCloseExecutor-42-thread-2) [ x:final_game_review] o.a.s.c.SolrCore CLOSING SolrCore org.apache.solr.core.SolrCore@63194167 final_game_review
+2023-04-09 10:36:13.362 INFO  (coreCloseExecutor-42-thread-4) [ x:review_dir] o.a.s.c.SolrCore CLOSING SolrCore org.apache.solr.core.SolrCore@5ebffbe3 review_dir
+2023-04-09 10:36:13.362 INFO  (coreCloseExecutor-42-thread-3) [ x:amazon_iphone] o.a.s.c.SolrCore CLOSING SolrCore org.apache.solr.core.SolrCore@7013b9fc amazon_iphone
+2023-04-09 10:36:13.362 INFO  (coreCloseExecutor-42-thread-1) [ x:game_list_dir] o.a.s.c.SolrCore CLOSING SolrCore org.apache.solr.core.SolrCore@35f18ca7 game_list_dir
+2023-04-09 10:36:13.363 INFO  (coreCloseExecutor-42-thread-5) [ x:game_review] o.a.s.c.SolrCore CLOSING SolrCore org.apache.solr.core.SolrCore@316321d game_review
+2023-04-09 10:36:13.363 INFO  (coreCloseExecutor-42-thread-3) [ x:amazon_iphone] o.a.s.m.SolrMetricManager Closing metric reporters for registry=solr.core.amazon_iphone tag=SolrCore@7013b9fc
+2023-04-09 10:36:13.416 INFO  (coreCloseExecutor-42-thread-4) [ x:review_dir] o.a.s.m.SolrMetricManager Closing metric reporters for registry=solr.core.review_dir tag=SolrCore@5ebffbe3
+2023-04-09 10:36:13.451 INFO  (coreCloseExecutor-42-thread-1) [ x:game_list_dir] o.a.s.m.SolrMetricManager Closing metric reporters for registry=solr.core.game_list_dir tag=SolrCore@35f18ca7
+2023-04-09 10:36:13.451 INFO  (coreCloseExecutor-42-thread-3) [ x:amazon_iphone] o.a.s.u.DirectUpdateHandler2 Committing on IndexWriter.close()  ... SKIPPED (unnecessary).
+2023-04-09 10:36:13.457 INFO  (coreCloseExecutor-42-thread-4) [ x:review_dir] o.a.s.u.DirectUpdateHandler2 Committing on IndexWriter.close()  ... SKIPPED (unnecessary).
+2023-04-09 10:36:13.486 INFO  (coreCloseExecutor-42-thread-5) [ x:game_review] o.a.s.m.SolrMetricManager Closing metric reporters for registry=solr.core.game_review tag=SolrCore@316321d
+2023-04-09 10:36:13.494 INFO  (coreCloseExecutor-42-thread-1) [ x:game_list_dir] o.a.s.u.DirectUpdateHandler2 Committing on IndexWriter.close()  ... SKIPPED (unnecessary).
+2023-04-09 10:36:13.518 INFO  (coreCloseExecutor-42-thread-2) [ x:final_game_review] o.a.s.m.SolrMetricManager Closing metric reporters for registry=solr.core.final_game_review tag=SolrCore@63194167
+2023-04-09 10:36:13.521 INFO  (coreCloseExecutor-42-thread-5) [ x:game_review] o.a.s.u.DirectUpdateHandler2 Committing on IndexWriter.close()  ... SKIPPED (unnecessary).
+2023-04-09 10:36:13.555 INFO  (coreCloseExecutor-42-thread-2) [ x:final_game_review] o.a.s.u.DirectUpdateHandler2 Committing on IndexWriter.close()  ... SKIPPED (unnecessary).
+2023-04-09 10:36:13.577 INFO  (ShutdownMonitor) [] o.a.s.m.SolrMetricManager Closing metric reporters for registry=solr.node tag=null
+2023-04-09 10:36:13.586 INFO  (ShutdownMonitor) [] o.a.s.m.SolrMetricManager Closing metric reporters for registry=solr.jvm tag=null
+2023-04-09 10:36:13.593 INFO  (ShutdownMonitor) [] o.a.s.m.SolrMetricManager Closing metric reporters for registry=solr.jetty tag=null
+2023-04-09 10:36:13.639 INFO  (ShutdownMonitor) [] o.e.j.s.h.ContextHandler Stopped o.e.j.w.WebAppContext@4943defe{/solr,null,STOPPED}{C:\Users\richi\OneDrive\Desktop\the_database\solr-9.1.1\server/solr-webapp/webapp}

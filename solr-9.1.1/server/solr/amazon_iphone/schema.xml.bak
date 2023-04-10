@@ -1,0 +1,46 @@
+<schema name="example-schema" version="1.5">
+  <fields>
+    <field name="id" type="string" indexed="true" stored="true" required="true" multiValued="false"/>
+	<field name="_version_" type="plong" indexed="true" stored="true"/>
+	<field name="title" type="string" indexed="true" stored="true" termVectors="true"/>
+	<field name="rating" type="pfloat" indexed="true" stored="true"/>
+	<field name="productAsin" type="string" indexed="true" stored="true"/>
+	<field name="reviewDate" type="string" indexed="true" stored="true"/>
+	<field name="reviewDescription" type="text_general" indexed="true" stored="true" termVectors="true" />
+	<field name="size" type="string" indexed="true" stored="true"/>
+	<field name="color" type="string" indexed="true" stored="true"/>
+	<field name="service_provider" type="string" indexed="true" stored="true"/>
+	<field name="product_grade" type="string" indexed="true" stored="true"/>
+	<field name="review_link" type="string" indexed="true" stored="true"/>
+	<field name="image_links" type="string" indexed="true" stored="true"/>
+	<field name="sentiment" type="string" indexed="true" stored="true"/>
+  </fields>
+
+  <uniqueKey>id</uniqueKey>
+
+  <types>
+    <fieldType name="string" class="solr.StrField" sortMissingLast="true" />
+	<fieldType name="int" class="solr.TrieIntField" docValues="true" />
+    <fieldType name="text_general" class="solr.TextField" positionIncrementGap="100">
+		<analyzer type="index">
+			<tokenizer class="solr.StandardTokenizerFactory"/>
+			<filter class="solr.LowerCaseFilterFactory"/>
+			<filter class="solr.ShingleFilterFactory" minShingleSize="2" maxShingleSize="6" outputUnigrams="true"/>
+	    </analyzer>
+        <analyzer type="query">
+			<tokenizer class="solr.StandardTokenizerFactory"/>
+			<filter class="solr.LowerCaseFilterFactory"/>
+			<filter class="solr.ShingleFilterFactory" minShingleSize="2" maxShingleSize="6" outputUnigrams="true"/>
+	    </analyzer>
+	</fieldType>
+    <fieldType name="boolean" class="solr.BoolField" sortMissingLast="true" />
+    <fieldType name="pint" class="solr.IntPointField" docValues="true" />
+    <fieldType name="pfloat" class="solr.FloatPointField" docValues="true" />
+    <fieldType name="tdate" class="solr.TrieDateField" precisionStep="0" positionIncrementGap="0" />
+	<fieldType name="plong" class="solr.TrieLongField" precisionStep="0" positionIncrementGap="0"/>
+	<fieldType name="booleans" class="solr.BoolField" sortMissingLast="true" />
+	<fieldType name="pdates" class="solr.TrieDateField" precisionStep="0" positionIncrementGap="0"/>
+	<fieldType name="plongs" class="solr.TrieLongField" precisionStep="0" positionIncrementGap="0"/>
+	<fieldType name="pdoubles" class="solr.TrieDoubleField" precisionStep="0" positionIncrementGap="0"/>
+  </types>
+</schema>

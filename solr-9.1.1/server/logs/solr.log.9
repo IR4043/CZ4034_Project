@@ -1,0 +1,104 @@
+2023-04-09 10:39:20.067 INFO  (main) [] o.e.j.u.log Logging initialized @1823ms to org.eclipse.jetty.util.log.Slf4jLog
+2023-04-09 10:39:20.342 INFO  (main) [] o.e.j.s.Server jetty-9.4.48.v20220622; built: 2022-06-21T20:42:25.880Z; git: 6b67c5719d1f4371b33655ff2d047d24e171e49a; jvm 11.0.18+9-LTS-195
+2023-04-09 10:39:21.115 INFO  (main) [] o.a.s.s.CoreContainerProvider Using logger factory org.apache.logging.slf4j.Log4jLoggerFactory
+2023-04-09 10:39:21.130 INFO  (main) [] o.a.s.s.CoreContainerProvider  ___      _       Welcome to Apache Solr™ version 9.1.1
+2023-04-09 10:39:21.131 INFO  (main) [] o.a.s.s.CoreContainerProvider / __| ___| |_ _   Starting in standalone mode on port 8983
+2023-04-09 10:39:21.131 INFO  (main) [] o.a.s.s.CoreContainerProvider \__ \/ _ \ | '_|  Install dir: C:\Users\richi\OneDrive\Desktop\the_database\solr-9.1.1
+2023-04-09 10:39:21.131 INFO  (main) [] o.a.s.s.CoreContainerProvider |___/\___/_|_|    Start time: 2023-04-09T10:39:21.131120100Z
+2023-04-09 10:39:21.157 INFO  (main) [] o.a.s.s.CoreContainerProvider Solr Home: C:\Users\richi\OneDrive\Desktop\the_database\solr-9.1.1\server\solr (source: system property: solr.solr.home)
+2023-04-09 10:39:21.160 INFO  (main) [] o.a.s.c.SolrXmlConfig Loading solr.xml from C:\Users\richi\OneDrive\Desktop\the_database\solr-9.1.1\server\solr\solr.xml
+2023-04-09 10:39:21.269 INFO  (main) [] o.a.s.c.SolrResourceLoader Added 1 libs to classloader, from paths: [/C:/Users/richi/OneDrive/Desktop/the_database/solr-9.1.1/lib]
+2023-04-09 10:39:22.520 WARN  (main) [] o.a.s.u.StartupLoggingUtils Jetty request logging enabled. Will retain logs for last 3 days. See chapter "Configuring Logging" in reference guide for how to configure.
+2023-04-09 10:39:22.523 WARN  (main) [] o.a.s.c.CoreContainer Not all security plugins configured!  authentication=disabled authorization=disabled.  Solr is only as secure as you make it. Consider configuring authentication/authorization before exposing Solr to users internal or external.  See https://s.apache.org/solrsecurity for more info
+2023-04-09 10:39:22.806 INFO  (main) [] o.a.s.c.CorePropertiesLocator Found 4 core definitions underneath C:\Users\richi\OneDrive\Desktop\the_database\solr-9.1.1\server\solr
+2023-04-09 10:39:22.807 INFO  (main) [] o.a.s.c.CorePropertiesLocator Cores are: [final_game_review, game_list_dir, game_review, review_dir]
+2023-04-09 10:39:22.814 INFO  (coreLoadExecutor-10-thread-1) [] o.a.s.c.TransientSolrCoreCacheDefault Allocating transient core cache for max 2147483647 cores with initial capacity of 1024
+2023-04-09 10:39:22.873 INFO  (coreLoadExecutor-10-thread-1) [ x:final_game_review] o.a.s.c.SolrConfig Using Lucene MatchVersion: 8.11.2
+2023-04-09 10:39:22.873 INFO  (coreLoadExecutor-10-thread-3) [ x:game_review] o.a.s.c.SolrConfig Using Lucene MatchVersion: 9.3.0
+2023-04-09 10:39:22.872 INFO  (coreLoadExecutor-10-thread-2) [ x:game_list_dir] o.a.s.c.SolrConfig Using Lucene MatchVersion: 8.11.2
+2023-04-09 10:39:22.926 WARN  (coreLoadExecutor-10-thread-1) [ x:final_game_review] o.a.s.c.SolrConfig solrconfig.xml: <jmx> is no longer supported, use solr.xml:/metrics/reporter section instead
+2023-04-09 10:39:22.926 WARN  (coreLoadExecutor-10-thread-2) [ x:game_list_dir] o.a.s.c.SolrConfig solrconfig.xml: <jmx> is no longer supported, use solr.xml:/metrics/reporter section instead
+2023-04-09 10:39:22.985 INFO  (coreLoadExecutor-10-thread-1) [ x:final_game_review] o.a.s.s.IndexSchema Schema name=example-schema
+2023-04-09 10:39:22.985 INFO  (coreLoadExecutor-10-thread-2) [ x:game_list_dir] o.a.s.s.IndexSchema Schema name=example-schema
+2023-04-09 10:39:23.004 INFO  (coreLoadExecutor-10-thread-3) [ x:game_review] o.a.s.s.IndexSchema Schema name=default-config
+2023-04-09 10:39:23.040 WARN  (coreLoadExecutor-10-thread-2) [ x:game_list_dir] o.a.s.D.s.TrieDateField Solr loaded a deprecated plugin/analysis class [solr.TrieDateField]. Please consult documentation how to replace it accordingly.
+2023-04-09 10:39:23.044 WARN  (coreLoadExecutor-10-thread-1) [ x:final_game_review] o.a.s.D.s.TrieDoubleField Solr loaded a deprecated plugin/analysis class [solr.TrieDoubleField]. Please consult documentation how to replace it accordingly.
+2023-04-09 10:39:23.052 WARN  (coreLoadExecutor-10-thread-1) [ x:final_game_review] o.a.s.D.s.TrieLongField Solr loaded a deprecated plugin/analysis class [solr.TrieLongField]. Please consult documentation how to replace it accordingly.
+2023-04-09 10:39:23.058 INFO  (coreLoadExecutor-10-thread-2) [ x:game_list_dir] o.a.s.s.IndexSchema Loaded schema example-schema/1.5 with uniqueid field id
+2023-04-09 10:39:23.059 INFO  (coreLoadExecutor-10-thread-2) [ x:game_list_dir] o.a.s.c.CoreContainer Creating SolrCore 'game_list_dir' using configuration from instancedir C:\Users\richi\OneDrive\Desktop\the_database\solr-9.1.1\server\solr\game_list_dir, trusted=true
+2023-04-09 10:39:23.058 INFO  (coreLoadExecutor-10-thread-1) [ x:final_game_review] o.a.s.s.IndexSchema Loaded schema example-schema/1.5 with uniqueid field id
+2023-04-09 10:39:23.060 INFO  (coreLoadExecutor-10-thread-1) [ x:final_game_review] o.a.s.c.CoreContainer Creating SolrCore 'final_game_review' using configuration from instancedir C:\Users\richi\OneDrive\Desktop\the_database\solr-9.1.1\server\solr\final_game_review, trusted=true
+2023-04-09 10:39:23.138 INFO  (coreLoadExecutor-10-thread-1) [ x:final_game_review] o.a.s.c.SolrCore Opening new SolrCore at [C:\Users\richi\OneDrive\Desktop\the_database\solr-9.1.1\server\solr\final_game_review], dataDir=[C:\Users\richi\OneDrive\Desktop\the_database\solr-9.1.1\server\solr\final_game_review\data\]
+2023-04-09 10:39:23.138 INFO  (coreLoadExecutor-10-thread-2) [ x:game_list_dir] o.a.s.c.SolrCore Opening new SolrCore at [C:\Users\richi\OneDrive\Desktop\the_database\solr-9.1.1\server\solr\game_list_dir], dataDir=[C:\Users\richi\OneDrive\Desktop\the_database\solr-9.1.1\server\solr\game_list_dir\data\]
+2023-04-09 10:39:23.464 INFO  (coreLoadExecutor-10-thread-3) [ x:game_review] o.a.s.s.IndexSchema Loaded schema default-config/1.6 with uniqueid field id
+2023-04-09 10:39:23.464 INFO  (coreLoadExecutor-10-thread-3) [ x:game_review] o.a.s.c.CoreContainer Creating SolrCore 'game_review' using configuration from instancedir C:\Users\richi\OneDrive\Desktop\the_database\solr-9.1.1\server\solr\game_review, trusted=true
+2023-04-09 10:39:23.465 INFO  (coreLoadExecutor-10-thread-3) [ x:game_review] o.a.s.c.SolrCore Opening new SolrCore at [C:\Users\richi\OneDrive\Desktop\the_database\solr-9.1.1\server\solr\game_review], dataDir=[C:\Users\richi\OneDrive\Desktop\the_database\solr-9.1.1\server\solr\game_review\data\]
+2023-04-09 10:39:23.572 INFO  (main) [] o.e.j.s.h.ContextHandler Started o.e.j.w.WebAppContext@4943defe{/solr,file:///C:/Users/richi/OneDrive/Desktop/the_database/solr-9.1.1/server/solr-webapp/webapp/,AVAILABLE}{C:\Users\richi\OneDrive\Desktop\the_database\solr-9.1.1\server/solr-webapp/webapp}
+2023-04-09 10:39:23.583 INFO  (main) [] o.e.j.s.RequestLogWriter Opened C:\Users\richi\OneDrive\Desktop\the_database\solr-9.1.1\server\logs\2023_04_09.request.log
+2023-04-09 10:39:23.598 INFO  (main) [] o.e.j.s.AbstractConnector Started ServerConnector@200a26bc{HTTP/1.1, (http/1.1, h2c)}{127.0.0.1:8983}
+2023-04-09 10:39:23.598 INFO  (main) [] o.e.j.s.Server Started @5357ms
+2023-04-09 10:39:24.166 INFO  (coreLoadExecutor-10-thread-1) [ x:final_game_review] o.a.s.u.UpdateHandler Using UpdateLog implementation: org.apache.solr.update.UpdateLog
+2023-04-09 10:39:24.166 INFO  (coreLoadExecutor-10-thread-3) [ x:game_review] o.a.s.u.UpdateHandler Using UpdateLog implementation: org.apache.solr.update.UpdateLog
+2023-04-09 10:39:24.166 INFO  (coreLoadExecutor-10-thread-2) [ x:game_list_dir] o.a.s.u.UpdateHandler Using UpdateLog implementation: org.apache.solr.update.UpdateLog
+2023-04-09 10:39:24.167 INFO  (coreLoadExecutor-10-thread-1) [ x:final_game_review] o.a.s.u.UpdateLog Initializing UpdateLog: dataDir= defaultSyncLevel=FLUSH numRecordsToKeep=100 maxNumLogsToKeep=10 numVersionBuckets=65536
+2023-04-09 10:39:24.167 INFO  (coreLoadExecutor-10-thread-2) [ x:game_list_dir] o.a.s.u.UpdateLog Initializing UpdateLog: dataDir= defaultSyncLevel=FLUSH numRecordsToKeep=100 maxNumLogsToKeep=10 numVersionBuckets=65536
+2023-04-09 10:39:24.167 INFO  (coreLoadExecutor-10-thread-3) [ x:game_review] o.a.s.u.UpdateLog Initializing UpdateLog: dataDir= defaultSyncLevel=FLUSH numRecordsToKeep=100 maxNumLogsToKeep=10 numVersionBuckets=65536
+2023-04-09 10:39:24.198 INFO  (coreLoadExecutor-10-thread-3) [ x:game_review] o.a.s.u.CommitTracker Hard AutoCommit: if uncommitted for 15000ms; 
+2023-04-09 10:39:24.198 INFO  (coreLoadExecutor-10-thread-1) [ x:final_game_review] o.a.s.u.CommitTracker Hard AutoCommit: if uncommitted for 15000ms; 
+2023-04-09 10:39:24.198 INFO  (coreLoadExecutor-10-thread-2) [ x:game_list_dir] o.a.s.u.CommitTracker Hard AutoCommit: if uncommitted for 15000ms; 
+2023-04-09 10:39:24.207 INFO  (coreLoadExecutor-10-thread-3) [ x:game_review] o.a.s.u.CommitTracker Soft AutoCommit: disabled
+2023-04-09 10:39:24.207 INFO  (coreLoadExecutor-10-thread-1) [ x:final_game_review] o.a.s.u.CommitTracker Soft AutoCommit: disabled
+2023-04-09 10:39:24.208 INFO  (coreLoadExecutor-10-thread-2) [ x:game_list_dir] o.a.s.u.CommitTracker Soft AutoCommit: disabled
+2023-04-09 10:39:24.459 INFO  (coreLoadExecutor-10-thread-1) [ x:final_game_review] o.a.s.r.ManagedResourceStorage File-based storage initialized to use dir: C:\Users\richi\OneDrive\Desktop\the_database\solr-9.1.1\server\solr\final_game_review\conf
+2023-04-09 10:39:24.459 INFO  (coreLoadExecutor-10-thread-3) [ x:game_review] o.a.s.r.ManagedResourceStorage File-based storage initialized to use dir: C:\Users\richi\OneDrive\Desktop\the_database\solr-9.1.1\server\solr\game_review\conf
+2023-04-09 10:39:24.462 INFO  (coreLoadExecutor-10-thread-2) [ x:game_list_dir] o.a.s.r.ManagedResourceStorage File-based storage initialized to use dir: C:\Users\richi\OneDrive\Desktop\the_database\solr-9.1.1\server\solr\game_list_dir\conf
+2023-04-09 10:39:24.496 INFO  (coreLoadExecutor-10-thread-1) [ x:final_game_review] o.a.s.s.DirectSolrSpellChecker init: {maxEdits=2, minPrefix=1, maxInspections=5, minQueryLength=4, accuracy=0.5, maxQueryFrequency=0.01, name=default, field=_text_, classname=solr.DirectSolrSpellChecker, distanceMeasure=internal}
+2023-04-09 10:39:24.496 INFO  (coreLoadExecutor-10-thread-2) [ x:game_list_dir] o.a.s.s.DirectSolrSpellChecker init: {maxEdits=2, minPrefix=1, maxInspections=5, minQueryLength=4, accuracy=0.5, maxQueryFrequency=0.01, name=default, field=_text_, classname=solr.DirectSolrSpellChecker, distanceMeasure=internal}
+2023-04-09 10:39:24.496 INFO  (coreLoadExecutor-10-thread-3) [ x:game_review] o.a.s.s.DirectSolrSpellChecker init: {maxEdits=2, minPrefix=1, maxInspections=5, minQueryLength=4, accuracy=0.5, maxQueryFrequency=0.01, name=default, field=_text_, classname=solr.DirectSolrSpellChecker, distanceMeasure=internal}
+2023-04-09 10:39:24.515 INFO  (coreLoadExecutor-10-thread-1) [ x:final_game_review] o.a.s.h.ReplicationHandler Commits will be reserved for 10000 ms
+2023-04-09 10:39:24.515 INFO  (coreLoadExecutor-10-thread-3) [ x:game_review] o.a.s.h.ReplicationHandler Commits will be reserved for 10000 ms
+2023-04-09 10:39:24.515 INFO  (coreLoadExecutor-10-thread-2) [ x:game_list_dir] o.a.s.h.ReplicationHandler Commits will be reserved for 10000 ms
+2023-04-09 10:39:24.539 INFO  (searcherExecutor-13-thread-1-processing-game_list_dir) [ x:game_list_dir] o.a.s.c.QuerySenderListener QuerySenderListener done.
+2023-04-09 10:39:24.539 INFO  (searcherExecutor-13-thread-1-processing-game_list_dir) [ x:game_list_dir] o.a.s.h.c.SpellCheckComponent Loading spell index for spellchecker: default
+2023-04-09 10:39:24.555 INFO  (searcherExecutor-16-thread-1-processing-game_review) [ x:game_review] o.a.s.c.QuerySenderListener QuerySenderListener done.
+2023-04-09 10:39:24.555 INFO  (searcherExecutor-16-thread-1-processing-game_review) [ x:game_review] o.a.s.h.c.SpellCheckComponent Loading spell index for spellchecker: default
+2023-04-09 10:39:24.559 INFO  (searcherExecutor-14-thread-1-processing-final_game_review) [ x:final_game_review] o.a.s.c.QuerySenderListener QuerySenderListener done.
+2023-04-09 10:39:24.560 INFO  (searcherExecutor-14-thread-1-processing-final_game_review) [ x:final_game_review] o.a.s.h.c.SpellCheckComponent Loading spell index for spellchecker: default
+2023-04-09 10:39:24.563 INFO  (searcherExecutor-13-thread-1-processing-game_list_dir) [ x:game_list_dir] o.a.s.c.SolrCore Registered new searcher autowarm time: 0 ms
+2023-04-09 10:39:24.564 INFO  (searcherExecutor-14-thread-1-processing-final_game_review) [ x:final_game_review] o.a.s.c.SolrCore Registered new searcher autowarm time: 0 ms
+2023-04-09 10:39:24.564 INFO  (searcherExecutor-16-thread-1-processing-game_review) [ x:game_review] o.a.s.c.SolrCore Registered new searcher autowarm time: 0 ms
+2023-04-09 10:39:24.564 INFO  (coreLoadExecutor-10-thread-2) [ x:review_dir] o.a.s.c.SolrConfig Using Lucene MatchVersion: 8.11.2
+2023-04-09 10:39:24.565 WARN  (coreLoadExecutor-10-thread-2) [ x:review_dir] o.a.s.c.SolrConfig solrconfig.xml: <jmx> is no longer supported, use solr.xml:/metrics/reporter section instead
+2023-04-09 10:39:24.571 INFO  (coreLoadExecutor-10-thread-2) [ x:review_dir] o.a.s.s.IndexSchema Schema name=example-schema
+2023-04-09 10:39:24.573 INFO  (coreLoadExecutor-10-thread-2) [ x:review_dir] o.a.s.s.IndexSchema Loaded schema example-schema/1.5 with uniqueid field id
+2023-04-09 10:39:24.573 INFO  (coreLoadExecutor-10-thread-2) [ x:review_dir] o.a.s.c.CoreContainer Creating SolrCore 'review_dir' using configuration from instancedir C:\Users\richi\OneDrive\Desktop\the_database\solr-9.1.1\server\solr\review_dir, trusted=true
+2023-04-09 10:39:24.574 INFO  (coreLoadExecutor-10-thread-2) [ x:review_dir] o.a.s.c.SolrCore Opening new SolrCore at [C:\Users\richi\OneDrive\Desktop\the_database\solr-9.1.1\server\solr\review_dir], dataDir=[C:\Users\richi\OneDrive\Desktop\the_database\solr-9.1.1\server\solr\review_dir\data\]
+2023-04-09 10:39:24.644 INFO  (coreLoadExecutor-10-thread-2) [ x:review_dir] o.a.s.u.UpdateHandler Using UpdateLog implementation: org.apache.solr.update.UpdateLog
+2023-04-09 10:39:24.644 INFO  (coreLoadExecutor-10-thread-2) [ x:review_dir] o.a.s.u.UpdateLog Initializing UpdateLog: dataDir= defaultSyncLevel=FLUSH numRecordsToKeep=100 maxNumLogsToKeep=10 numVersionBuckets=65536
+2023-04-09 10:39:24.649 INFO  (coreLoadExecutor-10-thread-2) [ x:review_dir] o.a.s.u.CommitTracker Hard AutoCommit: if uncommitted for 15000ms; 
+2023-04-09 10:39:24.649 INFO  (coreLoadExecutor-10-thread-2) [ x:review_dir] o.a.s.u.CommitTracker Soft AutoCommit: disabled
+2023-04-09 10:39:24.699 INFO  (coreLoadExecutor-10-thread-2) [ x:review_dir] o.a.s.r.ManagedResourceStorage File-based storage initialized to use dir: C:\Users\richi\OneDrive\Desktop\the_database\solr-9.1.1\server\solr\review_dir\conf
+2023-04-09 10:39:24.700 INFO  (coreLoadExecutor-10-thread-2) [ x:review_dir] o.a.s.s.DirectSolrSpellChecker init: {maxEdits=2, minPrefix=1, maxInspections=5, minQueryLength=4, accuracy=0.5, maxQueryFrequency=0.01, name=default, field=_text_, classname=solr.DirectSolrSpellChecker, distanceMeasure=internal}
+2023-04-09 10:39:24.703 INFO  (coreLoadExecutor-10-thread-2) [ x:review_dir] o.a.s.h.ReplicationHandler Commits will be reserved for 10000 ms
+2023-04-09 10:39:24.712 INFO  (searcherExecutor-30-thread-1-processing-review_dir) [ x:review_dir] o.a.s.c.QuerySenderListener QuerySenderListener done.
+2023-04-09 10:39:24.712 INFO  (searcherExecutor-30-thread-1-processing-review_dir) [ x:review_dir] o.a.s.h.c.SpellCheckComponent Loading spell index for spellchecker: default
+2023-04-09 10:39:24.716 INFO  (searcherExecutor-30-thread-1-processing-review_dir) [ x:review_dir] o.a.s.c.SolrCore Registered new searcher autowarm time: 0 ms
+2023-04-09 10:39:25.128 INFO  (qtp967677821-24) [] o.a.s.s.HttpSolrCall [admin] webapp=null path=/admin/info/system params={wt=json} status=0 QTime=48
+2023-04-09 10:40:01.956 INFO  (ShutdownMonitor) [] o.e.j.s.AbstractConnector Stopped ServerConnector@200a26bc{HTTP/1.1, (http/1.1, h2c)}{127.0.0.1:8983}
+2023-04-09 10:40:01.965 INFO  (ShutdownMonitor) [] o.a.s.c.CoreContainer Shutting down CoreContainer instance=1983063045
+2023-04-09 10:40:01.970 INFO  (coreCloseExecutor-36-thread-1) [ x:game_list_dir] o.a.s.c.SolrCore CLOSING SolrCore org.apache.solr.core.SolrCore@62bab347 game_list_dir
+2023-04-09 10:40:01.971 INFO  (coreCloseExecutor-36-thread-4) [ x:review_dir] o.a.s.c.SolrCore CLOSING SolrCore org.apache.solr.core.SolrCore@29ad7d19 review_dir
+2023-04-09 10:40:01.971 INFO  (coreCloseExecutor-36-thread-2) [ x:game_review] o.a.s.c.SolrCore CLOSING SolrCore org.apache.solr.core.SolrCore@351a0bd9 game_review
+2023-04-09 10:40:01.971 INFO  (coreCloseExecutor-36-thread-1) [ x:game_list_dir] o.a.s.m.SolrMetricManager Closing metric reporters for registry=solr.core.game_list_dir tag=SolrCore@62bab347
+2023-04-09 10:40:01.971 INFO  (coreCloseExecutor-36-thread-3) [ x:final_game_review] o.a.s.c.SolrCore CLOSING SolrCore org.apache.solr.core.SolrCore@6b34ba38 final_game_review
+2023-04-09 10:40:02.001 INFO  (coreCloseExecutor-36-thread-2) [ x:game_review] o.a.s.m.SolrMetricManager Closing metric reporters for registry=solr.core.game_review tag=SolrCore@351a0bd9
+2023-04-09 10:40:02.007 INFO  (coreCloseExecutor-36-thread-1) [ x:game_list_dir] o.a.s.u.DirectUpdateHandler2 Committing on IndexWriter.close()  ... SKIPPED (unnecessary).
+2023-04-09 10:40:02.033 INFO  (coreCloseExecutor-36-thread-3) [ x:final_game_review] o.a.s.m.SolrMetricManager Closing metric reporters for registry=solr.core.final_game_review tag=SolrCore@6b34ba38
+2023-04-09 10:40:02.036 INFO  (coreCloseExecutor-36-thread-2) [ x:game_review] o.a.s.u.DirectUpdateHandler2 Committing on IndexWriter.close()  ... SKIPPED (unnecessary).
+2023-04-09 10:40:02.057 INFO  (coreCloseExecutor-36-thread-4) [ x:review_dir] o.a.s.m.SolrMetricManager Closing metric reporters for registry=solr.core.review_dir tag=SolrCore@29ad7d19
+2023-04-09 10:40:02.060 INFO  (coreCloseExecutor-36-thread-3) [ x:final_game_review] o.a.s.u.DirectUpdateHandler2 Committing on IndexWriter.close()  ... SKIPPED (unnecessary).
+2023-04-09 10:40:02.078 INFO  (coreCloseExecutor-36-thread-4) [ x:review_dir] o.a.s.u.DirectUpdateHandler2 Committing on IndexWriter.close()  ... SKIPPED (unnecessary).
+2023-04-09 10:40:02.089 INFO  (ShutdownMonitor) [] o.a.s.m.SolrMetricManager Closing metric reporters for registry=solr.node tag=null
+2023-04-09 10:40:02.094 INFO  (ShutdownMonitor) [] o.a.s.m.SolrMetricManager Closing metric reporters for registry=solr.jvm tag=null
+2023-04-09 10:40:02.099 INFO  (ShutdownMonitor) [] o.a.s.m.SolrMetricManager Closing metric reporters for registry=solr.jetty tag=null
+2023-04-09 10:40:02.116 INFO  (ShutdownMonitor) [] o.e.j.s.h.ContextHandler Stopped o.e.j.w.WebAppContext@4943defe{/solr,null,STOPPED}{C:\Users\richi\OneDrive\Desktop\the_database\solr-9.1.1\server/solr-webapp/webapp}

@@ -1,0 +1,749 @@
+2023-04-10 09:35:15.419 INFO  (main) [] o.e.j.u.log Logging initialized @2782ms to org.eclipse.jetty.util.log.Slf4jLog
+2023-04-10 09:35:15.879 INFO  (main) [] o.e.j.s.Server jetty-9.4.48.v20220622; built: 2022-06-21T20:42:25.880Z; git: 6b67c5719d1f4371b33655ff2d047d24e171e49a; jvm 11.0.18+9-LTS-195
+2023-04-10 09:35:16.896 INFO  (main) [] o.a.s.s.CoreContainerProvider Using logger factory org.apache.logging.slf4j.Log4jLoggerFactory
+2023-04-10 09:35:16.914 INFO  (main) [] o.a.s.s.CoreContainerProvider  ___      _       Welcome to Apache Solr™ version 9.1.1
+2023-04-10 09:35:16.914 INFO  (main) [] o.a.s.s.CoreContainerProvider / __| ___| |_ _   Starting in standalone mode on port 8983
+2023-04-10 09:35:16.914 INFO  (main) [] o.a.s.s.CoreContainerProvider \__ \/ _ \ | '_|  Install dir: C:\Users\richi\OneDrive\Desktop\the_database\solr-9.1.1
+2023-04-10 09:35:16.914 INFO  (main) [] o.a.s.s.CoreContainerProvider |___/\___/_|_|    Start time: 2023-04-10T09:35:16.914999300Z
+2023-04-10 09:35:16.938 INFO  (main) [] o.a.s.s.CoreContainerProvider Solr Home: C:\Users\richi\OneDrive\Desktop\the_database\solr-9.1.1\server\solr (source: system property: solr.solr.home)
+2023-04-10 09:35:16.941 INFO  (main) [] o.a.s.c.SolrXmlConfig Loading solr.xml from C:\Users\richi\OneDrive\Desktop\the_database\solr-9.1.1\server\solr\solr.xml
+2023-04-10 09:35:17.048 INFO  (main) [] o.a.s.c.SolrResourceLoader Added 1 libs to classloader, from paths: [/C:/Users/richi/OneDrive/Desktop/the_database/solr-9.1.1/lib]
+2023-04-10 09:35:18.543 WARN  (main) [] o.a.s.u.StartupLoggingUtils Jetty request logging enabled. Will retain logs for last 3 days. See chapter "Configuring Logging" in reference guide for how to configure.
+2023-04-10 09:35:18.546 WARN  (main) [] o.a.s.c.CoreContainer Not all security plugins configured!  authentication=disabled authorization=disabled.  Solr is only as secure as you make it. Consider configuring authentication/authorization before exposing Solr to users internal or external.  See https://s.apache.org/solrsecurity for more info
+2023-04-10 09:35:18.938 INFO  (main) [] o.a.s.c.CorePropertiesLocator Found 1 core definitions underneath C:\Users\richi\OneDrive\Desktop\the_database\solr-9.1.1\server\solr
+2023-04-10 09:35:18.939 INFO  (main) [] o.a.s.c.CorePropertiesLocator Cores are: [amazon_iphone]
+2023-04-10 09:35:18.966 INFO  (coreLoadExecutor-10-thread-1) [] o.a.s.c.TransientSolrCoreCacheDefault Allocating transient core cache for max 2147483647 cores with initial capacity of 1024
+2023-04-10 09:35:19.078 INFO  (coreLoadExecutor-10-thread-1) [ x:amazon_iphone] o.a.s.c.SolrConfig Using Lucene MatchVersion: 9.1.1
+2023-04-10 09:35:19.319 INFO  (coreLoadExecutor-10-thread-1) [ x:amazon_iphone] o.a.s.s.IndexSchema Schema name=example-schema
+2023-04-10 09:35:19.386 WARN  (coreLoadExecutor-10-thread-1) [ x:amazon_iphone] o.a.s.D.s.TrieIntField Solr loaded a deprecated plugin/analysis class [solr.TrieIntField]. Please consult documentation how to replace it accordingly.
+2023-04-10 09:35:19.389 WARN  (coreLoadExecutor-10-thread-1) [ x:amazon_iphone] o.a.s.D.s.TrieDateField Solr loaded a deprecated plugin/analysis class [solr.TrieDateField]. Please consult documentation how to replace it accordingly.
+2023-04-10 09:35:19.393 WARN  (coreLoadExecutor-10-thread-1) [ x:amazon_iphone] o.a.s.D.s.TrieDoubleField Solr loaded a deprecated plugin/analysis class [solr.TrieDoubleField]. Please consult documentation how to replace it accordingly.
+2023-04-10 09:35:19.404 WARN  (coreLoadExecutor-10-thread-1) [ x:amazon_iphone] o.a.s.D.s.TrieLongField Solr loaded a deprecated plugin/analysis class [solr.TrieLongField]. Please consult documentation how to replace it accordingly.
+2023-04-10 09:35:19.415 INFO  (coreLoadExecutor-10-thread-1) [ x:amazon_iphone] o.a.s.s.IndexSchema Loaded schema example-schema/1.5 with uniqueid field id
+2023-04-10 09:35:19.416 INFO  (coreLoadExecutor-10-thread-1) [ x:amazon_iphone] o.a.s.c.CoreContainer Creating SolrCore 'amazon_iphone' using configuration from instancedir C:\Users\richi\OneDrive\Desktop\the_database\solr-9.1.1\server\solr\amazon_iphone, trusted=true
+2023-04-10 09:35:19.479 INFO  (coreLoadExecutor-10-thread-1) [ x:amazon_iphone] o.a.s.c.SolrCore Opening new SolrCore at [C:\Users\richi\OneDrive\Desktop\the_database\solr-9.1.1\server\solr\amazon_iphone], dataDir=[C:\Users\richi\OneDrive\Desktop\the_database\solr-9.1.1\server\solr\amazon_iphone\data\]
+2023-04-10 09:35:20.033 INFO  (main) [] o.e.j.s.h.ContextHandler Started o.e.j.w.WebAppContext@4943defe{/solr,file:///C:/Users/richi/OneDrive/Desktop/the_database/solr-9.1.1/server/solr-webapp/webapp/,AVAILABLE}{C:\Users\richi\OneDrive\Desktop\the_database\solr-9.1.1\server/solr-webapp/webapp}
+2023-04-10 09:35:20.046 INFO  (main) [] o.e.j.s.RequestLogWriter Opened C:\Users\richi\OneDrive\Desktop\the_database\solr-9.1.1\server\logs\2023_04_10.request.log
+2023-04-10 09:35:20.096 INFO  (main) [] o.e.j.s.AbstractConnector Started ServerConnector@200a26bc{HTTP/1.1, (http/1.1, h2c)}{127.0.0.1:8983}
+2023-04-10 09:35:20.096 INFO  (main) [] o.e.j.s.Server Started @7464ms
+2023-04-10 09:35:20.900 INFO  (qtp967677821-24) [] o.a.s.s.HttpSolrCall [admin] webapp=null path=/admin/info/system params={wt=json} status=0 QTime=87
+2023-04-10 09:35:20.917 INFO  (coreLoadExecutor-10-thread-1) [ x:amazon_iphone] o.a.s.u.UpdateHandler Using UpdateLog implementation: org.apache.solr.update.UpdateLog
+2023-04-10 09:35:20.917 INFO  (coreLoadExecutor-10-thread-1) [ x:amazon_iphone] o.a.s.u.UpdateLog Initializing UpdateLog: dataDir= defaultSyncLevel=FLUSH numRecordsToKeep=100 maxNumLogsToKeep=10 numVersionBuckets=65536
+2023-04-10 09:35:21.006 INFO  (coreLoadExecutor-10-thread-1) [ x:amazon_iphone] o.a.s.u.CommitTracker Hard AutoCommit: if uncommitted for 15000ms; 
+2023-04-10 09:35:21.017 INFO  (coreLoadExecutor-10-thread-1) [ x:amazon_iphone] o.a.s.u.CommitTracker Soft AutoCommit: disabled
+2023-04-10 09:35:21.336 INFO  (coreLoadExecutor-10-thread-1) [ x:amazon_iphone] o.a.s.r.ManagedResourceStorage File-based storage initialized to use dir: C:\Users\richi\OneDrive\Desktop\the_database\solr-9.1.1\server\solr\amazon_iphone\conf
+2023-04-10 09:35:21.363 INFO  (coreLoadExecutor-10-thread-1) [ x:amazon_iphone] o.a.s.s.DirectSolrSpellChecker init: {name=default, field=reviewDescription, classname=solr.DirectSolrSpellChecker, distanceMeasure=internal, maxEdits=2, minPrefix=1, maxInspections=5, minQueryLength=4, accuracy=0.5, maxQueryFrequency=0.01}
+2023-04-10 09:35:21.366 INFO  (coreLoadExecutor-10-thread-1) [ x:amazon_iphone] o.a.s.h.c.SuggestComponent Initializing SuggestComponent
+2023-04-10 09:35:21.369 INFO  (coreLoadExecutor-10-thread-1) [ x:amazon_iphone] o.a.s.s.s.SolrSuggester init: {highlight=false, name=mySuggester, lookupImpl=AnalyzingInfixLookupFactory, dictionaryImpl=HighFrequencyDictionaryFactory, field=reviewDescription, suggestAnalyzerFieldType=text_general, suggestFreeTextAnalyzerFieldType=text_general, ngrams=5, buildOnCommit=true}
+2023-04-10 09:35:21.490 INFO  (coreLoadExecutor-10-thread-1) [ x:amazon_iphone] o.a.s.s.s.SolrSuggester Dictionary loaded with params: {highlight=false, name=mySuggester, lookupImpl=AnalyzingInfixLookupFactory, dictionaryImpl=HighFrequencyDictionaryFactory, field=reviewDescription, suggestAnalyzerFieldType=text_general, suggestFreeTextAnalyzerFieldType=text_general, ngrams=5, buildOnCommit=true}
+2023-04-10 09:35:21.491 INFO  (coreLoadExecutor-10-thread-1) [ x:amazon_iphone] o.a.s.h.c.SuggestComponent Registering searcher listener for suggester: mySuggester = SuggesterListener [core=org.apache.solr.core.SolrCore@1ff75354 amazon_iphone, suggester=SolrSuggester [ name=mySuggester, sourceLocation=null, storeDir=, lookupImpl=AnalyzingInfixLookupFactory, dictionaryImpl=HighFrequencyDictionaryFactory, sizeInBytes=0 ], buildOnCommit=true, buildOnOptimize=false, buildOnStartup=true, isCoreReload=false]
+2023-04-10 09:35:21.519 INFO  (coreLoadExecutor-10-thread-1) [ x:amazon_iphone] o.a.s.h.ReplicationHandler Commits will be reserved for 10000 ms
+2023-04-10 09:35:21.557 INFO  (searcherExecutor-12-thread-1-processing-amazon_iphone) [ x:amazon_iphone] o.a.s.c.QuerySenderListener QuerySenderListener done.
+2023-04-10 09:35:21.557 INFO  (searcherExecutor-12-thread-1-processing-amazon_iphone) [ x:amazon_iphone] o.a.s.h.c.SpellCheckComponent Loading spell index for spellchecker: default
+2023-04-10 09:35:21.557 INFO  (searcherExecutor-12-thread-1-processing-amazon_iphone) [ x:amazon_iphone] o.a.s.h.c.SuggestComponent buildOnStartup: mySuggester
+2023-04-10 09:35:21.557 INFO  (searcherExecutor-12-thread-1-processing-amazon_iphone) [ x:amazon_iphone] o.a.s.s.s.SolrSuggester SolrSuggester.build(mySuggester)
+2023-04-10 09:36:18.417 INFO  (searcherExecutor-12-thread-1-processing-amazon_iphone) [ x:amazon_iphone] o.a.s.c.SolrCore Registered new searcher autowarm time: 0 ms
+2023-04-10 09:36:18.461 INFO  (qtp967677821-19) [ x:amazon_iphone] o.a.s.c.S.Request webapp=/solr path=/select params={q=*:*&facet.field=size&facet.field=service_provider&facet.field=product_grade&facet.field=color&facet.field=sentiment&rows=500&facet=true} hits=11546 status=0 QTime=14681
+2023-04-10 09:36:20.684 INFO  (qtp967677821-20) [ x:amazon_iphone] o.a.s.c.S.Request webapp=/solr path=/select params={q=*:*&start=0&rows=9} hits=11546 status=0 QTime=0
+2023-04-10 11:56:09.992 INFO  (qtp967677821-19) [ x:amazon_iphone] o.a.s.u.p.LogUpdateProcessorFactory webapp=/solr path=/update params={commitWithin=1000&boost=1.0&wt=json&overwrite=true}{add=[6c934ebf-7d72-463d-be8f-36f0c96161e9 (1762790232151818240), 4436cbac-1c2b-4031-99fc-f800aa2767e7 (1762790232506236928), 9d8dd141-643e-4fa8-b9fa-8842bd02c9c5 (1762790232514625536), 48f2e71b-f808-43dc-9408-4c4e4a4f914c (1762790232528257024)]} 0 843
+2023-04-10 11:56:09.999 ERROR (qtp967677821-19) [ x:amazon_iphone] o.a.s.h.RequestHandlerBase org.apache.solr.common.SolrException: ERROR: [doc=0be65957-a9c1-4833-b23d-c00563357a86] multiple values encountered for non multiValued field image_links: [https://m.media-amazon.com/images/I/51QolJkvAQL._SY88.jpg, https://m.media-amazon.com/images/I/617gN+UTMoL._SY88.jpg, https://m.media-amazon.com/images/I/61zkvTXPuuL._SY88.jpg] => org.apache.solr.common.SolrException: ERROR: [doc=0be65957-a9c1-4833-b23d-c00563357a86] multiple values encountered for non multiValued field image_links: [https://m.media-amazon.com/images/I/51QolJkvAQL._SY88.jpg, https://m.media-amazon.com/images/I/617gN+UTMoL._SY88.jpg, https://m.media-amazon.com/images/I/61zkvTXPuuL._SY88.jpg]
+	at org.apache.solr.update.DocumentBuilder.toDocument(DocumentBuilder.java:178)
+org.apache.solr.common.SolrException: ERROR: [doc=0be65957-a9c1-4833-b23d-c00563357a86] multiple values encountered for non multiValued field image_links: [https://m.media-amazon.com/images/I/51QolJkvAQL._SY88.jpg, https://m.media-amazon.com/images/I/617gN+UTMoL._SY88.jpg, https://m.media-amazon.com/images/I/61zkvTXPuuL._SY88.jpg]
+	at org.apache.solr.update.DocumentBuilder.toDocument(DocumentBuilder.java:178) ~[?:?]
+	at org.apache.solr.update.AddUpdateCommand.makeLuceneDocs(AddUpdateCommand.java:213) ~[?:?]
+	at org.apache.solr.update.DirectUpdateHandler2.updateDocOrDocValues(DirectUpdateHandler2.java:1043) ~[?:?]
+	at org.apache.solr.update.DirectUpdateHandler2.doNormalUpdate(DirectUpdateHandler2.java:416) ~[?:?]
+	at org.apache.solr.update.DirectUpdateHandler2.addDoc0(DirectUpdateHandler2.java:369) ~[?:?]
+	at org.apache.solr.update.DirectUpdateHandler2.addDoc(DirectUpdateHandler2.java:300) ~[?:?]
+	at org.apache.solr.update.processor.RunUpdateProcessorFactory$RunUpdateProcessor.processAdd(RunUpdateProcessorFactory.java:76) ~[?:?]
+	at org.apache.solr.update.processor.UpdateRequestProcessor.processAdd(UpdateRequestProcessor.java:55) ~[?:?]
+	at org.apache.solr.update.processor.DistributedUpdateProcessor.doLocalAdd(DistributedUpdateProcessor.java:269) ~[?:?]
+	at org.apache.solr.update.processor.DistributedUpdateProcessor.doVersionAdd(DistributedUpdateProcessor.java:544) ~[?:?]
+	at org.apache.solr.update.processor.DistributedUpdateProcessor.lambda$versionAdd$0(DistributedUpdateProcessor.java:356) ~[?:?]
+	at org.apache.solr.update.VersionBucket.runWithLock(VersionBucket.java:51) ~[?:?]
+	at org.apache.solr.update.processor.DistributedUpdateProcessor.versionAdd(DistributedUpdateProcessor.java:353) ~[?:?]
+	at org.apache.solr.update.processor.DistributedUpdateProcessor.processAdd(DistributedUpdateProcessor.java:235) ~[?:?]
+	at org.apache.solr.update.processor.LogUpdateProcessorFactory$LogUpdateProcessor.processAdd(LogUpdateProcessorFactory.java:111) ~[?:?]
+	at org.apache.solr.update.processor.UpdateRequestProcessor.processAdd(UpdateRequestProcessor.java:55) ~[?:?]
+	at org.apache.solr.update.processor.AddSchemaFieldsUpdateProcessorFactory$AddSchemaFieldsUpdateProcessor.processAdd(AddSchemaFieldsUpdateProcessorFactory.java:535) ~[?:?]
+	at org.apache.solr.update.processor.UpdateRequestProcessor.processAdd(UpdateRequestProcessor.java:55) ~[?:?]
+	at org.apache.solr.update.processor.FieldMutatingUpdateProcessor.processAdd(FieldMutatingUpdateProcessor.java:111) ~[?:?]
+	at org.apache.solr.update.processor.UpdateRequestProcessor.processAdd(UpdateRequestProcessor.java:55) ~[?:?]
+	at org.apache.solr.update.processor.FieldMutatingUpdateProcessor.processAdd(FieldMutatingUpdateProcessor.java:111) ~[?:?]
+	at org.apache.solr.update.processor.UpdateRequestProcessor.processAdd(UpdateRequestProcessor.java:55) ~[?:?]
+	at org.apache.solr.update.processor.FieldMutatingUpdateProcessor.processAdd(FieldMutatingUpdateProcessor.java:111) ~[?:?]
+	at org.apache.solr.update.processor.UpdateRequestProcessor.processAdd(UpdateRequestProcessor.java:55) ~[?:?]
+	at org.apache.solr.update.processor.FieldMutatingUpdateProcessor.processAdd(FieldMutatingUpdateProcessor.java:111) ~[?:?]
+	at org.apache.solr.update.processor.UpdateRequestProcessor.processAdd(UpdateRequestProcessor.java:55) ~[?:?]
+	at org.apache.solr.update.processor.FieldNameMutatingUpdateProcessorFactory$1.processAdd(FieldNameMutatingUpdateProcessorFactory.java:71) ~[?:?]
+	at org.apache.solr.update.processor.UpdateRequestProcessor.processAdd(UpdateRequestProcessor.java:55) ~[?:?]
+	at org.apache.solr.update.processor.FieldMutatingUpdateProcessor.processAdd(FieldMutatingUpdateProcessor.java:111) ~[?:?]
+	at org.apache.solr.update.processor.UpdateRequestProcessor.processAdd(UpdateRequestProcessor.java:55) ~[?:?]
+	at org.apache.solr.update.processor.AbstractDefaultValueUpdateProcessorFactory$DefaultValueUpdateProcessor.processAdd(AbstractDefaultValueUpdateProcessorFactory.java:82) ~[?:?]
+	at org.apache.solr.handler.loader.JsonLoader$SingleThreadedJsonLoader.handleAdds(JsonLoader.java:554) ~[?:?]
+	at org.apache.solr.handler.loader.JsonLoader$SingleThreadedJsonLoader.processUpdate(JsonLoader.java:185) ~[?:?]
+	at org.apache.solr.handler.loader.JsonLoader$SingleThreadedJsonLoader.load(JsonLoader.java:160) ~[?:?]
+	at org.apache.solr.handler.loader.JsonLoader.load(JsonLoader.java:86) ~[?:?]
+	at org.apache.solr.handler.UpdateRequestHandler$1.load(UpdateRequestHandler.java:101) ~[?:?]
+	at org.apache.solr.handler.ContentStreamHandlerBase.handleRequestBody(ContentStreamHandlerBase.java:84) ~[?:?]
+	at org.apache.solr.handler.RequestHandlerBase.handleRequest(RequestHandlerBase.java:224) ~[?:?]
+	at org.apache.solr.core.SolrCore.execute(SolrCore.java:2865) ~[?:?]
+	at org.apache.solr.servlet.HttpSolrCall.execute(HttpSolrCall.java:887) ~[?:?]
+	at org.apache.solr.servlet.HttpSolrCall.call(HttpSolrCall.java:606) ~[?:?]
+	at org.apache.solr.servlet.SolrDispatchFilter.dispatch(SolrDispatchFilter.java:250) ~[?:?]
+	at org.apache.solr.servlet.SolrDispatchFilter.lambda$doFilter$0(SolrDispatchFilter.java:218) ~[?:?]
+	at org.apache.solr.servlet.ServletUtils.traceHttpRequestExecution2(ServletUtils.java:257) ~[?:?]
+	at org.apache.solr.servlet.ServletUtils.rateLimitRequest(ServletUtils.java:227) ~[?:?]
+	at org.apache.solr.servlet.SolrDispatchFilter.doFilter(SolrDispatchFilter.java:213) ~[?:?]
+	at org.apache.solr.servlet.SolrDispatchFilter.doFilter(SolrDispatchFilter.java:195) ~[?:?]
+	at org.eclipse.jetty.servlet.FilterHolder.doFilter(FilterHolder.java:201) ~[jetty-servlet-9.4.48.v20220622.jar:9.4.48.v20220622]
+	at org.eclipse.jetty.servlet.ServletHandler$Chain.doFilter(ServletHandler.java:1626) ~[jetty-servlet-9.4.48.v20220622.jar:9.4.48.v20220622]
+	at org.eclipse.jetty.servlet.ServletHandler.doHandle(ServletHandler.java:552) ~[jetty-servlet-9.4.48.v20220622.jar:9.4.48.v20220622]
+	at org.eclipse.jetty.server.handler.ScopedHandler.handle(ScopedHandler.java:143) ~[jetty-server-9.4.48.v20220622.jar:9.4.48.v20220622]
+	at org.eclipse.jetty.security.SecurityHandler.handle(SecurityHandler.java:600) ~[jetty-security-9.4.48.v20220622.jar:9.4.48.v20220622]
+	at org.eclipse.jetty.server.handler.HandlerWrapper.handle(HandlerWrapper.java:127) ~[jetty-server-9.4.48.v20220622.jar:9.4.48.v20220622]
+	at org.eclipse.jetty.server.handler.ScopedHandler.nextHandle(ScopedHandler.java:235) ~[jetty-server-9.4.48.v20220622.jar:9.4.48.v20220622]
+	at org.eclipse.jetty.server.session.SessionHandler.doHandle(SessionHandler.java:1624) ~[jetty-server-9.4.48.v20220622.jar:9.4.48.v20220622]
+	at org.eclipse.jetty.server.handler.ScopedHandler.nextHandle(ScopedHandler.java:233) ~[jetty-server-9.4.48.v20220622.jar:9.4.48.v20220622]
+	at org.eclipse.jetty.server.handler.ContextHandler.doHandle(ContextHandler.java:1440) ~[jetty-server-9.4.48.v20220622.jar:9.4.48.v20220622]
+	at org.eclipse.jetty.server.handler.ScopedHandler.nextScope(ScopedHandler.java:188) ~[jetty-server-9.4.48.v20220622.jar:9.4.48.v20220622]
+	at org.eclipse.jetty.servlet.ServletHandler.doScope(ServletHandler.java:505) ~[jetty-servlet-9.4.48.v20220622.jar:9.4.48.v20220622]
+	at org.eclipse.jetty.server.session.SessionHandler.doScope(SessionHandler.java:1594) ~[jetty-server-9.4.48.v20220622.jar:9.4.48.v20220622]
+	at org.eclipse.jetty.server.handler.ScopedHandler.nextScope(ScopedHandler.java:186) ~[jetty-server-9.4.48.v20220622.jar:9.4.48.v20220622]
+	at org.eclipse.jetty.server.handler.ContextHandler.doScope(ContextHandler.java:1355) ~[jetty-server-9.4.48.v20220622.jar:9.4.48.v20220622]
+	at org.eclipse.jetty.server.handler.ScopedHandler.handle(ScopedHandler.java:141) ~[jetty-server-9.4.48.v20220622.jar:9.4.48.v20220622]
+	at org.eclipse.jetty.server.handler.ContextHandlerCollection.handle(ContextHandlerCollection.java:191) ~[jetty-server-9.4.48.v20220622.jar:9.4.48.v20220622]
+	at org.eclipse.jetty.server.handler.InetAccessHandler.handle(InetAccessHandler.java:177) ~[jetty-server-9.4.48.v20220622.jar:9.4.48.v20220622]
+	at org.eclipse.jetty.server.handler.HandlerCollection.handle(HandlerCollection.java:146) ~[jetty-server-9.4.48.v20220622.jar:9.4.48.v20220622]
+	at org.eclipse.jetty.server.handler.HandlerWrapper.handle(HandlerWrapper.java:127) ~[jetty-server-9.4.48.v20220622.jar:9.4.48.v20220622]
+	at org.eclipse.jetty.rewrite.handler.RewriteHandler.handle(RewriteHandler.java:322) ~[jetty-rewrite-9.4.48.v20220622.jar:9.4.48.v20220622]
+	at org.eclipse.jetty.server.handler.gzip.GzipHandler.handle(GzipHandler.java:772) ~[jetty-server-9.4.48.v20220622.jar:9.4.48.v20220622]
+	at org.eclipse.jetty.server.handler.HandlerWrapper.handle(HandlerWrapper.java:127) ~[jetty-server-9.4.48.v20220622.jar:9.4.48.v20220622]
+	at org.eclipse.jetty.server.Server.handle(Server.java:516) ~[jetty-server-9.4.48.v20220622.jar:9.4.48.v20220622]
+	at org.eclipse.jetty.server.HttpChannel.lambda$handle$1(HttpChannel.java:487) ~[jetty-server-9.4.48.v20220622.jar:9.4.48.v20220622]
+	at org.eclipse.jetty.server.HttpChannel.dispatch(HttpChannel.java:732) ~[jetty-server-9.4.48.v20220622.jar:9.4.48.v20220622]
+	at org.eclipse.jetty.server.HttpChannel.handle(HttpChannel.java:479) ~[jetty-server-9.4.48.v20220622.jar:9.4.48.v20220622]
+	at org.eclipse.jetty.server.HttpConnection.onFillable(HttpConnection.java:277) ~[jetty-server-9.4.48.v20220622.jar:9.4.48.v20220622]
+	at org.eclipse.jetty.io.AbstractConnection$ReadCallback.succeeded(AbstractConnection.java:311) ~[jetty-io-9.4.48.v20220622.jar:9.4.48.v20220622]
+	at org.eclipse.jetty.io.FillInterest.fillable(FillInterest.java:105) ~[jetty-io-9.4.48.v20220622.jar:9.4.48.v20220622]
+	at org.eclipse.jetty.io.ChannelEndPoint$1.run(ChannelEndPoint.java:104) ~[jetty-io-9.4.48.v20220622.jar:9.4.48.v20220622]
+	at org.eclipse.jetty.util.thread.QueuedThreadPool.runJob(QueuedThreadPool.java:883) ~[jetty-util-9.4.48.v20220622.jar:9.4.48.v20220622]
+	at org.eclipse.jetty.util.thread.QueuedThreadPool$Runner.run(QueuedThreadPool.java:1034) ~[jetty-util-9.4.48.v20220622.jar:9.4.48.v20220622]
+	at java.lang.Thread.run(Thread.java:834) ~[?:?]
+2023-04-10 11:56:11.278 INFO  (searcherExecutor-12-thread-1-processing-amazon_iphone) [ x:amazon_iphone] o.a.s.c.QuerySenderListener QuerySenderListener done.
+2023-04-10 11:56:11.278 INFO  (searcherExecutor-12-thread-1-processing-amazon_iphone) [ x:amazon_iphone] o.a.s.h.c.SuggestComponent buildOnCommit: mySuggester
+2023-04-10 11:56:11.279 INFO  (searcherExecutor-12-thread-1-processing-amazon_iphone) [ x:amazon_iphone] o.a.s.s.s.SolrSuggester SolrSuggester.build(mySuggester)
+2023-04-10 11:56:57.406 INFO  (qtp967677821-23) [ x:amazon_iphone] o.a.s.u.p.LogUpdateProcessorFactory webapp=/solr path=/update params={commitWithin=1000&boost=1.0&wt=json&overwrite=true}{add=[fb0bc674-6452-4a8a-bb09-3f430a700f51 (1762790282239148032), 3612e65c-ba4d-4bb4-ac12-3cc559c04437 (1762790282255925248), 0e61d71d-ea0e-4bfc-961b-72ac882754c5 (1762790282259070976), 29a1a7d3-e31c-4aa6-b270-e35fea46a17a (1762790282262216704)]} 0 25
+2023-04-10 11:56:57.406 ERROR (qtp967677821-23) [ x:amazon_iphone] o.a.s.h.RequestHandlerBase org.apache.solr.common.SolrException: ERROR: [doc=46981f56-9aad-48a3-a996-d9682d368f5a] multiple values encountered for non multiValued field image_links: [https://m.media-amazon.com/images/I/51QolJkvAQL._SY88.jpg, https://m.media-amazon.com/images/I/617gN+UTMoL._SY88.jpg, https://m.media-amazon.com/images/I/61zkvTXPuuL._SY88.jpg] => org.apache.solr.common.SolrException: ERROR: [doc=46981f56-9aad-48a3-a996-d9682d368f5a] multiple values encountered for non multiValued field image_links: [https://m.media-amazon.com/images/I/51QolJkvAQL._SY88.jpg, https://m.media-amazon.com/images/I/617gN+UTMoL._SY88.jpg, https://m.media-amazon.com/images/I/61zkvTXPuuL._SY88.jpg]
+	at org.apache.solr.update.DocumentBuilder.toDocument(DocumentBuilder.java:178)
+org.apache.solr.common.SolrException: ERROR: [doc=46981f56-9aad-48a3-a996-d9682d368f5a] multiple values encountered for non multiValued field image_links: [https://m.media-amazon.com/images/I/51QolJkvAQL._SY88.jpg, https://m.media-amazon.com/images/I/617gN+UTMoL._SY88.jpg, https://m.media-amazon.com/images/I/61zkvTXPuuL._SY88.jpg]
+	at org.apache.solr.update.DocumentBuilder.toDocument(DocumentBuilder.java:178) ~[?:?]
+	at org.apache.solr.update.AddUpdateCommand.makeLuceneDocs(AddUpdateCommand.java:213) ~[?:?]
+	at org.apache.solr.update.DirectUpdateHandler2.updateDocOrDocValues(DirectUpdateHandler2.java:1043) ~[?:?]
+	at org.apache.solr.update.DirectUpdateHandler2.doNormalUpdate(DirectUpdateHandler2.java:416) ~[?:?]
+	at org.apache.solr.update.DirectUpdateHandler2.addDoc0(DirectUpdateHandler2.java:369) ~[?:?]
+	at org.apache.solr.update.DirectUpdateHandler2.addDoc(DirectUpdateHandler2.java:300) ~[?:?]
+	at org.apache.solr.update.processor.RunUpdateProcessorFactory$RunUpdateProcessor.processAdd(RunUpdateProcessorFactory.java:76) ~[?:?]
+	at org.apache.solr.update.processor.UpdateRequestProcessor.processAdd(UpdateRequestProcessor.java:55) ~[?:?]
+	at org.apache.solr.update.processor.DistributedUpdateProcessor.doLocalAdd(DistributedUpdateProcessor.java:269) ~[?:?]
+	at org.apache.solr.update.processor.DistributedUpdateProcessor.doVersionAdd(DistributedUpdateProcessor.java:544) ~[?:?]
+	at org.apache.solr.update.processor.DistributedUpdateProcessor.lambda$versionAdd$0(DistributedUpdateProcessor.java:356) ~[?:?]
+	at org.apache.solr.update.VersionBucket.runWithLock(VersionBucket.java:51) ~[?:?]
+	at org.apache.solr.update.processor.DistributedUpdateProcessor.versionAdd(DistributedUpdateProcessor.java:353) ~[?:?]
+	at org.apache.solr.update.processor.DistributedUpdateProcessor.processAdd(DistributedUpdateProcessor.java:235) ~[?:?]
+	at org.apache.solr.update.processor.LogUpdateProcessorFactory$LogUpdateProcessor.processAdd(LogUpdateProcessorFactory.java:111) ~[?:?]
+	at org.apache.solr.update.processor.UpdateRequestProcessor.processAdd(UpdateRequestProcessor.java:55) ~[?:?]
+	at org.apache.solr.update.processor.AddSchemaFieldsUpdateProcessorFactory$AddSchemaFieldsUpdateProcessor.processAdd(AddSchemaFieldsUpdateProcessorFactory.java:535) ~[?:?]
+	at org.apache.solr.update.processor.UpdateRequestProcessor.processAdd(UpdateRequestProcessor.java:55) ~[?:?]
+	at org.apache.solr.update.processor.FieldMutatingUpdateProcessor.processAdd(FieldMutatingUpdateProcessor.java:111) ~[?:?]
+	at org.apache.solr.update.processor.UpdateRequestProcessor.processAdd(UpdateRequestProcessor.java:55) ~[?:?]
+	at org.apache.solr.update.processor.FieldMutatingUpdateProcessor.processAdd(FieldMutatingUpdateProcessor.java:111) ~[?:?]
+	at org.apache.solr.update.processor.UpdateRequestProcessor.processAdd(UpdateRequestProcessor.java:55) ~[?:?]
+	at org.apache.solr.update.processor.FieldMutatingUpdateProcessor.processAdd(FieldMutatingUpdateProcessor.java:111) ~[?:?]
+	at org.apache.solr.update.processor.UpdateRequestProcessor.processAdd(UpdateRequestProcessor.java:55) ~[?:?]
+	at org.apache.solr.update.processor.FieldMutatingUpdateProcessor.processAdd(FieldMutatingUpdateProcessor.java:111) ~[?:?]
+	at org.apache.solr.update.processor.UpdateRequestProcessor.processAdd(UpdateRequestProcessor.java:55) ~[?:?]
+	at org.apache.solr.update.processor.FieldNameMutatingUpdateProcessorFactory$1.processAdd(FieldNameMutatingUpdateProcessorFactory.java:71) ~[?:?]
+	at org.apache.solr.update.processor.UpdateRequestProcessor.processAdd(UpdateRequestProcessor.java:55) ~[?:?]
+	at org.apache.solr.update.processor.FieldMutatingUpdateProcessor.processAdd(FieldMutatingUpdateProcessor.java:111) ~[?:?]
+	at org.apache.solr.update.processor.UpdateRequestProcessor.processAdd(UpdateRequestProcessor.java:55) ~[?:?]
+	at org.apache.solr.update.processor.AbstractDefaultValueUpdateProcessorFactory$DefaultValueUpdateProcessor.processAdd(AbstractDefaultValueUpdateProcessorFactory.java:82) ~[?:?]
+	at org.apache.solr.handler.loader.JsonLoader$SingleThreadedJsonLoader.handleAdds(JsonLoader.java:554) ~[?:?]
+	at org.apache.solr.handler.loader.JsonLoader$SingleThreadedJsonLoader.processUpdate(JsonLoader.java:185) ~[?:?]
+	at org.apache.solr.handler.loader.JsonLoader$SingleThreadedJsonLoader.load(JsonLoader.java:160) ~[?:?]
+	at org.apache.solr.handler.loader.JsonLoader.load(JsonLoader.java:86) ~[?:?]
+	at org.apache.solr.handler.UpdateRequestHandler$1.load(UpdateRequestHandler.java:101) ~[?:?]
+	at org.apache.solr.handler.ContentStreamHandlerBase.handleRequestBody(ContentStreamHandlerBase.java:84) ~[?:?]
+	at org.apache.solr.handler.RequestHandlerBase.handleRequest(RequestHandlerBase.java:224) ~[?:?]
+	at org.apache.solr.core.SolrCore.execute(SolrCore.java:2865) ~[?:?]
+	at org.apache.solr.servlet.HttpSolrCall.execute(HttpSolrCall.java:887) ~[?:?]
+	at org.apache.solr.servlet.HttpSolrCall.call(HttpSolrCall.java:606) ~[?:?]
+	at org.apache.solr.servlet.SolrDispatchFilter.dispatch(SolrDispatchFilter.java:250) ~[?:?]
+	at org.apache.solr.servlet.SolrDispatchFilter.lambda$doFilter$0(SolrDispatchFilter.java:218) ~[?:?]
+	at org.apache.solr.servlet.ServletUtils.traceHttpRequestExecution2(ServletUtils.java:257) ~[?:?]
+	at org.apache.solr.servlet.ServletUtils.rateLimitRequest(ServletUtils.java:227) ~[?:?]
+	at org.apache.solr.servlet.SolrDispatchFilter.doFilter(SolrDispatchFilter.java:213) ~[?:?]
+	at org.apache.solr.servlet.SolrDispatchFilter.doFilter(SolrDispatchFilter.java:195) ~[?:?]
+	at org.eclipse.jetty.servlet.FilterHolder.doFilter(FilterHolder.java:201) ~[jetty-servlet-9.4.48.v20220622.jar:9.4.48.v20220622]
+	at org.eclipse.jetty.servlet.ServletHandler$Chain.doFilter(ServletHandler.java:1626) ~[jetty-servlet-9.4.48.v20220622.jar:9.4.48.v20220622]
+	at org.eclipse.jetty.servlet.ServletHandler.doHandle(ServletHandler.java:552) ~[jetty-servlet-9.4.48.v20220622.jar:9.4.48.v20220622]
+	at org.eclipse.jetty.server.handler.ScopedHandler.handle(ScopedHandler.java:143) ~[jetty-server-9.4.48.v20220622.jar:9.4.48.v20220622]
+	at org.eclipse.jetty.security.SecurityHandler.handle(SecurityHandler.java:600) ~[jetty-security-9.4.48.v20220622.jar:9.4.48.v20220622]
+	at org.eclipse.jetty.server.handler.HandlerWrapper.handle(HandlerWrapper.java:127) ~[jetty-server-9.4.48.v20220622.jar:9.4.48.v20220622]
+	at org.eclipse.jetty.server.handler.ScopedHandler.nextHandle(ScopedHandler.java:235) ~[jetty-server-9.4.48.v20220622.jar:9.4.48.v20220622]
+	at org.eclipse.jetty.server.session.SessionHandler.doHandle(SessionHandler.java:1624) ~[jetty-server-9.4.48.v20220622.jar:9.4.48.v20220622]
+	at org.eclipse.jetty.server.handler.ScopedHandler.nextHandle(ScopedHandler.java:233) ~[jetty-server-9.4.48.v20220622.jar:9.4.48.v20220622]
+	at org.eclipse.jetty.server.handler.ContextHandler.doHandle(ContextHandler.java:1440) ~[jetty-server-9.4.48.v20220622.jar:9.4.48.v20220622]
+	at org.eclipse.jetty.server.handler.ScopedHandler.nextScope(ScopedHandler.java:188) ~[jetty-server-9.4.48.v20220622.jar:9.4.48.v20220622]
+	at org.eclipse.jetty.servlet.ServletHandler.doScope(ServletHandler.java:505) ~[jetty-servlet-9.4.48.v20220622.jar:9.4.48.v20220622]
+	at org.eclipse.jetty.server.session.SessionHandler.doScope(SessionHandler.java:1594) ~[jetty-server-9.4.48.v20220622.jar:9.4.48.v20220622]
+	at org.eclipse.jetty.server.handler.ScopedHandler.nextScope(ScopedHandler.java:186) ~[jetty-server-9.4.48.v20220622.jar:9.4.48.v20220622]
+	at org.eclipse.jetty.server.handler.ContextHandler.doScope(ContextHandler.java:1355) ~[jetty-server-9.4.48.v20220622.jar:9.4.48.v20220622]
+	at org.eclipse.jetty.server.handler.ScopedHandler.handle(ScopedHandler.java:141) ~[jetty-server-9.4.48.v20220622.jar:9.4.48.v20220622]
+	at org.eclipse.jetty.server.handler.ContextHandlerCollection.handle(ContextHandlerCollection.java:191) ~[jetty-server-9.4.48.v20220622.jar:9.4.48.v20220622]
+	at org.eclipse.jetty.server.handler.InetAccessHandler.handle(InetAccessHandler.java:177) ~[jetty-server-9.4.48.v20220622.jar:9.4.48.v20220622]
+	at org.eclipse.jetty.server.handler.HandlerCollection.handle(HandlerCollection.java:146) ~[jetty-server-9.4.48.v20220622.jar:9.4.48.v20220622]
+	at org.eclipse.jetty.server.handler.HandlerWrapper.handle(HandlerWrapper.java:127) ~[jetty-server-9.4.48.v20220622.jar:9.4.48.v20220622]
+	at org.eclipse.jetty.rewrite.handler.RewriteHandler.handle(RewriteHandler.java:322) ~[jetty-rewrite-9.4.48.v20220622.jar:9.4.48.v20220622]
+	at org.eclipse.jetty.server.handler.gzip.GzipHandler.handle(GzipHandler.java:772) ~[jetty-server-9.4.48.v20220622.jar:9.4.48.v20220622]
+	at org.eclipse.jetty.server.handler.HandlerWrapper.handle(HandlerWrapper.java:127) ~[jetty-server-9.4.48.v20220622.jar:9.4.48.v20220622]
+	at org.eclipse.jetty.server.Server.handle(Server.java:516) ~[jetty-server-9.4.48.v20220622.jar:9.4.48.v20220622]
+	at org.eclipse.jetty.server.HttpChannel.lambda$handle$1(HttpChannel.java:487) ~[jetty-server-9.4.48.v20220622.jar:9.4.48.v20220622]
+	at org.eclipse.jetty.server.HttpChannel.dispatch(HttpChannel.java:732) ~[jetty-server-9.4.48.v20220622.jar:9.4.48.v20220622]
+	at org.eclipse.jetty.server.HttpChannel.handle(HttpChannel.java:479) ~[jetty-server-9.4.48.v20220622.jar:9.4.48.v20220622]
+	at org.eclipse.jetty.server.HttpConnection.onFillable(HttpConnection.java:277) ~[jetty-server-9.4.48.v20220622.jar:9.4.48.v20220622]
+	at org.eclipse.jetty.io.AbstractConnection$ReadCallback.succeeded(AbstractConnection.java:311) ~[jetty-io-9.4.48.v20220622.jar:9.4.48.v20220622]
+	at org.eclipse.jetty.io.FillInterest.fillable(FillInterest.java:105) ~[jetty-io-9.4.48.v20220622.jar:9.4.48.v20220622]
+	at org.eclipse.jetty.io.ChannelEndPoint$1.run(ChannelEndPoint.java:104) ~[jetty-io-9.4.48.v20220622.jar:9.4.48.v20220622]
+	at org.eclipse.jetty.util.thread.strategy.EatWhatYouKill.runTask(EatWhatYouKill.java:338) ~[jetty-util-9.4.48.v20220622.jar:9.4.48.v20220622]
+	at org.eclipse.jetty.util.thread.strategy.EatWhatYouKill.doProduce(EatWhatYouKill.java:315) ~[jetty-util-9.4.48.v20220622.jar:9.4.48.v20220622]
+	at org.eclipse.jetty.util.thread.strategy.EatWhatYouKill.tryProduce(EatWhatYouKill.java:173) ~[jetty-util-9.4.48.v20220622.jar:9.4.48.v20220622]
+	at org.eclipse.jetty.util.thread.strategy.EatWhatYouKill.run(EatWhatYouKill.java:131) ~[jetty-util-9.4.48.v20220622.jar:9.4.48.v20220622]
+	at org.eclipse.jetty.util.thread.ReservedThreadExecutor$ReservedThread.run(ReservedThreadExecutor.java:409) ~[jetty-util-9.4.48.v20220622.jar:9.4.48.v20220622]
+	at org.eclipse.jetty.util.thread.QueuedThreadPool.runJob(QueuedThreadPool.java:883) ~[jetty-util-9.4.48.v20220622.jar:9.4.48.v20220622]
+	at org.eclipse.jetty.util.thread.QueuedThreadPool$Runner.run(QueuedThreadPool.java:1034) ~[jetty-util-9.4.48.v20220622.jar:9.4.48.v20220622]
+	at java.lang.Thread.run(Thread.java:834) ~[?:?]
+2023-04-10 11:57:06.317 INFO  (searcherExecutor-12-thread-1-processing-amazon_iphone) [ x:amazon_iphone] o.a.s.c.SolrCore Registered new searcher autowarm time: 13 ms
+2023-04-10 11:57:06.363 INFO  (searcherExecutor-12-thread-1-processing-amazon_iphone) [ x:amazon_iphone] o.a.s.c.QuerySenderListener QuerySenderListener done.
+2023-04-10 11:57:06.363 INFO  (searcherExecutor-12-thread-1-processing-amazon_iphone) [ x:amazon_iphone] o.a.s.h.c.SuggestComponent buildOnCommit: mySuggester
+2023-04-10 11:57:06.364 INFO  (searcherExecutor-12-thread-1-processing-amazon_iphone) [ x:amazon_iphone] o.a.s.s.s.SolrSuggester SolrSuggester.build(mySuggester)
+2023-04-10 11:57:56.993 INFO  (searcherExecutor-12-thread-1-processing-amazon_iphone) [ x:amazon_iphone] o.a.s.c.SolrCore Registered new searcher autowarm time: 0 ms
+2023-04-10 11:59:21.865 INFO  (qtp967677821-26) [ x:amazon_iphone] o.a.s.u.p.LogUpdateProcessorFactory webapp=/solr path=/update params={commitWithin=1000&boost=1.0&wt=json&overwrite=true}{add=[0da50cf2-4637-43e4-867a-9e741161aaeb (1762790433676591104), 004eb7e5-d68e-48d9-a3b4-ebf08fd2701f (1762790433691271168), 1c357119-2d8f-48ca-ab2a-606f2dee0ede (1762790433698611200), a8d66898-3207-4928-a16c-fffe33716fa6 (1762790433702805504), bdd6ebda-7ab2-4a4c-bc6f-17ff2cd024d2 (1762790433704902656), afede75c-5e7e-4b5b-85b7-563d62a8ab20 (1762790433711194112), 3803c320-a9f1-4679-bebd-622c17bfa85f (1762790433714339840), 7dc01d81-3013-42e7-ac6e-727ef469423a (1762790433716436992), 0fb59334-364f-487b-ad70-afe2a3e1c485 (1762790433719582720), 2241610b-293c-490f-83ea-a0c21e0a8afd (1762790433721679872), ... (20 adds)]} 0 62
+2023-04-10 11:59:22.869 INFO  (searcherExecutor-12-thread-1-processing-amazon_iphone) [ x:amazon_iphone] o.a.s.c.QuerySenderListener QuerySenderListener done.
+2023-04-10 11:59:22.869 INFO  (searcherExecutor-12-thread-1-processing-amazon_iphone) [ x:amazon_iphone] o.a.s.h.c.SuggestComponent buildOnCommit: mySuggester
+2023-04-10 11:59:22.869 INFO  (searcherExecutor-12-thread-1-processing-amazon_iphone) [ x:amazon_iphone] o.a.s.s.s.SolrSuggester SolrSuggester.build(mySuggester)
+2023-04-10 11:59:43.964 INFO  (qtp967677821-18) [] o.a.s.s.HttpSolrCall [admin] webapp=null path=/admin/cores params={indexInfo=false&wt=json&_=1681127983555} status=0 QTime=7
+2023-04-10 11:59:43.986 INFO  (qtp967677821-24) [] o.a.s.s.HttpSolrCall [admin] webapp=null path=/admin/cores params={wt=json&_=1681127983555} status=0 QTime=28
+2023-04-10 11:59:44.033 INFO  (qtp967677821-19) [] o.a.s.s.HttpSolrCall [admin] webapp=null path=/admin/cores params={indexInfo=false&wt=json&_=1681127983555} status=0 QTime=0
+2023-04-10 11:59:44.051 INFO  (qtp967677821-18) [] o.a.s.s.HttpSolrCall [admin] webapp=null path=/admin/cores params={wt=json&_=1681127983555} status=0 QTime=15
+2023-04-10 11:59:44.059 INFO  (qtp967677821-22) [] o.a.s.s.HttpSolrCall [admin] webapp=null path=/admin/info/system params={wt=json&_=1681127983556} status=0 QTime=101
+2023-04-10 11:59:44.119 INFO  (qtp967677821-23) [] o.a.s.s.HttpSolrCall [admin] webapp=null path=/admin/info/system params={wt=json&_=1681127983556} status=0 QTime=55
+2023-04-10 11:59:45.384 INFO  (qtp967677821-23) [] o.a.s.s.HttpSolrCall [admin] webapp=null path=/admin/cores params={indexInfo=false&wt=json&_=1681127983555} status=0 QTime=0
+2023-04-10 11:59:45.387 INFO  (qtp967677821-24) [ x:amazon_iphone] o.a.s.c.S.Request webapp=/solr path=/admin/luke params={numTerms=0&show=index&wt=json&_=1681127985375} status=0 QTime=1
+2023-04-10 11:59:45.398 INFO  (qtp967677821-20) [ x:amazon_iphone] o.a.s.c.S.Request webapp=/solr path=/admin/ping params={action=status&wt=json&_=1681127983556&ts=1681127983556} status=503 QTime=4
+2023-04-10 11:59:45.419 INFO  (qtp967677821-22) [ x:amazon_iphone] o.a.s.c.S.Request webapp=/solr path=/replication params={wt=json&command=details&_=1681127985375} status=0 QTime=31
+2023-04-10 11:59:45.482 INFO  (qtp967677821-19) [] o.a.s.s.HttpSolrCall [admin] webapp=null path=/admin/info/system params={wt=json&_=1681127983556} status=0 QTime=98
+2023-04-10 11:59:45.485 INFO  (qtp967677821-17) [ x:amazon_iphone] o.a.s.c.S.Request webapp=/solr path=/admin/system params={wt=json&_=1681127985375} status=0 QTime=92
+2023-04-10 11:59:47.438 INFO  (qtp967677821-24) [] o.a.s.s.HttpSolrCall [admin] webapp=null path=/admin/cores params={indexInfo=false&wt=json&_=1681127983555} status=0 QTime=0
+2023-04-10 11:59:47.448 INFO  (qtp967677821-23) [ x:amazon_iphone] o.a.s.c.S.Request webapp=/solr path=/admin/file params={wt=json&_=1681127987433} status=0 QTime=9
+2023-04-10 11:59:47.484 INFO  (qtp967677821-26) [] o.a.s.s.HttpSolrCall [admin] webapp=null path=/admin/info/system params={wt=json&_=1681127983556} status=0 QTime=46
+2023-04-10 11:59:48.005 INFO  (qtp967677821-19) [ x:amazon_iphone] o.a.s.c.S.Request webapp=/solr path=/admin/ping params={wt=json&_=1681127983556&ts=1681127983556} hits=11554 status=0 QTime=2
+2023-04-10 11:59:48.006 INFO  (qtp967677821-19) [ x:amazon_iphone] o.a.s.c.S.Request webapp=/solr path=/admin/ping params={wt=json&_=1681127983556&ts=1681127983556} status=0 QTime=2
+2023-04-10 11:59:48.811 INFO  (qtp967677821-19) [] o.a.s.s.HttpSolrCall [admin] webapp=null path=/admin/cores params={indexInfo=false&wt=json&_=1681127983555} status=0 QTime=0
+2023-04-10 11:59:48.816 INFO  (qtp967677821-17) [ x:amazon_iphone] o.a.s.c.S.Request webapp=/solr path=/config/params params={wt=json&_=1681127988794} status=0 QTime=4
+2023-04-10 11:59:48.857 INFO  (qtp967677821-22) [] o.a.s.s.HttpSolrCall [admin] webapp=null path=/admin/info/system params={wt=json&_=1681127983556} status=0 QTime=45
+2023-04-10 12:00:14.421 INFO  (searcherExecutor-12-thread-1-processing-amazon_iphone) [ x:amazon_iphone] o.a.s.c.SolrCore Registered new searcher autowarm time: 0 ms
+2023-04-10 12:00:19.949 INFO  (qtp967677821-17) [] o.a.s.s.HttpSolrCall [admin] webapp=null path=/admin/cores params={indexInfo=false&wt=json&_=1681127983555} status=0 QTime=0
+2023-04-10 12:00:19.950 INFO  (qtp967677821-22) [ x:amazon_iphone] o.a.s.c.S.Request webapp=/solr path=/config/params params={wt=json&_=1681127988794} status=0 QTime=0
+2023-04-10 12:00:19.960 ERROR (qtp967677821-19) [ x:amazon_iphone] o.a.s.h.RequestHandlerBase org.apache.solr.common.SolrException: undefined field _text_ => org.apache.solr.common.SolrException: undefined field _text_
+	at org.apache.solr.schema.IndexSchema.getDynamicFieldType(IndexSchema.java:1470)
+org.apache.solr.common.SolrException: undefined field _text_
+	at org.apache.solr.schema.IndexSchema.getDynamicFieldType(IndexSchema.java:1470) ~[?:?]
+	at org.apache.solr.schema.IndexSchema$SolrQueryAnalyzer.getWrappedAnalyzer(IndexSchema.java:501) ~[?:?]
+	at org.apache.lucene.analysis.DelegatingAnalyzerWrapper$DelegatingReuseStrategy.getReusableComponents(DelegatingAnalyzerWrapper.java:83) ~[?:?]
+	at org.apache.lucene.analysis.Analyzer.tokenStream(Analyzer.java:184) ~[?:?]
+	at org.apache.lucene.util.QueryBuilder.createFieldQuery(QueryBuilder.java:256) ~[?:?]
+	at org.apache.solr.parser.SolrQueryParserBase.newFieldQuery(SolrQueryParserBase.java:527) ~[?:?]
+	at org.apache.solr.parser.QueryParser.newFieldQuery(QueryParser.java:66) ~[?:?]
+	at org.apache.solr.parser.SolrQueryParserBase.getFieldQuery(SolrQueryParserBase.java:1226) ~[?:?]
+	at org.apache.solr.parser.QueryParser.MultiTerm(QueryParser.java:642) ~[?:?]
+	at org.apache.solr.parser.QueryParser.Query(QueryParser.java:210) ~[?:?]
+	at org.apache.solr.parser.QueryParser.TopLevelQuery(QueryParser.java:141) ~[?:?]
+	at org.apache.solr.parser.SolrQueryParserBase.parse(SolrQueryParserBase.java:274) ~[?:?]
+	at org.apache.solr.search.LuceneQParser.parse(LuceneQParser.java:51) ~[?:?]
+	at org.apache.solr.search.QParser.getQuery(QParser.java:188) ~[?:?]
+	at org.apache.solr.handler.component.QueryComponent.prepare(QueryComponent.java:171) ~[?:?]
+	at org.apache.solr.handler.component.SearchHandler.handleRequestBody(SearchHandler.java:384) ~[?:?]
+	at org.apache.solr.handler.RequestHandlerBase.handleRequest(RequestHandlerBase.java:224) ~[?:?]
+	at org.apache.solr.core.SolrCore.execute(SolrCore.java:2865) ~[?:?]
+	at org.apache.solr.servlet.HttpSolrCall.execute(HttpSolrCall.java:887) ~[?:?]
+	at org.apache.solr.servlet.HttpSolrCall.call(HttpSolrCall.java:606) ~[?:?]
+	at org.apache.solr.servlet.SolrDispatchFilter.dispatch(SolrDispatchFilter.java:250) ~[?:?]
+	at org.apache.solr.servlet.SolrDispatchFilter.lambda$doFilter$0(SolrDispatchFilter.java:218) ~[?:?]
+	at org.apache.solr.servlet.ServletUtils.traceHttpRequestExecution2(ServletUtils.java:257) ~[?:?]
+	at org.apache.solr.servlet.ServletUtils.rateLimitRequest(ServletUtils.java:227) ~[?:?]
+	at org.apache.solr.servlet.SolrDispatchFilter.doFilter(SolrDispatchFilter.java:213) ~[?:?]
+	at org.apache.solr.servlet.SolrDispatchFilter.doFilter(SolrDispatchFilter.java:195) ~[?:?]
+	at org.eclipse.jetty.servlet.FilterHolder.doFilter(FilterHolder.java:201) ~[jetty-servlet-9.4.48.v20220622.jar:9.4.48.v20220622]
+	at org.eclipse.jetty.servlet.ServletHandler$Chain.doFilter(ServletHandler.java:1626) ~[jetty-servlet-9.4.48.v20220622.jar:9.4.48.v20220622]
+	at org.eclipse.jetty.servlet.ServletHandler.doHandle(ServletHandler.java:552) ~[jetty-servlet-9.4.48.v20220622.jar:9.4.48.v20220622]
+	at org.eclipse.jetty.server.handler.ScopedHandler.handle(ScopedHandler.java:143) ~[jetty-server-9.4.48.v20220622.jar:9.4.48.v20220622]
+	at org.eclipse.jetty.security.SecurityHandler.handle(SecurityHandler.java:600) ~[jetty-security-9.4.48.v20220622.jar:9.4.48.v20220622]
+	at org.eclipse.jetty.server.handler.HandlerWrapper.handle(HandlerWrapper.java:127) ~[jetty-server-9.4.48.v20220622.jar:9.4.48.v20220622]
+	at org.eclipse.jetty.server.handler.ScopedHandler.nextHandle(ScopedHandler.java:235) ~[jetty-server-9.4.48.v20220622.jar:9.4.48.v20220622]
+	at org.eclipse.jetty.server.session.SessionHandler.doHandle(SessionHandler.java:1624) ~[jetty-server-9.4.48.v20220622.jar:9.4.48.v20220622]
+	at org.eclipse.jetty.server.handler.ScopedHandler.nextHandle(ScopedHandler.java:233) ~[jetty-server-9.4.48.v20220622.jar:9.4.48.v20220622]
+	at org.eclipse.jetty.server.handler.ContextHandler.doHandle(ContextHandler.java:1440) ~[jetty-server-9.4.48.v20220622.jar:9.4.48.v20220622]
+	at org.eclipse.jetty.server.handler.ScopedHandler.nextScope(ScopedHandler.java:188) ~[jetty-server-9.4.48.v20220622.jar:9.4.48.v20220622]
+	at org.eclipse.jetty.servlet.ServletHandler.doScope(ServletHandler.java:505) ~[jetty-servlet-9.4.48.v20220622.jar:9.4.48.v20220622]
+	at org.eclipse.jetty.server.session.SessionHandler.doScope(SessionHandler.java:1594) ~[jetty-server-9.4.48.v20220622.jar:9.4.48.v20220622]
+	at org.eclipse.jetty.server.handler.ScopedHandler.nextScope(ScopedHandler.java:186) ~[jetty-server-9.4.48.v20220622.jar:9.4.48.v20220622]
+	at org.eclipse.jetty.server.handler.ContextHandler.doScope(ContextHandler.java:1355) ~[jetty-server-9.4.48.v20220622.jar:9.4.48.v20220622]
+	at org.eclipse.jetty.server.handler.ScopedHandler.handle(ScopedHandler.java:141) ~[jetty-server-9.4.48.v20220622.jar:9.4.48.v20220622]
+	at org.eclipse.jetty.server.handler.ContextHandlerCollection.handle(ContextHandlerCollection.java:191) ~[jetty-server-9.4.48.v20220622.jar:9.4.48.v20220622]
+	at org.eclipse.jetty.server.handler.InetAccessHandler.handle(InetAccessHandler.java:177) ~[jetty-server-9.4.48.v20220622.jar:9.4.48.v20220622]
+	at org.eclipse.jetty.server.handler.HandlerCollection.handle(HandlerCollection.java:146) ~[jetty-server-9.4.48.v20220622.jar:9.4.48.v20220622]
+	at org.eclipse.jetty.server.handler.HandlerWrapper.handle(HandlerWrapper.java:127) ~[jetty-server-9.4.48.v20220622.jar:9.4.48.v20220622]
+	at org.eclipse.jetty.rewrite.handler.RewriteHandler.handle(RewriteHandler.java:322) ~[jetty-rewrite-9.4.48.v20220622.jar:9.4.48.v20220622]
+	at org.eclipse.jetty.server.handler.gzip.GzipHandler.handle(GzipHandler.java:772) ~[jetty-server-9.4.48.v20220622.jar:9.4.48.v20220622]
+	at org.eclipse.jetty.server.handler.HandlerWrapper.handle(HandlerWrapper.java:127) ~[jetty-server-9.4.48.v20220622.jar:9.4.48.v20220622]
+	at org.eclipse.jetty.server.Server.handle(Server.java:516) ~[jetty-server-9.4.48.v20220622.jar:9.4.48.v20220622]
+	at org.eclipse.jetty.server.HttpChannel.lambda$handle$1(HttpChannel.java:487) ~[jetty-server-9.4.48.v20220622.jar:9.4.48.v20220622]
+	at org.eclipse.jetty.server.HttpChannel.dispatch(HttpChannel.java:732) ~[jetty-server-9.4.48.v20220622.jar:9.4.48.v20220622]
+	at org.eclipse.jetty.server.HttpChannel.handle(HttpChannel.java:479) ~[jetty-server-9.4.48.v20220622.jar:9.4.48.v20220622]
+	at org.eclipse.jetty.server.HttpConnection.onFillable(HttpConnection.java:277) ~[jetty-server-9.4.48.v20220622.jar:9.4.48.v20220622]
+	at org.eclipse.jetty.io.AbstractConnection$ReadCallback.succeeded(AbstractConnection.java:311) ~[jetty-io-9.4.48.v20220622.jar:9.4.48.v20220622]
+	at org.eclipse.jetty.io.FillInterest.fillable(FillInterest.java:105) ~[jetty-io-9.4.48.v20220622.jar:9.4.48.v20220622]
+	at org.eclipse.jetty.io.ChannelEndPoint$1.run(ChannelEndPoint.java:104) ~[jetty-io-9.4.48.v20220622.jar:9.4.48.v20220622]
+	at org.eclipse.jetty.util.thread.strategy.EatWhatYouKill.runTask(EatWhatYouKill.java:338) ~[jetty-util-9.4.48.v20220622.jar:9.4.48.v20220622]
+	at org.eclipse.jetty.util.thread.strategy.EatWhatYouKill.doProduce(EatWhatYouKill.java:315) ~[jetty-util-9.4.48.v20220622.jar:9.4.48.v20220622]
+	at org.eclipse.jetty.util.thread.strategy.EatWhatYouKill.tryProduce(EatWhatYouKill.java:173) ~[jetty-util-9.4.48.v20220622.jar:9.4.48.v20220622]
+	at org.eclipse.jetty.util.thread.strategy.EatWhatYouKill.run(EatWhatYouKill.java:131) ~[jetty-util-9.4.48.v20220622.jar:9.4.48.v20220622]
+	at org.eclipse.jetty.util.thread.ReservedThreadExecutor$ReservedThread.run(ReservedThreadExecutor.java:409) ~[jetty-util-9.4.48.v20220622.jar:9.4.48.v20220622]
+	at org.eclipse.jetty.util.thread.QueuedThreadPool.runJob(QueuedThreadPool.java:883) ~[jetty-util-9.4.48.v20220622.jar:9.4.48.v20220622]
+	at org.eclipse.jetty.util.thread.QueuedThreadPool$Runner.run(QueuedThreadPool.java:1034) ~[jetty-util-9.4.48.v20220622.jar:9.4.48.v20220622]
+	at java.lang.Thread.run(Thread.java:834) ~[?:?]
+2023-04-10 12:00:19.961 INFO  (qtp967677821-19) [ x:amazon_iphone] o.a.s.c.S.Request webapp=/solr path=/select params={q=title:+Looks+brand+new!&indent=true&q.op=OR&useParams=&_=1681127988794} status=400 QTime=11
+2023-04-10 12:00:19.990 INFO  (qtp967677821-18) [] o.a.s.s.HttpSolrCall [admin] webapp=null path=/admin/info/system params={wt=json&_=1681127983556} status=0 QTime=41
+2023-04-10 12:00:44.651 INFO  (qtp967677821-26) [] o.a.s.s.HttpSolrCall [admin] webapp=null path=/admin/cores params={indexInfo=false&wt=json&_=1681127983555} status=0 QTime=0
+2023-04-10 12:00:44.651 INFO  (qtp967677821-20) [ x:amazon_iphone] o.a.s.c.S.Request webapp=/solr path=/config/params params={wt=json&_=1681127988794} status=0 QTime=0
+2023-04-10 12:00:44.692 ERROR (qtp967677821-22) [ x:amazon_iphone] o.a.s.h.RequestHandlerBase org.apache.solr.common.SolrException: undefined field _text_ => org.apache.solr.common.SolrException: undefined field _text_
+	at org.apache.solr.schema.IndexSchema.getDynamicFieldType(IndexSchema.java:1470)
+org.apache.solr.common.SolrException: undefined field _text_
+	at org.apache.solr.schema.IndexSchema.getDynamicFieldType(IndexSchema.java:1470) ~[?:?]
+	at org.apache.solr.schema.IndexSchema$SolrQueryAnalyzer.getWrappedAnalyzer(IndexSchema.java:501) ~[?:?]
+	at org.apache.lucene.analysis.DelegatingAnalyzerWrapper$DelegatingReuseStrategy.getReusableComponents(DelegatingAnalyzerWrapper.java:83) ~[?:?]
+	at org.apache.lucene.analysis.Analyzer.tokenStream(Analyzer.java:184) ~[?:?]
+	at org.apache.lucene.util.QueryBuilder.createFieldQuery(QueryBuilder.java:256) ~[?:?]
+	at org.apache.solr.parser.SolrQueryParserBase.newFieldQuery(SolrQueryParserBase.java:527) ~[?:?]
+	at org.apache.solr.parser.QueryParser.newFieldQuery(QueryParser.java:66) ~[?:?]
+	at org.apache.solr.parser.SolrQueryParserBase.getFieldQuery(SolrQueryParserBase.java:1139) ~[?:?]
+	at org.apache.solr.parser.SolrQueryParserBase.handleBareTokenQuery(SolrQueryParserBase.java:855) ~[?:?]
+	at org.apache.solr.parser.QueryParser.Term(QueryParser.java:452) ~[?:?]
+	at org.apache.solr.parser.QueryParser.Clause(QueryParser.java:291) ~[?:?]
+	at org.apache.solr.parser.QueryParser.Query(QueryParser.java:233) ~[?:?]
+	at org.apache.solr.parser.QueryParser.TopLevelQuery(QueryParser.java:141) ~[?:?]
+	at org.apache.solr.parser.SolrQueryParserBase.parse(SolrQueryParserBase.java:274) ~[?:?]
+	at org.apache.solr.search.LuceneQParser.parse(LuceneQParser.java:51) ~[?:?]
+	at org.apache.solr.search.QParser.getQuery(QParser.java:188) ~[?:?]
+	at org.apache.solr.handler.component.QueryComponent.prepare(QueryComponent.java:171) ~[?:?]
+	at org.apache.solr.handler.component.SearchHandler.handleRequestBody(SearchHandler.java:384) ~[?:?]
+	at org.apache.solr.handler.RequestHandlerBase.handleRequest(RequestHandlerBase.java:224) ~[?:?]
+	at org.apache.solr.core.SolrCore.execute(SolrCore.java:2865) ~[?:?]
+	at org.apache.solr.servlet.HttpSolrCall.execute(HttpSolrCall.java:887) ~[?:?]
+	at org.apache.solr.servlet.HttpSolrCall.call(HttpSolrCall.java:606) ~[?:?]
+	at org.apache.solr.servlet.SolrDispatchFilter.dispatch(SolrDispatchFilter.java:250) ~[?:?]
+	at org.apache.solr.servlet.SolrDispatchFilter.lambda$doFilter$0(SolrDispatchFilter.java:218) ~[?:?]
+	at org.apache.solr.servlet.ServletUtils.traceHttpRequestExecution2(ServletUtils.java:257) ~[?:?]
+	at org.apache.solr.servlet.ServletUtils.rateLimitRequest(ServletUtils.java:227) ~[?:?]
+	at org.apache.solr.servlet.SolrDispatchFilter.doFilter(SolrDispatchFilter.java:213) ~[?:?]
+	at org.apache.solr.servlet.SolrDispatchFilter.doFilter(SolrDispatchFilter.java:195) ~[?:?]
+	at org.eclipse.jetty.servlet.FilterHolder.doFilter(FilterHolder.java:201) ~[jetty-servlet-9.4.48.v20220622.jar:9.4.48.v20220622]
+	at org.eclipse.jetty.servlet.ServletHandler$Chain.doFilter(ServletHandler.java:1626) ~[jetty-servlet-9.4.48.v20220622.jar:9.4.48.v20220622]
+	at org.eclipse.jetty.servlet.ServletHandler.doHandle(ServletHandler.java:552) ~[jetty-servlet-9.4.48.v20220622.jar:9.4.48.v20220622]
+	at org.eclipse.jetty.server.handler.ScopedHandler.handle(ScopedHandler.java:143) ~[jetty-server-9.4.48.v20220622.jar:9.4.48.v20220622]
+	at org.eclipse.jetty.security.SecurityHandler.handle(SecurityHandler.java:600) ~[jetty-security-9.4.48.v20220622.jar:9.4.48.v20220622]
+	at org.eclipse.jetty.server.handler.HandlerWrapper.handle(HandlerWrapper.java:127) ~[jetty-server-9.4.48.v20220622.jar:9.4.48.v20220622]
+	at org.eclipse.jetty.server.handler.ScopedHandler.nextHandle(ScopedHandler.java:235) ~[jetty-server-9.4.48.v20220622.jar:9.4.48.v20220622]
+	at org.eclipse.jetty.server.session.SessionHandler.doHandle(SessionHandler.java:1624) ~[jetty-server-9.4.48.v20220622.jar:9.4.48.v20220622]
+	at org.eclipse.jetty.server.handler.ScopedHandler.nextHandle(ScopedHandler.java:233) ~[jetty-server-9.4.48.v20220622.jar:9.4.48.v20220622]
+	at org.eclipse.jetty.server.handler.ContextHandler.doHandle(ContextHandler.java:1440) ~[jetty-server-9.4.48.v20220622.jar:9.4.48.v20220622]
+	at org.eclipse.jetty.server.handler.ScopedHandler.nextScope(ScopedHandler.java:188) ~[jetty-server-9.4.48.v20220622.jar:9.4.48.v20220622]
+	at org.eclipse.jetty.servlet.ServletHandler.doScope(ServletHandler.java:505) ~[jetty-servlet-9.4.48.v20220622.jar:9.4.48.v20220622]
+	at org.eclipse.jetty.server.session.SessionHandler.doScope(SessionHandler.java:1594) ~[jetty-server-9.4.48.v20220622.jar:9.4.48.v20220622]
+	at org.eclipse.jetty.server.handler.ScopedHandler.nextScope(ScopedHandler.java:186) ~[jetty-server-9.4.48.v20220622.jar:9.4.48.v20220622]
+	at org.eclipse.jetty.server.handler.ContextHandler.doScope(ContextHandler.java:1355) ~[jetty-server-9.4.48.v20220622.jar:9.4.48.v20220622]
+	at org.eclipse.jetty.server.handler.ScopedHandler.handle(ScopedHandler.java:141) ~[jetty-server-9.4.48.v20220622.jar:9.4.48.v20220622]
+	at org.eclipse.jetty.server.handler.ContextHandlerCollection.handle(ContextHandlerCollection.java:191) ~[jetty-server-9.4.48.v20220622.jar:9.4.48.v20220622]
+	at org.eclipse.jetty.server.handler.InetAccessHandler.handle(InetAccessHandler.java:177) ~[jetty-server-9.4.48.v20220622.jar:9.4.48.v20220622]
+	at org.eclipse.jetty.server.handler.HandlerCollection.handle(HandlerCollection.java:146) ~[jetty-server-9.4.48.v20220622.jar:9.4.48.v20220622]
+	at org.eclipse.jetty.server.handler.HandlerWrapper.handle(HandlerWrapper.java:127) ~[jetty-server-9.4.48.v20220622.jar:9.4.48.v20220622]
+	at org.eclipse.jetty.rewrite.handler.RewriteHandler.handle(RewriteHandler.java:322) ~[jetty-rewrite-9.4.48.v20220622.jar:9.4.48.v20220622]
+	at org.eclipse.jetty.server.handler.gzip.GzipHandler.handle(GzipHandler.java:772) ~[jetty-server-9.4.48.v20220622.jar:9.4.48.v20220622]
+	at org.eclipse.jetty.server.handler.HandlerWrapper.handle(HandlerWrapper.java:127) ~[jetty-server-9.4.48.v20220622.jar:9.4.48.v20220622]
+	at org.eclipse.jetty.server.Server.handle(Server.java:516) ~[jetty-server-9.4.48.v20220622.jar:9.4.48.v20220622]
+	at org.eclipse.jetty.server.HttpChannel.lambda$handle$1(HttpChannel.java:487) ~[jetty-server-9.4.48.v20220622.jar:9.4.48.v20220622]
+	at org.eclipse.jetty.server.HttpChannel.dispatch(HttpChannel.java:732) ~[jetty-server-9.4.48.v20220622.jar:9.4.48.v20220622]
+	at org.eclipse.jetty.server.HttpChannel.handle(HttpChannel.java:479) ~[jetty-server-9.4.48.v20220622.jar:9.4.48.v20220622]
+	at org.eclipse.jetty.server.HttpConnection.onFillable(HttpConnection.java:277) ~[jetty-server-9.4.48.v20220622.jar:9.4.48.v20220622]
+	at org.eclipse.jetty.io.AbstractConnection$ReadCallback.succeeded(AbstractConnection.java:311) ~[jetty-io-9.4.48.v20220622.jar:9.4.48.v20220622]
+	at org.eclipse.jetty.io.FillInterest.fillable(FillInterest.java:105) ~[jetty-io-9.4.48.v20220622.jar:9.4.48.v20220622]
+	at org.eclipse.jetty.io.ChannelEndPoint$1.run(ChannelEndPoint.java:104) ~[jetty-io-9.4.48.v20220622.jar:9.4.48.v20220622]
+	at org.eclipse.jetty.util.thread.strategy.EatWhatYouKill.runTask(EatWhatYouKill.java:338) ~[jetty-util-9.4.48.v20220622.jar:9.4.48.v20220622]
+	at org.eclipse.jetty.util.thread.strategy.EatWhatYouKill.doProduce(EatWhatYouKill.java:315) ~[jetty-util-9.4.48.v20220622.jar:9.4.48.v20220622]
+	at org.eclipse.jetty.util.thread.strategy.EatWhatYouKill.tryProduce(EatWhatYouKill.java:173) ~[jetty-util-9.4.48.v20220622.jar:9.4.48.v20220622]
+	at org.eclipse.jetty.util.thread.strategy.EatWhatYouKill.run(EatWhatYouKill.java:131) ~[jetty-util-9.4.48.v20220622.jar:9.4.48.v20220622]
+	at org.eclipse.jetty.util.thread.ReservedThreadExecutor$ReservedThread.run(ReservedThreadExecutor.java:409) ~[jetty-util-9.4.48.v20220622.jar:9.4.48.v20220622]
+	at org.eclipse.jetty.util.thread.QueuedThreadPool.runJob(QueuedThreadPool.java:883) ~[jetty-util-9.4.48.v20220622.jar:9.4.48.v20220622]
+	at org.eclipse.jetty.util.thread.QueuedThreadPool$Runner.run(QueuedThreadPool.java:1034) ~[jetty-util-9.4.48.v20220622.jar:9.4.48.v20220622]
+	at java.lang.Thread.run(Thread.java:834) ~[?:?]
+2023-04-10 12:00:44.693 INFO  (qtp967677821-22) [ x:amazon_iphone] o.a.s.c.S.Request webapp=/solr path=/select params={q=title:+*Looks+brand+new!*&indent=true&q.op=OR&useParams=&_=1681127988794} status=400 QTime=41
+2023-04-10 12:00:44.706 INFO  (qtp967677821-19) [] o.a.s.s.HttpSolrCall [admin] webapp=null path=/admin/info/system params={wt=json&_=1681127983556} status=0 QTime=55
+2023-04-10 12:01:05.555 INFO  (qtp967677821-19) [ x:amazon_iphone] o.a.s.c.S.Request webapp=/solr path=/config/params params={wt=json&_=1681127988794} status=0 QTime=0
+2023-04-10 12:01:05.555 INFO  (qtp967677821-20) [] o.a.s.s.HttpSolrCall [admin] webapp=null path=/admin/cores params={indexInfo=false&wt=json&_=1681127983555} status=0 QTime=0
+2023-04-10 12:01:05.597 INFO  (qtp967677821-18) [ x:amazon_iphone] o.a.s.c.S.Request webapp=/solr path=/select params={q=title:WOW&indent=true&q.op=OR&useParams=&_=1681127988794} hits=2 status=0 QTime=41
+2023-04-10 12:01:05.603 INFO  (qtp967677821-26) [] o.a.s.s.HttpSolrCall [admin] webapp=null path=/admin/info/system params={wt=json&_=1681127983556} status=0 QTime=47
+2023-04-10 12:01:14.922 INFO  (qtp967677821-20) [ x:amazon_iphone] o.a.s.u.p.LogUpdateProcessorFactory webapp=/solr path=/update params={commitWithin=1000&boost=1.0&wt=json&overwrite=true}{add=[b27b3f6f-8a7d-402a-9ef4-441d24d26101 (1762790552245370880), 998331cb-54c7-4d93-9da3-a476a096d768 (1762790552260050944), 06b04406-b260-43ab-b918-b56a0b8f7cfd (1762790552262148096), b71d9cd9-5dc2-4b5f-b72e-869743a861cc (1762790552264245248), bc2004fe-790c-48e4-aa65-81be1202349a (1762790552265293824), ade5c4a3-ba4e-44c2-8eee-5c91a92bf3b9 (1762790552267390976), 1e5bf1e1-32bc-4eb2-b4c0-f42c7389d14c (1762790552268439552), df27be5a-b55d-484c-a26f-569d15a326da (1762790552270536704), b6b4744c-a11c-4993-9df4-667c54af5229 (1762790552272633856), 07ce4471-3c78-4eb0-8235-29108bf558f6 (1762790552273682432), ... (20 adds)]} 0 43
+2023-04-10 12:01:15.996 INFO  (searcherExecutor-12-thread-1-processing-amazon_iphone) [ x:amazon_iphone] o.a.s.c.QuerySenderListener QuerySenderListener done.
+2023-04-10 12:01:15.996 INFO  (searcherExecutor-12-thread-1-processing-amazon_iphone) [ x:amazon_iphone] o.a.s.h.c.SuggestComponent buildOnCommit: mySuggester
+2023-04-10 12:01:15.996 INFO  (searcherExecutor-12-thread-1-processing-amazon_iphone) [ x:amazon_iphone] o.a.s.s.s.SolrSuggester SolrSuggester.build(mySuggester)
+2023-04-10 12:01:18.180 INFO  (qtp967677821-17) [ x:amazon_iphone] o.a.s.c.S.Request webapp=/solr path=/config/params params={wt=json&_=1681127988794} status=0 QTime=0
+2023-04-10 12:01:18.180 INFO  (qtp967677821-26) [] o.a.s.s.HttpSolrCall [admin] webapp=null path=/admin/cores params={indexInfo=false&wt=json&_=1681127983555} status=0 QTime=0
+2023-04-10 12:01:18.180 INFO  (qtp967677821-20) [ x:amazon_iphone] o.a.s.c.S.Request webapp=/solr path=/select params={q=title:WOW&indent=true&q.op=OR&useParams=&_=1681127988794} hits=2 status=0 QTime=0
+2023-04-10 12:01:18.228 INFO  (qtp967677821-50) [] o.a.s.s.HttpSolrCall [admin] webapp=null path=/admin/info/system params={wt=json&_=1681127983556} status=0 QTime=46
+2023-04-10 12:01:24.853 INFO  (qtp967677821-17) [ x:amazon_iphone] o.a.s.c.S.Request webapp=/solr path=/config/params params={wt=json&_=1681127988794} status=0 QTime=0
+2023-04-10 12:01:24.853 INFO  (qtp967677821-26) [] o.a.s.s.HttpSolrCall [admin] webapp=null path=/admin/cores params={indexInfo=false&wt=json&_=1681127983555} status=0 QTime=0
+2023-04-10 12:01:24.854 INFO  (qtp967677821-18) [ x:amazon_iphone] o.a.s.c.S.Request webapp=/solr path=/select params={q=title:WOW&indent=true&q.op=OR&useParams=&_=1681127988794} hits=2 status=0 QTime=0
+2023-04-10 12:01:24.899 INFO  (qtp967677821-20) [] o.a.s.s.HttpSolrCall [admin] webapp=null path=/admin/info/system params={wt=json&_=1681127983556} status=0 QTime=46
+2023-04-10 12:02:03.795 INFO  (qtp967677821-24) [] o.a.s.s.HttpSolrCall [admin] webapp=null path=/admin/cores params={indexInfo=false&wt=json&_=1681127983555} status=0 QTime=0
+2023-04-10 12:02:03.795 INFO  (qtp967677821-50) [ x:amazon_iphone] o.a.s.c.S.Request webapp=/solr path=/config/params params={wt=json&_=1681127988794} status=0 QTime=0
+2023-04-10 12:02:03.797 INFO  (qtp967677821-19) [ x:amazon_iphone] o.a.s.c.S.Request webapp=/solr path=/select params={q=title:WOW&indent=true&q.op=OR&useParams=&_=1681127988794} hits=2 status=0 QTime=0
+2023-04-10 12:02:03.843 INFO  (qtp967677821-18) [] o.a.s.s.HttpSolrCall [admin] webapp=null path=/admin/info/system params={wt=json&_=1681127983556} status=0 QTime=47
+2023-04-10 12:02:06.656 INFO  (searcherExecutor-12-thread-1-processing-amazon_iphone) [ x:amazon_iphone] o.a.s.c.SolrCore Registered new searcher autowarm time: 0 ms
+2023-04-10 12:02:30.454 INFO  (qtp967677821-50) [ x:amazon_iphone] o.a.s.c.S.Request webapp=/solr path=/config/params params={wt=json&_=1681127988794} status=0 QTime=0
+2023-04-10 12:02:30.454 INFO  (qtp967677821-23) [] o.a.s.s.HttpSolrCall [admin] webapp=null path=/admin/cores params={indexInfo=false&wt=json&_=1681127983555} status=0 QTime=0
+2023-04-10 12:02:30.454 ERROR (qtp967677821-18) [ x:amazon_iphone] o.a.s.h.RequestHandlerBase org.apache.solr.common.SolrException: undefined field _text_ => org.apache.solr.common.SolrException: undefined field _text_
+	at org.apache.solr.schema.IndexSchema.getDynamicFieldType(IndexSchema.java:1470)
+org.apache.solr.common.SolrException: undefined field _text_
+	at org.apache.solr.schema.IndexSchema.getDynamicFieldType(IndexSchema.java:1470) ~[?:?]
+	at org.apache.solr.schema.IndexSchema$SolrQueryAnalyzer.getWrappedAnalyzer(IndexSchema.java:501) ~[?:?]
+	at org.apache.lucene.analysis.DelegatingAnalyzerWrapper$DelegatingReuseStrategy.getReusableComponents(DelegatingAnalyzerWrapper.java:83) ~[?:?]
+	at org.apache.lucene.analysis.Analyzer.tokenStream(Analyzer.java:184) ~[?:?]
+	at org.apache.lucene.util.QueryBuilder.createFieldQuery(QueryBuilder.java:256) ~[?:?]
+	at org.apache.solr.parser.SolrQueryParserBase.newFieldQuery(SolrQueryParserBase.java:527) ~[?:?]
+	at org.apache.solr.parser.QueryParser.newFieldQuery(QueryParser.java:66) ~[?:?]
+	at org.apache.solr.parser.SolrQueryParserBase.getFieldQuery(SolrQueryParserBase.java:1226) ~[?:?]
+	at org.apache.solr.parser.QueryParser.MultiTerm(QueryParser.java:642) ~[?:?]
+	at org.apache.solr.parser.QueryParser.Query(QueryParser.java:210) ~[?:?]
+	at org.apache.solr.parser.QueryParser.TopLevelQuery(QueryParser.java:141) ~[?:?]
+	at org.apache.solr.parser.SolrQueryParserBase.parse(SolrQueryParserBase.java:274) ~[?:?]
+	at org.apache.solr.search.LuceneQParser.parse(LuceneQParser.java:51) ~[?:?]
+	at org.apache.solr.search.QParser.getQuery(QParser.java:188) ~[?:?]
+	at org.apache.solr.handler.component.QueryComponent.prepare(QueryComponent.java:171) ~[?:?]
+	at org.apache.solr.handler.component.SearchHandler.handleRequestBody(SearchHandler.java:384) ~[?:?]
+	at org.apache.solr.handler.RequestHandlerBase.handleRequest(RequestHandlerBase.java:224) ~[?:?]
+	at org.apache.solr.core.SolrCore.execute(SolrCore.java:2865) ~[?:?]
+	at org.apache.solr.servlet.HttpSolrCall.execute(HttpSolrCall.java:887) ~[?:?]
+	at org.apache.solr.servlet.HttpSolrCall.call(HttpSolrCall.java:606) ~[?:?]
+	at org.apache.solr.servlet.SolrDispatchFilter.dispatch(SolrDispatchFilter.java:250) ~[?:?]
+	at org.apache.solr.servlet.SolrDispatchFilter.lambda$doFilter$0(SolrDispatchFilter.java:218) ~[?:?]
+	at org.apache.solr.servlet.ServletUtils.traceHttpRequestExecution2(ServletUtils.java:257) ~[?:?]
+	at org.apache.solr.servlet.ServletUtils.rateLimitRequest(ServletUtils.java:227) ~[?:?]
+	at org.apache.solr.servlet.SolrDispatchFilter.doFilter(SolrDispatchFilter.java:213) ~[?:?]
+	at org.apache.solr.servlet.SolrDispatchFilter.doFilter(SolrDispatchFilter.java:195) ~[?:?]
+	at org.eclipse.jetty.servlet.FilterHolder.doFilter(FilterHolder.java:201) ~[jetty-servlet-9.4.48.v20220622.jar:9.4.48.v20220622]
+	at org.eclipse.jetty.servlet.ServletHandler$Chain.doFilter(ServletHandler.java:1626) ~[jetty-servlet-9.4.48.v20220622.jar:9.4.48.v20220622]
+	at org.eclipse.jetty.servlet.ServletHandler.doHandle(ServletHandler.java:552) ~[jetty-servlet-9.4.48.v20220622.jar:9.4.48.v20220622]
+	at org.eclipse.jetty.server.handler.ScopedHandler.handle(ScopedHandler.java:143) ~[jetty-server-9.4.48.v20220622.jar:9.4.48.v20220622]
+	at org.eclipse.jetty.security.SecurityHandler.handle(SecurityHandler.java:600) ~[jetty-security-9.4.48.v20220622.jar:9.4.48.v20220622]
+	at org.eclipse.jetty.server.handler.HandlerWrapper.handle(HandlerWrapper.java:127) ~[jetty-server-9.4.48.v20220622.jar:9.4.48.v20220622]
+	at org.eclipse.jetty.server.handler.ScopedHandler.nextHandle(ScopedHandler.java:235) ~[jetty-server-9.4.48.v20220622.jar:9.4.48.v20220622]
+	at org.eclipse.jetty.server.session.SessionHandler.doHandle(SessionHandler.java:1624) ~[jetty-server-9.4.48.v20220622.jar:9.4.48.v20220622]
+	at org.eclipse.jetty.server.handler.ScopedHandler.nextHandle(ScopedHandler.java:233) ~[jetty-server-9.4.48.v20220622.jar:9.4.48.v20220622]
+	at org.eclipse.jetty.server.handler.ContextHandler.doHandle(ContextHandler.java:1440) ~[jetty-server-9.4.48.v20220622.jar:9.4.48.v20220622]
+	at org.eclipse.jetty.server.handler.ScopedHandler.nextScope(ScopedHandler.java:188) ~[jetty-server-9.4.48.v20220622.jar:9.4.48.v20220622]
+	at org.eclipse.jetty.servlet.ServletHandler.doScope(ServletHandler.java:505) ~[jetty-servlet-9.4.48.v20220622.jar:9.4.48.v20220622]
+	at org.eclipse.jetty.server.session.SessionHandler.doScope(SessionHandler.java:1594) ~[jetty-server-9.4.48.v20220622.jar:9.4.48.v20220622]
+	at org.eclipse.jetty.server.handler.ScopedHandler.nextScope(ScopedHandler.java:186) ~[jetty-server-9.4.48.v20220622.jar:9.4.48.v20220622]
+	at org.eclipse.jetty.server.handler.ContextHandler.doScope(ContextHandler.java:1355) ~[jetty-server-9.4.48.v20220622.jar:9.4.48.v20220622]
+	at org.eclipse.jetty.server.handler.ScopedHandler.handle(ScopedHandler.java:141) ~[jetty-server-9.4.48.v20220622.jar:9.4.48.v20220622]
+	at org.eclipse.jetty.server.handler.ContextHandlerCollection.handle(ContextHandlerCollection.java:191) ~[jetty-server-9.4.48.v20220622.jar:9.4.48.v20220622]
+	at org.eclipse.jetty.server.handler.InetAccessHandler.handle(InetAccessHandler.java:177) ~[jetty-server-9.4.48.v20220622.jar:9.4.48.v20220622]
+	at org.eclipse.jetty.server.handler.HandlerCollection.handle(HandlerCollection.java:146) ~[jetty-server-9.4.48.v20220622.jar:9.4.48.v20220622]
+	at org.eclipse.jetty.server.handler.HandlerWrapper.handle(HandlerWrapper.java:127) ~[jetty-server-9.4.48.v20220622.jar:9.4.48.v20220622]
+	at org.eclipse.jetty.rewrite.handler.RewriteHandler.handle(RewriteHandler.java:322) ~[jetty-rewrite-9.4.48.v20220622.jar:9.4.48.v20220622]
+	at org.eclipse.jetty.server.handler.gzip.GzipHandler.handle(GzipHandler.java:772) ~[jetty-server-9.4.48.v20220622.jar:9.4.48.v20220622]
+	at org.eclipse.jetty.server.handler.HandlerWrapper.handle(HandlerWrapper.java:127) ~[jetty-server-9.4.48.v20220622.jar:9.4.48.v20220622]
+	at org.eclipse.jetty.server.Server.handle(Server.java:516) ~[jetty-server-9.4.48.v20220622.jar:9.4.48.v20220622]
+	at org.eclipse.jetty.server.HttpChannel.lambda$handle$1(HttpChannel.java:487) ~[jetty-server-9.4.48.v20220622.jar:9.4.48.v20220622]
+	at org.eclipse.jetty.server.HttpChannel.dispatch(HttpChannel.java:732) ~[jetty-server-9.4.48.v20220622.jar:9.4.48.v20220622]
+	at org.eclipse.jetty.server.HttpChannel.handle(HttpChannel.java:479) ~[jetty-server-9.4.48.v20220622.jar:9.4.48.v20220622]
+	at org.eclipse.jetty.server.HttpConnection.onFillable(HttpConnection.java:277) ~[jetty-server-9.4.48.v20220622.jar:9.4.48.v20220622]
+	at org.eclipse.jetty.io.AbstractConnection$ReadCallback.succeeded(AbstractConnection.java:311) ~[jetty-io-9.4.48.v20220622.jar:9.4.48.v20220622]
+	at org.eclipse.jetty.io.FillInterest.fillable(FillInterest.java:105) ~[jetty-io-9.4.48.v20220622.jar:9.4.48.v20220622]
+	at org.eclipse.jetty.io.ChannelEndPoint$1.run(ChannelEndPoint.java:104) ~[jetty-io-9.4.48.v20220622.jar:9.4.48.v20220622]
+	at org.eclipse.jetty.util.thread.strategy.EatWhatYouKill.runTask(EatWhatYouKill.java:338) ~[jetty-util-9.4.48.v20220622.jar:9.4.48.v20220622]
+	at org.eclipse.jetty.util.thread.strategy.EatWhatYouKill.doProduce(EatWhatYouKill.java:315) ~[jetty-util-9.4.48.v20220622.jar:9.4.48.v20220622]
+	at org.eclipse.jetty.util.thread.strategy.EatWhatYouKill.tryProduce(EatWhatYouKill.java:173) ~[jetty-util-9.4.48.v20220622.jar:9.4.48.v20220622]
+	at org.eclipse.jetty.util.thread.strategy.EatWhatYouKill.run(EatWhatYouKill.java:131) ~[jetty-util-9.4.48.v20220622.jar:9.4.48.v20220622]
+	at org.eclipse.jetty.util.thread.ReservedThreadExecutor$ReservedThread.run(ReservedThreadExecutor.java:409) ~[jetty-util-9.4.48.v20220622.jar:9.4.48.v20220622]
+	at org.eclipse.jetty.util.thread.QueuedThreadPool.runJob(QueuedThreadPool.java:883) ~[jetty-util-9.4.48.v20220622.jar:9.4.48.v20220622]
+	at org.eclipse.jetty.util.thread.QueuedThreadPool$Runner.run(QueuedThreadPool.java:1034) ~[jetty-util-9.4.48.v20220622.jar:9.4.48.v20220622]
+	at java.lang.Thread.run(Thread.java:834) ~[?:?]
+2023-04-10 12:02:30.454 INFO  (qtp967677821-18) [ x:amazon_iphone] o.a.s.c.S.Request webapp=/solr path=/select params={q=title:1st+Time+Apple+iPhone+User&indent=true&q.op=OR&useParams=&_=1681127988794} status=400 QTime=0
+2023-04-10 12:02:30.495 INFO  (qtp967677821-19) [] o.a.s.s.HttpSolrCall [admin] webapp=null path=/admin/info/system params={wt=json&_=1681127983556} status=0 QTime=41
+2023-04-10 12:02:39.727 INFO  (qtp967677821-52) [ x:amazon_iphone] o.a.s.c.S.Request webapp=/solr path=/config/params params={wt=json&_=1681127988794} status=0 QTime=0
+2023-04-10 12:02:39.727 INFO  (qtp967677821-23) [] o.a.s.s.HttpSolrCall [admin] webapp=null path=/admin/cores params={indexInfo=false&wt=json&_=1681127983555} status=0 QTime=0
+2023-04-10 12:02:39.729 INFO  (qtp967677821-50) [ x:amazon_iphone] o.a.s.c.S.Request webapp=/solr path=/select params={q=title:"1st+Time+Apple+iPhone+User"&indent=true&q.op=OR&useParams=&_=1681127988794} hits=4 status=0 QTime=2
+2023-04-10 12:02:39.770 INFO  (qtp967677821-18) [] o.a.s.s.HttpSolrCall [admin] webapp=null path=/admin/info/system params={wt=json&_=1681127983556} status=0 QTime=43
+2023-04-10 12:02:52.074 INFO  (qtp967677821-52) [ x:amazon_iphone] o.a.s.u.p.LogUpdateProcessorFactory webapp=/solr path=/update params={commitWithin=1000&boost=1.0&wt=json&overwrite=true}{add=[2e0583c2-bf8d-4721-a9f5-232b9c88b5ae (1762790654110334976), f1eb574f-fbbb-47bf-a100-5338f675c92f (1762790654132355072), e003da2a-fdd5-4612-be87-bedaefe3ab4e (1762790654134452224), f484cec3-0b7a-4865-905e-6729c9e1a209 (1762790654136549376), b8fb0f60-e306-44ea-b5b0-bec8f843cb59 (1762790654138646528), 4385fe66-0e65-499b-86de-5d8c7df2693f (1762790654140743680), 4b571658-24d9-4fcf-8a62-f99cc9ecd8c6 (1762790654141792256), 242adf90-b740-40eb-8366-51bf5b187e4b (1762790654142840832), 4bbf3366-f8a4-4cc4-9d6f-f83cf651c3a8 (1762790654144937984), ac664076-1342-41e6-9e0b-89a3c13eaa0d (1762790654147035136), ... (20 adds)]} 0 49
+2023-04-10 12:02:53.139 INFO  (searcherExecutor-12-thread-1-processing-amazon_iphone) [ x:amazon_iphone] o.a.s.c.QuerySenderListener QuerySenderListener done.
+2023-04-10 12:02:53.139 INFO  (searcherExecutor-12-thread-1-processing-amazon_iphone) [ x:amazon_iphone] o.a.s.h.c.SuggestComponent buildOnCommit: mySuggester
+2023-04-10 12:02:53.139 INFO  (searcherExecutor-12-thread-1-processing-amazon_iphone) [ x:amazon_iphone] o.a.s.s.s.SolrSuggester SolrSuggester.build(mySuggester)
+2023-04-10 12:02:57.252 INFO  (qtp967677821-22) [ x:amazon_iphone] o.a.s.c.S.Request webapp=/solr path=/config/params params={wt=json&_=1681127988794} status=0 QTime=0
+2023-04-10 12:02:57.252 INFO  (qtp967677821-23) [] o.a.s.s.HttpSolrCall [admin] webapp=null path=/admin/cores params={indexInfo=false&wt=json&_=1681127983555} status=0 QTime=0
+2023-04-10 12:02:57.253 INFO  (qtp967677821-52) [ x:amazon_iphone] o.a.s.c.S.Request webapp=/solr path=/select params={q=title:"1st+Time+Apple+iPhone+User"&indent=true&q.op=OR&useParams=&_=1681127988794} hits=4 status=0 QTime=0
+2023-04-10 12:02:57.295 INFO  (qtp967677821-18) [] o.a.s.s.HttpSolrCall [admin] webapp=null path=/admin/info/system params={wt=json&_=1681127983556} status=0 QTime=42
+2023-04-10 12:03:04.016 INFO  (qtp967677821-22) [] o.a.s.s.HttpSolrCall [admin] webapp=null path=/admin/cores params={indexInfo=false&wt=json&_=1681127983555} status=0 QTime=0
+2023-04-10 12:03:04.016 INFO  (qtp967677821-50) [ x:amazon_iphone] o.a.s.c.S.Request webapp=/solr path=/admin/luke params={numTerms=0&show=index&wt=json&_=1681127985375} status=0 QTime=0
+2023-04-10 12:03:04.016 INFO  (qtp967677821-26) [ x:amazon_iphone] o.a.s.c.S.Request webapp=/solr path=/admin/ping params={action=status&wt=json&_=1681127983556&ts=1681127983556} status=503 QTime=0
+2023-04-10 12:03:04.031 INFO  (qtp967677821-23) [ x:amazon_iphone] o.a.s.c.S.Request webapp=/solr path=/replication params={wt=json&command=details&_=1681127985375} status=0 QTime=15
+2023-04-10 12:03:04.088 INFO  (qtp967677821-52) [] o.a.s.s.HttpSolrCall [admin] webapp=null path=/admin/info/system params={wt=json&_=1681127983556} status=0 QTime=72
+2023-04-10 12:03:04.091 INFO  (qtp967677821-18) [ x:amazon_iphone] o.a.s.c.S.Request webapp=/solr path=/admin/system params={wt=json&_=1681127985375} status=0 QTime=75
+2023-04-10 12:03:21.832 INFO  (qtp967677821-20) [ x:amazon_iphone] o.a.s.c.S.Request webapp=/solr path=/config/params params={wt=json&_=1681127988794} status=0 QTime=0
+2023-04-10 12:03:21.832 INFO  (qtp967677821-26) [] o.a.s.s.HttpSolrCall [admin] webapp=null path=/admin/cores params={indexInfo=false&wt=json&_=1681127983555} status=0 QTime=0
+2023-04-10 12:03:21.875 INFO  (qtp967677821-23) [] o.a.s.s.HttpSolrCall [admin] webapp=null path=/admin/info/system params={wt=json&_=1681127983556} status=0 QTime=43
+2023-04-10 12:03:23.139 INFO  (qtp967677821-52) [ x:amazon_iphone] o.a.s.c.S.Request webapp=/solr path=/config/params params={wt=json&_=1681127988794} status=0 QTime=0
+2023-04-10 12:03:23.139 INFO  (qtp967677821-18) [] o.a.s.s.HttpSolrCall [admin] webapp=null path=/admin/cores params={indexInfo=false&wt=json&_=1681127983555} status=0 QTime=0
+2023-04-10 12:03:23.141 INFO  (qtp967677821-17) [ x:amazon_iphone] o.a.s.c.S.Request webapp=/solr path=/select params={q=*:*&indent=true&q.op=OR&useParams=&_=1681127988794} hits=11594 status=0 QTime=1
+2023-04-10 12:03:23.185 INFO  (qtp967677821-57) [] o.a.s.s.HttpSolrCall [admin] webapp=null path=/admin/info/system params={wt=json&_=1681127983556} status=0 QTime=46
+2023-04-10 12:03:41.040 INFO  (qtp967677821-57) [ x:amazon_iphone] o.a.s.c.S.Request webapp=/solr path=/config/params params={wt=json&_=1681127988794} status=0 QTime=0
+2023-04-10 12:03:41.040 INFO  (qtp967677821-26) [] o.a.s.s.HttpSolrCall [admin] webapp=null path=/admin/cores params={indexInfo=false&wt=json&_=1681127983555} status=0 QTime=0
+2023-04-10 12:03:41.042 INFO  (qtp967677821-18) [ x:amazon_iphone] o.a.s.c.S.Request webapp=/solr path=/select params={q=title:"Good+phone+for+people+on+a+budget"&indent=true&q.op=OR&useParams=&_=1681127988794} hits=2 status=0 QTime=2
+2023-04-10 12:03:41.086 INFO  (qtp967677821-17) [] o.a.s.s.HttpSolrCall [admin] webapp=null path=/admin/info/system params={wt=json&_=1681127983556} status=0 QTime=46
+2023-04-10 12:03:43.259 INFO  (searcherExecutor-12-thread-1-processing-amazon_iphone) [ x:amazon_iphone] o.a.s.c.SolrCore Registered new searcher autowarm time: 0 ms
+2023-04-10 12:03:54.911 INFO  (qtp967677821-26) [] o.a.s.s.HttpSolrCall [admin] webapp=null path=/admin/cores params={indexInfo=false&wt=json&_=1681127983555} status=0 QTime=1
+2023-04-10 12:03:54.913 INFO  (qtp967677821-52) [ x:amazon_iphone] o.a.s.c.S.Request webapp=/solr path=/admin/ping params={action=status&wt=json&_=1681127983556&ts=1681127983556} status=503 QTime=1
+2023-04-10 12:03:54.913 INFO  (qtp967677821-23) [ x:amazon_iphone] o.a.s.c.S.Request webapp=/solr path=/admin/luke params={numTerms=0&show=index&wt=json&_=1681127985375} status=0 QTime=2
+2023-04-10 12:03:54.956 INFO  (qtp967677821-57) [ x:amazon_iphone] o.a.s.c.S.Request webapp=/solr path=/replication params={wt=json&command=details&_=1681127985375} status=0 QTime=45
+2023-04-10 12:03:55.001 INFO  (qtp967677821-18) [] o.a.s.s.HttpSolrCall [admin] webapp=null path=/admin/info/system params={wt=json&_=1681127983556} status=0 QTime=90
+2023-04-10 12:03:55.006 INFO  (qtp967677821-17) [ x:amazon_iphone] o.a.s.c.S.Request webapp=/solr path=/admin/system params={wt=json&_=1681127985375} status=0 QTime=94
+2023-04-10 12:07:04.430 INFO  (qtp967677821-26) [] o.a.s.s.HttpSolrCall [admin] webapp=null path=/admin/cores params={indexInfo=false&wt=json&_=1681127983555} status=0 QTime=0
+2023-04-10 12:07:04.435 INFO  (qtp967677821-57) [ x:amazon_iphone] o.a.s.c.S.Request webapp=/solr path=/admin/luke params={show=schema&wt=json&_=1681127985375} status=0 QTime=5
+2023-04-10 12:07:04.468 INFO  (qtp967677821-52) [] o.a.s.s.HttpSolrCall [admin] webapp=null path=/admin/info/system params={wt=json&_=1681127983556} status=0 QTime=38
+2023-04-10 12:07:04.523 INFO  (qtp967677821-55) [] o.a.s.s.HttpSolrCall [admin] webapp=null path=/admin/cores params={indexInfo=false&wt=json&_=1681127983555} status=0 QTime=0
+2023-04-10 12:07:04.552 INFO  (qtp967677821-52) [ x:amazon_iphone] o.a.s.c.S.Request webapp=/solr path=/admin/luke params={numTerms=0&show=index&wt=json&_=1681127985375} status=0 QTime=21
+2023-04-10 12:07:04.553 INFO  (qtp967677821-23) [ x:amazon_iphone] o.a.s.c.S.Request webapp=/solr path=/replication params={wt=json&command=details&_=1681127985375} status=0 QTime=27
+2023-04-10 12:07:04.556 INFO  (qtp967677821-25) [ x:amazon_iphone] o.a.s.c.S.Request webapp=/solr path=/admin/ping params={action=status&wt=json&_=1681127983556&ts=1681127983556} status=503 QTime=0
+2023-04-10 12:07:04.582 INFO  (qtp967677821-53) [] o.a.s.s.HttpSolrCall [admin] webapp=null path=/admin/info/system params={wt=json&_=1681127983556} status=0 QTime=58
+2023-04-10 12:07:04.605 INFO  (qtp967677821-18) [ x:amazon_iphone] o.a.s.c.S.Request webapp=/solr path=/admin/system params={wt=json&_=1681127985375} status=0 QTime=50
+2023-04-10 12:07:10.630 INFO  (qtp967677821-25) [ x:amazon_iphone] o.a.s.u.p.LogUpdateProcessorFactory webapp=/solr path=/update params={commitWithin=1000&boost=1.0&wt=json&overwrite=true}{add=[f2185a0c-92c4-4721-879b-91db565dc0f0 (1762790925247971328), 420e4838-defc-4782-a942-71055ab52366 (1762790925258457088), 84cb8123-1310-42d9-a606-8285fd57ccd3 (1762790925259505664), cf18828f-1447-486f-8367-3ac71dda67ed (1762790925260554240), 4c8c3edc-2c2a-4634-989c-59df591bd598 (1762790925261602816), ff64e455-9bbe-47cd-acd4-6ef54c73f6f5 (1762790925262651392), 469b5c19-4d2e-44e5-a824-2d672dde52bb (1762790925263699968), 642dcb2a-13c3-4c9f-ba93-3ad741fd135e (1762790925264748544), 3fe18b26-4c7a-4e21-ba5b-b615aa798438 (1762790925265797120), eccb3075-57f9-4084-88a0-640e5cd44af4 (1762790925265797121), ... (20 adds)]} 0 27
+2023-04-10 12:07:11.657 INFO  (searcherExecutor-12-thread-1-processing-amazon_iphone) [ x:amazon_iphone] o.a.s.c.QuerySenderListener QuerySenderListener done.
+2023-04-10 12:07:11.657 INFO  (searcherExecutor-12-thread-1-processing-amazon_iphone) [ x:amazon_iphone] o.a.s.h.c.SuggestComponent buildOnCommit: mySuggester
+2023-04-10 12:07:11.657 INFO  (searcherExecutor-12-thread-1-processing-amazon_iphone) [ x:amazon_iphone] o.a.s.s.s.SolrSuggester SolrSuggester.build(mySuggester)
+2023-04-10 12:07:21.891 INFO  (qtp967677821-55) [] o.a.s.s.HttpSolrCall [admin] webapp=null path=/admin/cores params={indexInfo=false&wt=json&_=1681127983555} status=0 QTime=0
+2023-04-10 12:07:21.891 INFO  (qtp967677821-18) [ x:amazon_iphone] o.a.s.c.S.Request webapp=/solr path=/admin/luke params={show=schema&wt=json&_=1681127985375} status=0 QTime=0
+2023-04-10 12:07:21.933 INFO  (qtp967677821-54) [] o.a.s.s.HttpSolrCall [admin] webapp=null path=/admin/info/system params={wt=json&_=1681127983556} status=0 QTime=42
+2023-04-10 12:07:22.215 INFO  (qtp967677821-19) [] o.a.s.s.HttpSolrCall [admin] webapp=null path=/admin/cores params={indexInfo=false&wt=json&_=1681127983555} status=0 QTime=0
+2023-04-10 12:07:22.216 INFO  (qtp967677821-52) [ x:amazon_iphone] o.a.s.c.S.Request webapp=/solr path=/admin/luke params={numTerms=0&show=index&wt=json&_=1681127985375} status=0 QTime=0
+2023-04-10 12:07:22.221 INFO  (qtp967677821-55) [ x:amazon_iphone] o.a.s.c.S.Request webapp=/solr path=/admin/ping params={action=status&wt=json&_=1681127983556&ts=1681127983556} status=503 QTime=0
+2023-04-10 12:07:22.234 INFO  (qtp967677821-25) [ x:amazon_iphone] o.a.s.c.S.Request webapp=/solr path=/replication params={wt=json&command=details&_=1681127985375} status=0 QTime=19
+2023-04-10 12:07:22.283 INFO  (qtp967677821-53) [] o.a.s.s.HttpSolrCall [admin] webapp=null path=/admin/info/system params={wt=json&_=1681127983556} status=0 QTime=67
+2023-04-10 12:07:22.293 INFO  (qtp967677821-54) [ x:amazon_iphone] o.a.s.c.S.Request webapp=/solr path=/admin/system params={wt=json&_=1681127985375} status=0 QTime=71
+2023-04-10 12:07:24.895 INFO  (qtp967677821-19) [ x:amazon_iphone] o.a.s.c.S.Request webapp=/solr path=/admin/ping params={wt=json&_=1681127983556&ts=1681127983556} hits=11614 status=0 QTime=0
+2023-04-10 12:07:24.895 INFO  (qtp967677821-19) [ x:amazon_iphone] o.a.s.c.S.Request webapp=/solr path=/admin/ping params={wt=json&_=1681127983556&ts=1681127983556} status=0 QTime=1
+2023-04-10 12:07:25.830 INFO  (qtp967677821-54) [] o.a.s.s.HttpSolrCall [admin] webapp=null path=/admin/cores params={indexInfo=false&wt=json&_=1681127983555} status=0 QTime=0
+2023-04-10 12:07:25.834 INFO  (qtp967677821-18) [ x:amazon_iphone] o.a.s.c.S.Request webapp=/solr path=/admin/luke params={show=schema&wt=json&_=1681127985375} status=0 QTime=1
+2023-04-10 12:07:25.872 INFO  (qtp967677821-23) [] o.a.s.s.HttpSolrCall [admin] webapp=null path=/admin/info/system params={wt=json&_=1681127983556} status=0 QTime=39
+2023-04-10 12:07:26.369 INFO  (qtp967677821-23) [] o.a.s.s.HttpSolrCall [admin] webapp=null path=/admin/cores params={indexInfo=false&wt=json&_=1681127983555} status=0 QTime=0
+2023-04-10 12:07:26.370 INFO  (qtp967677821-54) [ x:amazon_iphone] o.a.s.c.S.Request webapp=/solr path=/admin/luke params={show=schema&wt=json&_=1681127985375} status=0 QTime=0
+2023-04-10 12:07:26.409 INFO  (qtp967677821-19) [] o.a.s.s.HttpSolrCall [admin] webapp=null path=/admin/info/system params={wt=json&_=1681127983556} status=0 QTime=39
+2023-04-10 12:07:26.996 INFO  (qtp967677821-25) [] o.a.s.s.HttpSolrCall [admin] webapp=null path=/admin/cores params={indexInfo=false&wt=json&_=1681127983555} status=0 QTime=0
+2023-04-10 12:07:26.999 INFO  (qtp967677821-54) [ x:amazon_iphone] o.a.s.c.S.Request webapp=/solr path=/admin/ping params={action=status&wt=json&_=1681127983556&ts=1681127983556} status=503 QTime=0
+2023-04-10 12:07:27.019 INFO  (qtp967677821-53) [ x:amazon_iphone] o.a.s.c.S.Request webapp=/solr path=/replication params={wt=json&command=details&_=1681127985375} status=0 QTime=22
+2023-04-10 12:07:27.019 INFO  (qtp967677821-52) [ x:amazon_iphone] o.a.s.c.S.Request webapp=/solr path=/admin/luke params={numTerms=0&show=index&wt=json&_=1681127985375} status=0 QTime=20
+2023-04-10 12:07:27.070 INFO  (qtp967677821-18) [] o.a.s.s.HttpSolrCall [admin] webapp=null path=/admin/info/system params={wt=json&_=1681127983556} status=0 QTime=73
+2023-04-10 12:07:27.076 INFO  (qtp967677821-25) [ x:amazon_iphone] o.a.s.c.S.Request webapp=/solr path=/admin/system params={wt=json&_=1681127985375} status=0 QTime=77
+2023-04-10 12:07:29.497 INFO  (qtp967677821-55) [ x:amazon_iphone] o.a.s.c.S.Request webapp=/solr path=/config/params params={wt=json&_=1681127988794} status=0 QTime=0
+2023-04-10 12:07:29.497 INFO  (qtp967677821-18) [] o.a.s.s.HttpSolrCall [admin] webapp=null path=/admin/cores params={indexInfo=false&wt=json&_=1681127983555} status=0 QTime=0
+2023-04-10 12:07:29.536 INFO  (qtp967677821-53) [] o.a.s.s.HttpSolrCall [admin] webapp=null path=/admin/info/system params={wt=json&_=1681127983556} status=0 QTime=39
+2023-04-10 12:07:31.026 INFO  (qtp967677821-25) [] o.a.s.s.HttpSolrCall [admin] webapp=null path=/admin/cores params={indexInfo=false&wt=json&_=1681127983555} status=0 QTime=0
+2023-04-10 12:07:31.027 INFO  (qtp967677821-54) [ x:amazon_iphone] o.a.s.c.S.Request webapp=/solr path=/admin/luke params={numTerms=0&show=index&wt=json&_=1681127985375} status=0 QTime=0
+2023-04-10 12:07:31.035 INFO  (qtp967677821-55) [ x:amazon_iphone] o.a.s.c.S.Request webapp=/solr path=/admin/ping params={action=status&wt=json&_=1681127983556&ts=1681127983556} status=503 QTime=0
+2023-04-10 12:07:31.054 INFO  (qtp967677821-23) [ x:amazon_iphone] o.a.s.c.S.Request webapp=/solr path=/replication params={wt=json&command=details&_=1681127985375} status=0 QTime=22
+2023-04-10 12:07:31.108 INFO  (qtp967677821-53) [ x:amazon_iphone] o.a.s.c.S.Request webapp=/solr path=/admin/system params={wt=json&_=1681127985375} status=0 QTime=73
+2023-04-10 12:07:31.108 INFO  (qtp967677821-52) [] o.a.s.s.HttpSolrCall [admin] webapp=null path=/admin/info/system params={wt=json&_=1681127983556} status=0 QTime=82
+2023-04-10 12:08:00.953 INFO  (searcherExecutor-12-thread-1-processing-amazon_iphone) [ x:amazon_iphone] o.a.s.c.SolrCore Registered new searcher autowarm time: 0 ms
+2023-04-10 12:08:10.415 INFO  (qtp967677821-52) [] o.a.s.s.HttpSolrCall [admin] webapp=null path=/admin/cores params={indexInfo=false&wt=json&_=1681127983555} status=0 QTime=0
+2023-04-10 12:08:10.419 INFO  (qtp967677821-53) [ x:amazon_iphone] o.a.s.c.S.Request webapp=/solr path=/admin/luke params={show=schema&wt=json&_=1681127985375} status=0 QTime=0
+2023-04-10 12:08:10.457 INFO  (qtp967677821-18) [] o.a.s.s.HttpSolrCall [admin] webapp=null path=/admin/info/system params={wt=json&_=1681127983556} status=0 QTime=39
+2023-04-10 12:08:10.651 INFO  (qtp967677821-19) [] o.a.s.s.HttpSolrCall [admin] webapp=null path=/admin/cores params={indexInfo=false&wt=json&_=1681127983555} status=0 QTime=0
+2023-04-10 12:08:10.656 INFO  (qtp967677821-55) [ x:amazon_iphone] o.a.s.c.S.Request webapp=/solr path=/admin/ping params={action=status&wt=json&_=1681127983556&ts=1681127983556} status=503 QTime=0
+2023-04-10 12:08:10.677 INFO  (qtp967677821-18) [ x:amazon_iphone] o.a.s.c.S.Request webapp=/solr path=/replication params={wt=json&command=details&_=1681127985375} status=0 QTime=22
+2023-04-10 12:08:10.681 INFO  (qtp967677821-19) [ x:amazon_iphone] o.a.s.c.S.Request webapp=/solr path=/admin/luke params={numTerms=0&show=index&wt=json&_=1681127985375} status=0 QTime=0
+2023-04-10 12:08:10.725 INFO  (qtp967677821-52) [ x:amazon_iphone] o.a.s.c.S.Request webapp=/solr path=/admin/system params={wt=json&_=1681127985375} status=0 QTime=70
+2023-04-10 12:08:10.730 INFO  (qtp967677821-22) [] o.a.s.s.HttpSolrCall [admin] webapp=null path=/admin/info/system params={wt=json&_=1681127983556} status=0 QTime=72
+2023-04-10 12:08:17.188 INFO  (qtp967677821-55) [] o.a.s.s.HttpSolrCall [admin] webapp=null path=/admin/cores params={indexInfo=false&wt=json&_=1681127983555} status=0 QTime=0
+2023-04-10 12:08:17.189 INFO  (qtp967677821-53) [ x:amazon_iphone] o.a.s.c.S.Request webapp=/solr path=/admin/luke params={show=schema&wt=json&_=1681127985375} status=0 QTime=1
+2023-04-10 12:08:17.228 INFO  (qtp967677821-18) [] o.a.s.s.HttpSolrCall [admin] webapp=null path=/admin/info/system params={wt=json&_=1681127983556} status=0 QTime=39
+2023-04-10 12:08:18.158 INFO  (qtp967677821-19) [] o.a.s.s.HttpSolrCall [admin] webapp=null path=/admin/cores params={indexInfo=false&wt=json&_=1681127983555} status=0 QTime=0
+2023-04-10 12:08:18.167 INFO  (qtp967677821-53) [ x:amazon_iphone] o.a.s.c.S.Request webapp=/solr path=/admin/ping params={action=status&wt=json&_=1681127983556&ts=1681127983556} status=503 QTime=0
+2023-04-10 12:08:18.182 INFO  (qtp967677821-19) [ x:amazon_iphone] o.a.s.c.S.Request webapp=/solr path=/admin/luke params={numTerms=0&show=index&wt=json&_=1681127985375} status=0 QTime=19
+2023-04-10 12:08:18.185 INFO  (qtp967677821-22) [ x:amazon_iphone] o.a.s.c.S.Request webapp=/solr path=/replication params={wt=json&command=details&_=1681127985375} status=0 QTime=24
+2023-04-10 12:08:18.232 INFO  (qtp967677821-25) [ x:amazon_iphone] o.a.s.c.S.Request webapp=/solr path=/admin/system params={wt=json&_=1681127985375} status=0 QTime=71
+2023-04-10 12:08:18.232 INFO  (qtp967677821-52) [] o.a.s.s.HttpSolrCall [admin] webapp=null path=/admin/info/system params={wt=json&_=1681127983556} status=0 QTime=72
+2023-04-10 12:08:46.131 INFO  (qtp967677821-25) [] o.a.s.s.HttpSolrCall [admin] webapp=null path=/admin/cores params={indexInfo=false&wt=json&_=1681127983555} status=0 QTime=0
+2023-04-10 12:08:46.132 INFO  (qtp967677821-19) [ x:amazon_iphone] o.a.s.c.S.Request webapp=/solr path=/admin/luke params={show=schema&wt=json&_=1681127985375} status=0 QTime=0
+2023-04-10 12:08:46.148 INFO  (qtp967677821-57) [] o.a.s.s.HttpSolrCall [admin] webapp=null path=/admin/cores params={indexInfo=false&wt=json&_=1681127983555} status=0 QTime=0
+2023-04-10 12:08:46.170 INFO  (qtp967677821-22) [ x:amazon_iphone] o.a.s.c.S.Request webapp=/solr path=/replication params={wt=json&command=details&_=1681127985375} status=0 QTime=20
+2023-04-10 12:08:46.170 INFO  (qtp967677821-19) [ x:amazon_iphone] o.a.s.c.S.Request webapp=/solr path=/admin/luke params={numTerms=0&show=index&wt=json&_=1681127985375} status=0 QTime=18
+2023-04-10 12:08:46.173 INFO  (qtp967677821-57) [ x:amazon_iphone] o.a.s.c.S.Request webapp=/solr path=/admin/ping params={action=status&wt=json&_=1681127983556&ts=1681127983556} status=503 QTime=0
+2023-04-10 12:08:46.175 INFO  (qtp967677821-53) [] o.a.s.s.HttpSolrCall [admin] webapp=null path=/admin/info/system params={wt=json&_=1681127983556} status=0 QTime=44
+2023-04-10 12:08:46.231 INFO  (qtp967677821-25) [ x:amazon_iphone] o.a.s.c.S.Request webapp=/solr path=/admin/system params={wt=json&_=1681127985375} status=0 QTime=58
+2023-04-10 12:08:46.239 INFO  (qtp967677821-52) [] o.a.s.s.HttpSolrCall [admin] webapp=null path=/admin/info/system params={wt=json&_=1681127983556} status=0 QTime=60
+2023-04-10 12:08:50.821 INFO  (qtp967677821-52) [ x:amazon_iphone] o.a.s.u.p.LogUpdateProcessorFactory webapp=/solr path=/update params={commitWithin=1000&boost=1.0&wt=json&overwrite=true}{add=[95d72526-bd82-4d3f-aa02-bb4b5686ce05 (1762791030306897920), 0d2e038f-d8ff-473f-b2f4-78bc9da5c6f2 (1762791030316335104), 32c4cb26-b217-4631-a47f-540a19b974cc (1762791030317383680), 3942ee34-61c2-4023-9c41-c580ad0553a7 (1762791030318432256), d96ea763-385d-411a-96b1-b40f31b46a67 (1762791030319480832), 6857768e-ec78-4cd1-8fe9-0f5c96bef9fe (1762791030320529408), aa11b7ed-bc0f-4976-b302-1d08c2e6b6c7 (1762791030321577984), c29927b6-55ff-40f9-9253-f4bd596526dc (1762791030322626560), eb537c64-89a5-4e79-840f-a58a05ac9ce6 (1762791030323675136), 580555f3-0d8a-4332-9bbe-7eeb06da6568 (1762791030324723712), ... (20 adds)]} 0 27
+2023-04-10 12:08:51.897 INFO  (searcherExecutor-12-thread-1-processing-amazon_iphone) [ x:amazon_iphone] o.a.s.c.QuerySenderListener QuerySenderListener done.
+2023-04-10 12:08:51.897 INFO  (searcherExecutor-12-thread-1-processing-amazon_iphone) [ x:amazon_iphone] o.a.s.h.c.SuggestComponent buildOnCommit: mySuggester
+2023-04-10 12:08:51.897 INFO  (searcherExecutor-12-thread-1-processing-amazon_iphone) [ x:amazon_iphone] o.a.s.s.s.SolrSuggester SolrSuggester.build(mySuggester)
+2023-04-10 12:09:06.358 INFO  (qtp967677821-24) [] o.a.s.s.HttpSolrCall [admin] webapp=null path=/admin/cores params={indexInfo=false&wt=json&_=1681127983555} status=0 QTime=0
+2023-04-10 12:09:06.358 INFO  (qtp967677821-22) [ x:amazon_iphone] o.a.s.c.S.Request webapp=/solr path=/admin/luke params={show=schema&wt=json&_=1681127985375} status=0 QTime=0
+2023-04-10 12:09:06.399 INFO  (qtp967677821-55) [] o.a.s.s.HttpSolrCall [admin] webapp=null path=/admin/info/system params={wt=json&_=1681127983556} status=0 QTime=41
+2023-04-10 12:09:06.636 INFO  (qtp967677821-18) [] o.a.s.s.HttpSolrCall [admin] webapp=null path=/admin/cores params={indexInfo=false&wt=json&_=1681127983555} status=0 QTime=0
+2023-04-10 12:09:06.642 INFO  (qtp967677821-57) [ x:amazon_iphone] o.a.s.c.S.Request webapp=/solr path=/admin/luke params={numTerms=0&show=index&wt=json&_=1681127985375} status=0 QTime=0
+2023-04-10 12:09:06.646 INFO  (qtp967677821-25) [ x:amazon_iphone] o.a.s.c.S.Request webapp=/solr path=/admin/ping params={action=status&wt=json&_=1681127983556&ts=1681127983556} status=503 QTime=0
+2023-04-10 12:09:06.661 INFO  (qtp967677821-55) [ x:amazon_iphone] o.a.s.c.S.Request webapp=/solr path=/replication params={wt=json&command=details&_=1681127985375} status=0 QTime=19
+2023-04-10 12:09:06.710 INFO  (qtp967677821-53) [] o.a.s.s.HttpSolrCall [admin] webapp=null path=/admin/info/system params={wt=json&_=1681127983556} status=0 QTime=68
+2023-04-10 12:09:06.712 INFO  (qtp967677821-52) [ x:amazon_iphone] o.a.s.c.S.Request webapp=/solr path=/admin/system params={wt=json&_=1681127985375} status=0 QTime=70
+2023-04-10 12:09:07.389 INFO  (qtp967677821-24) [] o.a.s.s.HttpSolrCall [admin] webapp=null path=/admin/cores params={indexInfo=false&wt=json&_=1681127983555} status=0 QTime=0
+2023-04-10 12:09:07.390 INFO  (qtp967677821-22) [ x:amazon_iphone] o.a.s.c.S.Request webapp=/solr path=/admin/luke params={show=schema&wt=json&_=1681127985375} status=0 QTime=1
+2023-04-10 12:09:07.429 INFO  (qtp967677821-18) [] o.a.s.s.HttpSolrCall [admin] webapp=null path=/admin/info/system params={wt=json&_=1681127983556} status=0 QTime=40
+2023-04-10 12:09:07.841 INFO  (qtp967677821-55) [] o.a.s.s.HttpSolrCall [admin] webapp=null path=/admin/cores params={indexInfo=false&wt=json&_=1681127983555} status=0 QTime=0
+2023-04-10 12:09:07.842 INFO  (qtp967677821-52) [ x:amazon_iphone] o.a.s.c.S.Request webapp=/solr path=/config/params params={wt=json&_=1681127988794} status=0 QTime=0
+2023-04-10 12:09:07.880 INFO  (qtp967677821-53) [] o.a.s.s.HttpSolrCall [admin] webapp=null path=/admin/info/system params={wt=json&_=1681127983556} status=0 QTime=39
+2023-04-10 12:09:08.400 INFO  (qtp967677821-22) [] o.a.s.s.HttpSolrCall [admin] webapp=null path=/admin/cores params={indexInfo=false&wt=json&_=1681127983555} status=0 QTime=0
+2023-04-10 12:09:08.406 INFO  (qtp967677821-53) [ x:amazon_iphone] o.a.s.c.S.Request webapp=/solr path=/admin/ping params={action=status&wt=json&_=1681127983556&ts=1681127983556} status=503 QTime=0
+2023-04-10 12:09:08.420 INFO  (qtp967677821-57) [ x:amazon_iphone] o.a.s.c.S.Request webapp=/solr path=/admin/luke params={numTerms=0&show=index&wt=json&_=1681127985375} status=0 QTime=17
+2023-04-10 12:09:08.427 INFO  (qtp967677821-18) [ x:amazon_iphone] o.a.s.c.S.Request webapp=/solr path=/replication params={wt=json&command=details&_=1681127985375} status=0 QTime=24
+2023-04-10 12:09:08.478 INFO  (qtp967677821-24) [] o.a.s.s.HttpSolrCall [admin] webapp=null path=/admin/info/system params={wt=json&_=1681127983556} status=0 QTime=77
+2023-04-10 12:09:08.481 INFO  (qtp967677821-55) [ x:amazon_iphone] o.a.s.c.S.Request webapp=/solr path=/admin/system params={wt=json&_=1681127985375} status=0 QTime=77
+2023-04-10 12:09:09.842 INFO  (qtp967677821-18) [] o.a.s.s.HttpSolrCall [admin] webapp=null path=/admin/cores params={indexInfo=false&wt=json&_=1681127983555} status=0 QTime=0
+2023-04-10 12:09:09.842 INFO  (qtp967677821-52) [ x:amazon_iphone] o.a.s.c.S.Request webapp=/solr path=/admin/luke params={show=schema&wt=json&_=1681127985375} status=0 QTime=0
+2023-04-10 12:09:09.884 INFO  (qtp967677821-19) [] o.a.s.s.HttpSolrCall [admin] webapp=null path=/admin/info/system params={wt=json&_=1681127983556} status=0 QTime=42
+2023-04-10 12:09:09.897 INFO  (qtp967677821-22) [] o.a.s.s.HttpSolrCall [admin] webapp=null path=/admin/cores params={indexInfo=false&wt=json&_=1681127983555} status=0 QTime=0
+2023-04-10 12:09:09.901 INFO  (qtp967677821-55) [ x:amazon_iphone] o.a.s.c.S.Request webapp=/solr path=/admin/luke params={show=schema&wt=json&_=1681127985375} status=0 QTime=1
+2023-04-10 12:09:09.940 INFO  (qtp967677821-24) [] o.a.s.s.HttpSolrCall [admin] webapp=null path=/admin/info/system params={wt=json&_=1681127983556} status=0 QTime=39
+2023-04-10 12:09:10.345 INFO  (qtp967677821-52) [] o.a.s.s.HttpSolrCall [admin] webapp=null path=/admin/cores params={indexInfo=false&wt=json&_=1681127983555} status=0 QTime=0
+2023-04-10 12:09:10.349 INFO  (qtp967677821-22) [ x:amazon_iphone] o.a.s.c.S.Request webapp=/solr path=/admin/file params={wt=json&_=1681127987433} status=0 QTime=1
+2023-04-10 12:09:10.391 INFO  (qtp967677821-19) [] o.a.s.s.HttpSolrCall [admin] webapp=null path=/admin/info/system params={wt=json&_=1681127983556} status=0 QTime=43
+2023-04-10 12:09:10.865 INFO  (qtp967677821-55) [] o.a.s.s.HttpSolrCall [admin] webapp=null path=/admin/cores params={indexInfo=false&wt=json&_=1681127983555} status=0 QTime=0
+2023-04-10 12:09:10.894 INFO  (qtp967677821-57) [ x:amazon_iphone] o.a.s.c.S.Request webapp=/solr path=/admin/luke params={numTerms=0&show=index&wt=json&_=1681127985375} status=0 QTime=24
+2023-04-10 12:09:10.894 INFO  (qtp967677821-24) [ x:amazon_iphone] o.a.s.c.S.Request webapp=/solr path=/replication params={wt=json&command=details&_=1681127985375} status=0 QTime=27
+2023-04-10 12:09:10.897 INFO  (qtp967677821-18) [ x:amazon_iphone] o.a.s.c.S.Request webapp=/solr path=/admin/ping params={action=status&wt=json&_=1681127983556&ts=1681127983556} status=503 QTime=0
+2023-04-10 12:09:10.946 INFO  (qtp967677821-52) [] o.a.s.s.HttpSolrCall [admin] webapp=null path=/admin/info/system params={wt=json&_=1681127983556} status=0 QTime=80
+2023-04-10 12:09:10.949 INFO  (qtp967677821-19) [ x:amazon_iphone] o.a.s.c.S.Request webapp=/solr path=/admin/system params={wt=json&_=1681127985375} status=0 QTime=75
+2023-04-10 12:09:11.915 INFO  (qtp967677821-25) [] o.a.s.s.HttpSolrCall [admin] webapp=null path=/admin/cores params={indexInfo=false&wt=json&_=1681127983555} status=0 QTime=0
+2023-04-10 12:09:11.918 INFO  (qtp967677821-22) [ x:amazon_iphone] o.a.s.c.S.Request webapp=/solr path=/admin/luke params={show=schema&wt=json&_=1681127985375} status=0 QTime=1
+2023-04-10 12:09:11.961 INFO  (qtp967677821-24) [] o.a.s.s.HttpSolrCall [admin] webapp=null path=/admin/info/system params={wt=json&_=1681127983556} status=0 QTime=43
+2023-04-10 12:09:12.320 INFO  (qtp967677821-52) [] o.a.s.s.HttpSolrCall [admin] webapp=null path=/admin/cores params={indexInfo=false&wt=json&_=1681127983555} status=0 QTime=0
+2023-04-10 12:09:12.321 INFO  (qtp967677821-19) [ x:amazon_iphone] o.a.s.c.S.Request webapp=/solr path=/config/params params={wt=json&_=1681127988794} status=0 QTime=0
+2023-04-10 12:09:12.362 INFO  (qtp967677821-25) [] o.a.s.s.HttpSolrCall [admin] webapp=null path=/admin/info/system params={wt=json&_=1681127983556} status=0 QTime=41
+2023-04-10 12:09:12.704 INFO  (qtp967677821-22) [] o.a.s.s.HttpSolrCall [admin] webapp=null path=/admin/cores params={indexInfo=false&wt=json&_=1681127983555} status=0 QTime=0
+2023-04-10 12:09:12.707 INFO  (qtp967677821-18) [ x:amazon_iphone] o.a.s.c.S.Request webapp=/solr path=/admin/file params={wt=json&_=1681127987433} status=0 QTime=1
+2023-04-10 12:09:12.746 INFO  (qtp967677821-24) [] o.a.s.s.HttpSolrCall [admin] webapp=null path=/admin/info/system params={wt=json&_=1681127983556} status=0 QTime=40
+2023-04-10 12:09:13.363 INFO  (qtp967677821-19) [] o.a.s.s.HttpSolrCall [admin] webapp=null path=/admin/cores params={indexInfo=false&wt=json&_=1681127983555} status=0 QTime=0
+2023-04-10 12:09:13.366 INFO  (qtp967677821-25) [ x:amazon_iphone] o.a.s.c.S.Request webapp=/solr path=/admin/luke params={numTerms=0&show=index&wt=json&_=1681127985375} status=0 QTime=0
+2023-04-10 12:09:13.370 INFO  (qtp967677821-19) [ x:amazon_iphone] o.a.s.c.S.Request webapp=/solr path=/admin/ping params={action=status&wt=json&_=1681127983556&ts=1681127983556} status=503 QTime=0
+2023-04-10 12:09:13.385 INFO  (qtp967677821-55) [ x:amazon_iphone] o.a.s.c.S.Request webapp=/solr path=/replication params={wt=json&command=details&_=1681127985375} status=0 QTime=19
+2023-04-10 12:09:13.436 INFO  (qtp967677821-22) [] o.a.s.s.HttpSolrCall [admin] webapp=null path=/admin/info/system params={wt=json&_=1681127983556} status=0 QTime=71
+2023-04-10 12:09:13.443 INFO  (qtp967677821-24) [ x:amazon_iphone] o.a.s.c.S.Request webapp=/solr path=/admin/system params={wt=json&_=1681127985375} status=0 QTime=76
+2023-04-10 12:09:14.218 INFO  (qtp967677821-57) [] o.a.s.s.HttpSolrCall [admin] webapp=null path=/admin/cores params={indexInfo=false&wt=json&_=1681127983555} status=0 QTime=0
+2023-04-10 12:09:14.218 INFO  (qtp967677821-52) [ x:amazon_iphone] o.a.s.c.S.Request webapp=/solr path=/config/params params={wt=json&_=1681127988794} status=0 QTime=0
+2023-04-10 12:09:14.262 INFO  (qtp967677821-18) [] o.a.s.s.HttpSolrCall [admin] webapp=null path=/admin/info/system params={wt=json&_=1681127983556} status=0 QTime=44
+2023-04-10 12:09:14.544 INFO  (qtp967677821-22) [] o.a.s.s.HttpSolrCall [admin] webapp=null path=/admin/cores params={indexInfo=false&wt=json&_=1681127983555} status=0 QTime=0
+2023-04-10 12:09:14.546 INFO  (qtp967677821-55) [ x:amazon_iphone] o.a.s.c.S.Request webapp=/solr path=/admin/file params={wt=json&_=1681127987433} status=0 QTime=1
+2023-04-10 12:09:14.584 INFO  (qtp967677821-24) [] o.a.s.s.HttpSolrCall [admin] webapp=null path=/admin/info/system params={wt=json&_=1681127983556} status=0 QTime=38
+2023-04-10 12:09:15.010 INFO  (qtp967677821-57) [] o.a.s.s.HttpSolrCall [admin] webapp=null path=/admin/cores params={indexInfo=false&wt=json&_=1681127983555} status=0 QTime=0
+2023-04-10 12:09:15.052 INFO  (qtp967677821-52) [] o.a.s.s.HttpSolrCall [admin] webapp=null path=/admin/info/system params={wt=json&_=1681127983556} status=0 QTime=42
+2023-04-10 12:09:15.092 INFO  (qtp967677821-18) [ x:amazon_iphone] o.a.s.c.S.Request webapp=/solr path=/admin/mbeans params={stats=true&wt=json&_=1681128555005} status=0 QTime=80
+2023-04-10 12:09:15.651 INFO  (qtp967677821-22) [] o.a.s.s.HttpSolrCall [admin] webapp=null path=/admin/cores params={indexInfo=false&wt=json&_=1681127983555} status=0 QTime=0
+2023-04-10 12:09:15.654 INFO  (qtp967677821-22) [ x:amazon_iphone] o.a.s.c.S.Request webapp=/solr path=/admin/ping params={action=status&wt=json&_=1681127983556&ts=1681127983556} status=503 QTime=0
+2023-04-10 12:09:15.654 INFO  (qtp967677821-24) [ x:amazon_iphone] o.a.s.c.S.Request webapp=/solr path=/admin/luke params={numTerms=0&show=index&wt=json&_=1681127985375} status=0 QTime=1
+2023-04-10 12:09:15.676 INFO  (qtp967677821-25) [ x:amazon_iphone] o.a.s.c.S.Request webapp=/solr path=/replication params={wt=json&command=details&_=1681127985375} status=0 QTime=22
+2023-04-10 12:09:15.733 INFO  (qtp967677821-55) [] o.a.s.s.HttpSolrCall [admin] webapp=null path=/admin/info/system params={wt=json&_=1681127983556} status=0 QTime=80
+2023-04-10 12:09:15.733 INFO  (qtp967677821-19) [ x:amazon_iphone] o.a.s.c.S.Request webapp=/solr path=/admin/system params={wt=json&_=1681127985375} status=0 QTime=77
+2023-04-10 12:09:16.883 INFO  (qtp967677821-52) [ x:amazon_iphone] o.a.s.c.S.Request webapp=/solr path=/admin/ping params={wt=json&_=1681127983556&ts=1681127983556} hits=11634 status=0 QTime=0
+2023-04-10 12:09:16.884 INFO  (qtp967677821-52) [ x:amazon_iphone] o.a.s.c.S.Request webapp=/solr path=/admin/ping params={wt=json&_=1681127983556&ts=1681127983556} status=0 QTime=1
+2023-04-10 12:09:17.161 INFO  (qtp967677821-55) [] o.a.s.s.HttpSolrCall [admin] webapp=null path=/admin/cores params={indexInfo=false&wt=json&_=1681127983555} status=0 QTime=0
+2023-04-10 12:09:17.167 INFO  (qtp967677821-53) [ x:amazon_iphone] o.a.s.c.S.Request webapp=/solr path=/admin/file params={wt=json&_=1681127987433} status=0 QTime=3
+2023-04-10 12:09:17.206 INFO  (qtp967677821-55) [] o.a.s.s.HttpSolrCall [admin] webapp=null path=/admin/info/system params={wt=json&_=1681127983556} status=0 QTime=43
+2023-04-10 12:09:17.672 INFO  (qtp967677821-19) [] o.a.s.s.HttpSolrCall [admin] webapp=null path=/admin/cores params={indexInfo=false&wt=json&_=1681127983555} status=0 QTime=0
+2023-04-10 12:09:17.673 INFO  (qtp967677821-52) [ x:amazon_iphone] o.a.s.c.S.Request webapp=/solr path=/admin/luke params={show=schema&wt=json&_=1681127985375} status=0 QTime=0
+2023-04-10 12:09:17.711 INFO  (qtp967677821-55) [] o.a.s.s.HttpSolrCall [admin] webapp=null path=/admin/info/system params={wt=json&_=1681127983556} status=0 QTime=39
+2023-04-10 12:09:17.975 INFO  (qtp967677821-53) [] o.a.s.s.HttpSolrCall [admin] webapp=null path=/admin/cores params={indexInfo=false&wt=json&_=1681127983555} status=0 QTime=0
+2023-04-10 12:09:17.977 INFO  (qtp967677821-55) [ x:amazon_iphone] o.a.s.c.S.Request webapp=/solr path=/admin/luke params={numTerms=0&show=index&wt=json&_=1681127985375} status=0 QTime=0
+2023-04-10 12:09:17.981 INFO  (qtp967677821-22) [ x:amazon_iphone] o.a.s.c.S.Request webapp=/solr path=/admin/ping params={action=status&wt=json&_=1681127983556&ts=1681127983556} status=503 QTime=0
+2023-04-10 12:09:17.999 INFO  (qtp967677821-57) [ x:amazon_iphone] o.a.s.c.S.Request webapp=/solr path=/replication params={wt=json&command=details&_=1681127985375} status=0 QTime=21
+2023-04-10 12:09:18.046 INFO  (qtp967677821-25) [] o.a.s.s.HttpSolrCall [admin] webapp=null path=/admin/info/system params={wt=json&_=1681127983556} status=0 QTime=70
+2023-04-10 12:09:18.052 INFO  (qtp967677821-18) [ x:amazon_iphone] o.a.s.c.S.Request webapp=/solr path=/admin/system params={wt=json&_=1681127985375} status=0 QTime=74
+2023-04-10 12:09:19.074 INFO  (qtp967677821-52) [] o.a.s.s.HttpSolrCall [admin] webapp=null path=/admin/cores params={indexInfo=false&wt=json&_=1681127983555} status=0 QTime=0
+2023-04-10 12:09:19.076 INFO  (qtp967677821-53) [ x:amazon_iphone] o.a.s.c.S.Request webapp=/solr path=/admin/file params={wt=json&_=1681127987433} status=0 QTime=1
+2023-04-10 12:09:19.115 INFO  (qtp967677821-55) [] o.a.s.s.HttpSolrCall [admin] webapp=null path=/admin/info/system params={wt=json&_=1681127983556} status=0 QTime=40
+2023-04-10 12:09:19.900 INFO  (qtp967677821-18) [] o.a.s.s.HttpSolrCall [admin] webapp=null path=/admin/cores params={indexInfo=false&wt=json&_=1681127983555} status=0 QTime=0
+2023-04-10 12:09:19.901 INFO  (qtp967677821-57) [ x:amazon_iphone] o.a.s.c.S.Request webapp=/solr path=/admin/luke params={numTerms=0&show=index&wt=json&_=1681127985375} status=0 QTime=0
+2023-04-10 12:09:19.901 INFO  (qtp967677821-22) [ x:amazon_iphone] o.a.s.c.S.Request webapp=/solr path=/admin/ping params={action=status&wt=json&_=1681127983556&ts=1681127983556} status=503 QTime=0
+2023-04-10 12:09:19.922 INFO  (qtp967677821-19) [ x:amazon_iphone] o.a.s.c.S.Request webapp=/solr path=/replication params={wt=json&command=details&_=1681127985375} status=0 QTime=22
+2023-04-10 12:09:19.979 INFO  (qtp967677821-53) [ x:amazon_iphone] o.a.s.c.S.Request webapp=/solr path=/admin/system params={wt=json&_=1681127985375} status=0 QTime=79
+2023-04-10 12:09:19.984 INFO  (qtp967677821-25) [] o.a.s.s.HttpSolrCall [admin] webapp=null path=/admin/info/system params={wt=json&_=1681127983556} status=0 QTime=84
+2023-04-10 12:09:21.108 INFO  (qtp967677821-23) [] o.a.s.s.HttpSolrCall [admin] webapp=null path=/admin/cores params={indexInfo=false&wt=json&_=1681127983555} status=0 QTime=0
+2023-04-10 12:09:21.109 INFO  (qtp967677821-24) [ x:amazon_iphone] o.a.s.c.S.Request webapp=/solr path=/admin/luke params={show=schema&wt=json&_=1681127985375} status=0 QTime=1
+2023-04-10 12:09:21.150 INFO  (qtp967677821-55) [] o.a.s.s.HttpSolrCall [admin] webapp=null path=/admin/info/system params={wt=json&_=1681127983556} status=0 QTime=42
+2023-04-10 12:09:21.511 INFO  (qtp967677821-19) [] o.a.s.s.HttpSolrCall [admin] webapp=null path=/admin/cores params={indexInfo=false&wt=json&_=1681127983555} status=0 QTime=0
+2023-04-10 12:09:21.513 INFO  (qtp967677821-53) [ x:amazon_iphone] o.a.s.c.S.Request webapp=/solr path=/admin/luke params={show=schema&wt=json&_=1681127985375} status=0 QTime=1
+2023-04-10 12:09:21.553 INFO  (qtp967677821-25) [] o.a.s.s.HttpSolrCall [admin] webapp=null path=/admin/info/system params={wt=json&_=1681127983556} status=0 QTime=40
+2023-04-10 12:09:21.982 INFO  (qtp967677821-24) [] o.a.s.s.HttpSolrCall [admin] webapp=null path=/admin/cores params={indexInfo=false&wt=json&_=1681127983555} status=0 QTime=0
+2023-04-10 12:09:21.982 INFO  (qtp967677821-19) [ x:amazon_iphone] o.a.s.c.S.Request webapp=/solr path=/admin/luke params={show=schema&wt=json&_=1681127985375} status=0 QTime=0
+2023-04-10 12:09:22.022 INFO  (qtp967677821-55) [] o.a.s.s.HttpSolrCall [admin] webapp=null path=/admin/info/system params={wt=json&_=1681127983556} status=0 QTime=40
+2023-04-10 12:09:22.449 INFO  (qtp967677821-23) [] o.a.s.s.HttpSolrCall [admin] webapp=null path=/admin/cores params={indexInfo=false&wt=json&_=1681127983555} status=0 QTime=0
+2023-04-10 12:09:22.452 INFO  (qtp967677821-25) [ x:amazon_iphone] o.a.s.c.S.Request webapp=/solr path=/admin/file params={wt=json&_=1681127987433} status=0 QTime=1
+2023-04-10 12:09:22.490 INFO  (qtp967677821-53) [] o.a.s.s.HttpSolrCall [admin] webapp=null path=/admin/info/system params={wt=json&_=1681127983556} status=0 QTime=38
+2023-04-10 12:09:23.295 INFO  (qtp967677821-19) [] o.a.s.s.HttpSolrCall [admin] webapp=null path=/admin/cores params={indexInfo=false&wt=json&_=1681127983555} status=0 QTime=0
+2023-04-10 12:09:23.296 INFO  (qtp967677821-55) [ x:amazon_iphone] o.a.s.c.S.Request webapp=/solr path=/admin/luke params={numTerms=0&show=index&wt=json&_=1681127985375} status=0 QTime=0
+2023-04-10 12:09:23.297 INFO  (qtp967677821-25) [ x:amazon_iphone] o.a.s.c.S.Request webapp=/solr path=/admin/ping params={action=status&wt=json&_=1681127983556&ts=1681127983556} status=503 QTime=0
+2023-04-10 12:09:23.317 INFO  (qtp967677821-52) [ x:amazon_iphone] o.a.s.c.S.Request webapp=/solr path=/replication params={wt=json&command=details&_=1681127985375} status=0 QTime=20
+2023-04-10 12:09:23.374 INFO  (qtp967677821-23) [] o.a.s.s.HttpSolrCall [admin] webapp=null path=/admin/info/system params={wt=json&_=1681127983556} status=0 QTime=79
+2023-04-10 12:09:23.375 INFO  (qtp967677821-53) [ x:amazon_iphone] o.a.s.c.S.Request webapp=/solr path=/admin/system params={wt=json&_=1681127985375} status=0 QTime=77
+2023-04-10 12:09:25.101 INFO  (qtp967677821-18) [ x:amazon_iphone] o.a.s.c.S.Request webapp=/solr path=/admin/ping params={wt=json&_=1681127983556&ts=1681127983556} hits=11634 status=0 QTime=1
+2023-04-10 12:09:25.102 INFO  (qtp967677821-18) [ x:amazon_iphone] o.a.s.c.S.Request webapp=/solr path=/admin/ping params={wt=json&_=1681127983556&ts=1681127983556} status=0 QTime=1
+2023-04-10 12:09:26.505 INFO  (qtp967677821-53) [] o.a.s.s.HttpSolrCall [admin] webapp=null path=/admin/cores params={indexInfo=false&wt=json&_=1681127983555} status=0 QTime=0
+2023-04-10 12:09:26.508 INFO  (qtp967677821-22) [ x:amazon_iphone] o.a.s.c.S.Request webapp=/solr path=/admin/luke params={show=schema&wt=json&_=1681127985375} status=0 QTime=1
+2023-04-10 12:09:26.553 INFO  (qtp967677821-57) [] o.a.s.s.HttpSolrCall [admin] webapp=null path=/admin/info/system params={wt=json&_=1681127983556} status=0 QTime=46
+2023-04-10 12:09:26.859 INFO  (qtp967677821-52) [] o.a.s.s.HttpSolrCall [admin] webapp=null path=/admin/cores params={indexInfo=false&wt=json&_=1681127983555} status=0 QTime=0
+2023-04-10 12:09:26.862 INFO  (qtp967677821-18) [ x:amazon_iphone] o.a.s.c.S.Request webapp=/solr path=/admin/luke params={numTerms=0&show=index&wt=json&_=1681127985375} status=0 QTime=0
+2023-04-10 12:09:26.865 INFO  (qtp967677821-52) [ x:amazon_iphone] o.a.s.c.S.Request webapp=/solr path=/admin/ping params={action=status&wt=json&_=1681127983556&ts=1681127983556} status=503 QTime=0
+2023-04-10 12:09:26.888 INFO  (qtp967677821-24) [ x:amazon_iphone] o.a.s.c.S.Request webapp=/solr path=/replication params={wt=json&command=details&_=1681127985375} status=0 QTime=26
+2023-04-10 12:09:26.930 INFO  (qtp967677821-23) [] o.a.s.s.HttpSolrCall [admin] webapp=null path=/admin/info/system params={wt=json&_=1681127983556} status=0 QTime=69
+2023-04-10 12:09:26.936 INFO  (qtp967677821-22) [ x:amazon_iphone] o.a.s.c.S.Request webapp=/solr path=/admin/system params={wt=json&_=1681127985375} status=0 QTime=71
+2023-04-10 12:09:28.009 INFO  (qtp967677821-18) [] o.a.s.s.HttpSolrCall [admin] webapp=null path=/admin/cores params={indexInfo=false&wt=json&_=1681127983555} status=0 QTime=0
+2023-04-10 12:09:28.057 INFO  (qtp967677821-22) [] o.a.s.s.HttpSolrCall [admin] webapp=null path=/admin/info/system params={wt=json&_=1681127983556} status=0 QTime=48
+2023-04-10 12:09:28.093 INFO  (qtp967677821-23) [] o.a.s.s.HttpSolrCall [admin] webapp=null path=/admin/info/system params={wt=json&_=1681127983556} status=0 QTime=32
+2023-04-10 12:09:30.206 INFO  (qtp967677821-23) [] o.a.s.s.HttpSolrCall [admin] webapp=null path=/admin/cores params={indexInfo=false&wt=json&_=1681127983555} status=0 QTime=0
+2023-04-10 12:09:30.207 INFO  (qtp967677821-22) [ x:amazon_iphone] o.a.s.c.S.Request webapp=/solr path=/admin/luke params={numTerms=0&show=index&wt=json&_=1681127985375} status=0 QTime=0
+2023-04-10 12:09:30.207 INFO  (qtp967677821-18) [ x:amazon_iphone] o.a.s.c.S.Request webapp=/solr path=/admin/ping params={action=status&wt=json&_=1681127983556&ts=1681127983556} status=503 QTime=0
+2023-04-10 12:09:30.232 INFO  (qtp967677821-19) [ x:amazon_iphone] o.a.s.c.S.Request webapp=/solr path=/replication params={wt=json&command=details&_=1681127985375} status=0 QTime=25
+2023-04-10 12:09:30.299 INFO  (qtp967677821-24) [] o.a.s.s.HttpSolrCall [admin] webapp=null path=/admin/info/system params={wt=json&_=1681127983556} status=0 QTime=92
+2023-04-10 12:09:30.303 INFO  (qtp967677821-53) [ x:amazon_iphone] o.a.s.c.S.Request webapp=/solr path=/admin/system params={wt=json&_=1681127985375} status=0 QTime=96
+2023-04-10 12:09:42.083 INFO  (searcherExecutor-12-thread-1-processing-amazon_iphone) [ x:amazon_iphone] o.a.s.c.SolrCore Registered new searcher autowarm time: 0 ms
+2023-04-10 12:10:13.759 INFO  (qtp967677821-18) [] o.a.s.s.HttpSolrCall [admin] webapp=null path=/admin/cores params={indexInfo=false&wt=json&_=1681127983555} status=0 QTime=0
+2023-04-10 12:10:13.760 INFO  (qtp967677821-57) [ x:amazon_iphone] o.a.s.c.S.Request webapp=/solr path=/admin/luke params={show=schema&wt=json&_=1681127985375} status=0 QTime=0
+2023-04-10 12:10:13.795 INFO  (qtp967677821-25) [] o.a.s.s.HttpSolrCall [admin] webapp=null path=/admin/cores params={indexInfo=false&wt=json&_=1681127983555} status=0 QTime=0
+2023-04-10 12:10:13.797 INFO  (qtp967677821-24) [ x:amazon_iphone] o.a.s.c.S.Request webapp=/solr path=/admin/luke params={numTerms=0&show=index&wt=json&_=1681127985375} status=0 QTime=0
+2023-04-10 12:10:13.806 INFO  (qtp967677821-52) [] o.a.s.s.HttpSolrCall [admin] webapp=null path=/admin/info/system params={wt=json&_=1681127983556} status=0 QTime=46
+2023-04-10 12:10:13.810 INFO  (qtp967677821-53) [ x:amazon_iphone] o.a.s.c.S.Request webapp=/solr path=/admin/ping params={action=status&wt=json&_=1681127983556&ts=1681127983556} status=503 QTime=0
+2023-04-10 12:10:13.830 INFO  (qtp967677821-57) [ x:amazon_iphone] o.a.s.c.S.Request webapp=/solr path=/replication params={wt=json&command=details&_=1681127985375} status=0 QTime=29
+2023-04-10 12:10:13.880 INFO  (qtp967677821-18) [ x:amazon_iphone] o.a.s.c.S.Request webapp=/solr path=/admin/system params={wt=json&_=1681127985375} status=0 QTime=79
+2023-04-10 12:10:13.885 INFO  (qtp967677821-52) [] o.a.s.s.HttpSolrCall [admin] webapp=null path=/admin/info/system params={wt=json&_=1681127983556} status=0 QTime=73
+2023-04-10 12:15:35.552 INFO  (qtp967677821-22) [ x:amazon_iphone] o.a.s.u.p.LogUpdateProcessorFactory webapp=/solr path=/update params={commitWithin=1000&boost=1.0&wt=json&overwrite=true}{add=[db1e469b-f169-4791-b5b6-6b00cd1cc701 (1762791454694965248), f589bfb8-0323-4fa0-ad57-e01938dce708 (1762791454708596736), 64c046a8-3cbd-4d1d-847c-51f1f1cae9c3 (1762791454709645312), 74ba442a-7d6c-4d9f-8d92-47661542c416 (1762791454709645313), 825f4c7e-139b-433e-b7ce-33f2b162d4d8 (1762791454710693888), 1beb073b-ebe1-46ae-a10f-a7ffaa8ab379 (1762791454711742464), 47d48e7e-b227-4e99-855c-7806acf739f4 (1762791454712791040), 1d2f441c-9cfe-45a2-8e29-72ad530bfda2 (1762791454713839616), e1c5bf3f-99d5-4db6-b447-b5b258b4da76 (1762791454713839617), 0051cddb-4174-42d9-92a2-9dbd4c64af6a (1762791454714888192), ... (20 adds)]} 0 29
+2023-04-10 12:15:36.585 INFO  (searcherExecutor-12-thread-1-processing-amazon_iphone) [ x:amazon_iphone] o.a.s.c.QuerySenderListener QuerySenderListener done.
+2023-04-10 12:15:36.585 INFO  (searcherExecutor-12-thread-1-processing-amazon_iphone) [ x:amazon_iphone] o.a.s.h.c.SuggestComponent buildOnCommit: mySuggester
+2023-04-10 12:15:36.585 INFO  (searcherExecutor-12-thread-1-processing-amazon_iphone) [ x:amazon_iphone] o.a.s.s.s.SolrSuggester SolrSuggester.build(mySuggester)
+2023-04-10 12:16:25.096 INFO  (searcherExecutor-12-thread-1-processing-amazon_iphone) [ x:amazon_iphone] o.a.s.c.SolrCore Registered new searcher autowarm time: 0 ms
