@@ -862,7 +862,7 @@
 		<str name="field">reviewDescription</str>
         <str name="suggestAnalyzerFieldType">text_general</str>
 		<str name="suggestFreeTextAnalyzerFieldType">text_general</str>
-		<str name="ngrams">5</str>
+		<str name="ngrams">6</str>
         <str name="buildOnCommit">true</str>
 		<bool name="highlight">false</bool>
     </lst>
