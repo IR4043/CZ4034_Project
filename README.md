@@ -33,3 +33,44 @@ To run the streamlit UI, open up terminal and run the command below:
 ```bash
 streamlit run Home.py
 ```
+
+## Setting up of Solr Environment
+The Solr core should already be inside the SOLR server, with its respective schema, and 
+configuration files. To start the solr server simply open command prompt from the start
+of the solr folder, and run the following commands.
+
+```bash
+cd bin
+solr start
+```
+
+### Solutions if there are problems to our Solr Environment
+- Unload the core in Solr Web Server if you can
+- Delete the Conf File
+- Delete the all files in Data file except for the CSV
+- Rename schema.xml.bak to schema.xml
+
+Go to the Solr Web Server to create the core and ensure the settings are according to the picture.
+
+![Screenshot of Solr Core Configuration](image.png)
+
+After the core is created, select amazon_phone from the core selector
+- Navigate to Documents
+- Switch File type to File Upload
+- Navigate to the data file within amazon_iphone and upload final_sentiment.csv
+- Submit and wait for the data to get indexed.
+
+![Screenshot of Inserting Dataset](image2.png)
+
+Once all 11545 records have been indexed, open postman and run the following command.
+
+```bash
+http://localhost:8983/solr/amazon_iphone/suggest?suggest.build=true
+```
+This will build the suggestor index, which will take about a minute. Once done, the solr environment 
+is set up and ready for querying.
+
+### BERT Model and Preprocessing Codes
+
+The pre-processing and training codes are all under the pynb_files section. To view the files,
+simply head to this directory.
