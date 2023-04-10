@@ -3,6 +3,9 @@ from streamlit_extras.switch_page_button import switch_page
 from streamlit_option_menu import option_menu
 from amazon_crawl import scrape
 import pandas as pd
+from pre_process_predict import pre_process_df
+from ensemble import process_data_for_analysis
+import requests
 
 
 def streamlit_menu():
@@ -50,6 +53,7 @@ df = pd.DataFrame(columns=["title", 'rating', 'productAsin', 'reviewDate', 'revi
 
 dataframe_space = st.empty()
 incremental_index = st.empty()
+success_header = st.empty()
 
 dataframe_space.dataframe(df)
 incremental_button = incremental_index.button("Update Index")
@@ -73,6 +77,34 @@ if incremental_button:
     if st.session_state["record_df"].empty:
         st.write("No records to perform incremental updates to index.")
     else:
-        st.write("Updating")
-        # Write the logic here for MODEL PREDICTION
+        success_header.empty()
+        with st.spinner("Updating in Progress"):
+            copy_df = st.session_state["record_df"].copy()
+            copy_df = pre_process_df(copy_df)
+            result = process_data_for_analysis(copy_df)
+            retrieve = st.session_state["record_df"]
+            retrieve["sentiment"] = result
+            data = {}
+            new_list = []
+            for index, row in retrieve.iterrows():
+                new_data = pd.Series(row)
+                series_dict = new_data.to_dict()
+                series_dict["image_links"] = str(series_dict["image_links"])
+                new_list.append(series_dict)
+
+            data["docs"] = new_list
+            response = requests.post("http://127.0.0.1:5000/update_index", json=data)
+            result = response.json()["responseHeader"]["status"]
+
+            if result == 0:
+                success_header.markdown(f'<h1 style="color:#00FF00;font-size:24px;">Incremental Update Success</h1>',
+                                        unsafe_allow_html=True)
+                st.session_state["record_df"] = ""
+            else:
+                success_header.markdown(f'<h1 style="color:##FF0000;font-size:24px;">Incremental Update Failed</h1>',
+                                        unsafe_allow_html=True)
+
+
+
+
 

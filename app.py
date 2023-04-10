@@ -127,7 +127,9 @@ def general_query():
 
     base_query = base_query.rstrip(' AND ')
 
-    # Call one Query to get all text and facet for data analysis
+    if count == 1:
+        base_query += "&"
+        # Call one Query to get all text and facet for data analysis
     text = ""
     facet = ""
     headers = {"Content-Type": "application/json"}
@@ -137,11 +139,13 @@ def general_query():
         for field, value in facet_fields.items():
             additional_params += f"&facet.field={field}"
         result = requests.get(base_query + additional_params, headers=headers).json()
-        for i in result['response']['docs']:
-            text = text + "," + i['reviewDescription']
 
-        if result['facet_counts']['facet_fields']:
-            facet = json.dumps(result['facet_counts']['facet_fields'])
+        if len(result['response']['docs']) != 0:
+            for i in result['response']['docs']:
+                text = text + "," + i['reviewDescription']
+
+            if result['facet_counts']['facet_fields']:
+                facet = json.dumps(result['facet_counts']['facet_fields'])
 
     # Adding Page Numbers
     page_number = (data_list["page"] - 1) * 9
@@ -199,7 +203,7 @@ def mlt_query():
         base_mlt += "q=reviewDescription:" + '%22' + f"{format_search_term}" + '%22'
 
     base_mlt += "&fl=*"
-    base_mlt += "&mlt.fl=reviewDescription"
+    base_mlt += "&mlt.fl=reviewDescription&"
 
     count = 0
     for field, value in facet_fields.items():
@@ -211,20 +215,24 @@ def mlt_query():
 
     base_mlt = base_mlt.rstrip(' AND ')
 
+    if count == 1:
+        base_mlt += "&"
+
     text = ""
     facet = ""
     headers = {"Content-Type": "application/json"}
     if data_list["page"] == 1:
         # Facet and Text Counting for Data Analysis
-        additional_params = "&rows=500&facet=true"
+        additional_params = "rows=500&facet=true"
         for field, value in facet_fields.items():
             additional_params += f"&facet.field={field}"
         result = requests.get(base_mlt + additional_params, headers=headers).json()
-        for i in result['response']['docs']:
-            text = text + "," + i['reviewDescription']
+        if len(result['response']['docs']) != 0:
+            for i in result['response']['docs']:
+                text = text + "," + i['reviewDescription']
 
-        if result['facet_counts']['facet_fields']:
-            facet = json.dumps(result['facet_counts']['facet_fields'])
+            if result['facet_counts']['facet_fields']:
+                facet = json.dumps(result['facet_counts']['facet_fields'])
 
     page_number = (data_list["page"] - 1) * 9
     base_mlt += f"&start={page_number}&rows=9"

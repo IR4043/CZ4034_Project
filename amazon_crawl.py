@@ -69,7 +69,7 @@ def scrape(link):
     review_list = []
     split_list = link.split("/")
     productAsin = split_list[5]
-    for n in range(1, 5):
+    for n in range(1, 3):
         soup = get_soup(link + str(n))
         print(f'Getting Page: {n}')
         get_reviews(soup, review_list, productAsin)
